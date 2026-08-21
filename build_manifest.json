@@ -21,6 +21,11 @@
    "bytes": 391
   },
   {
+   "path": "TRANSFER.md",
+   "md5": "00bb502ed66725a736dd3e4394388426",
+   "bytes": 4543
+  },
+  {
    "path": "UNINSTALL.cmd",
    "md5": "cb845bc02eff94796b6373501f156aaa",
    "bytes": 817
@@ -606,8 +611,8 @@
    "bytes": 14957
   }
  ],
- "count": 121,
- "bytes": 59377225,
+ "count": 122,
+ "bytes": 59381768,
  "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
  "excluded_personal": [
   "club.json",
