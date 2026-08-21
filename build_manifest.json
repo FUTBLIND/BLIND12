@@ -2,8 +2,8 @@
  "files": [
   {
    "path": "README.md",
-   "md5": "b125fd066e9cc4ecc58053ce78ff33b8",
-   "bytes": 7539
+   "md5": "98dd7b31841696092675e12f67d58c7d",
+   "bytes": 7561
   },
   {
    "path": "SETUP.cmd",
@@ -22,8 +22,8 @@
   },
   {
    "path": "TRANSFER.md",
-   "md5": "00bb502ed66725a736dd3e4394388426",
-   "bytes": 4543
+   "md5": "43a626944cdea6ba84ba58e1645209e3",
+   "bytes": 5264
   },
   {
    "path": "UNINSTALL.cmd",
@@ -612,7 +612,7 @@
   }
  ],
  "count": 122,
- "bytes": 59381768,
+ "bytes": 59382511,
  "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
  "excluded_personal": [
   "club.json",

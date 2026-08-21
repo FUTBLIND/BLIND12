@@ -73,12 +73,20 @@ cd "C:\Program Files\EA Games\FIFA 12"
 tar -xf <wherever-you-put-it>\fifa12-game.tar
 ```
 
-Then, **before `SETUP.cmd`**:
+Then, **before `SETUP.cmd`**, from inside this folder:
 
 ```
-git pull
-python server\gamehash.py --check
+python\python.exe server\gamehash.py --check
 ```
+
+**Note the `python\python.exe`.** A fresh machine has no Python installed and
+does not need one — the runtime is bundled here, which is the whole point. Plain
+`python` gives "python was not found" and that is expected, not a fault.
+
+If you got this folder as a **Download ZIP** rather than a clone, make sure it
+is a recent one: `server\gamehash.py` and `server\game_manifest.json` were added
+after the first upload, and an older ZIP will not have them. There is nothing to
+`git pull` in a ZIP download — download it again to update.
 
 That compares all 173 game files against `server\game_manifest.json`, which came
 with the repo — so it arrives by a route the 6.29 GB transfer cannot corrupt. It
@@ -119,7 +127,7 @@ SETUP.cmd      right-click, Run as administrator
 START.cmd
 ```
 
-If setup says FIFA 12 was not found, `python server\gamepath.py --why` prints
+If setup says FIFA 12 was not found, `python\python.exe server\gamepath.py --why` prints
 every location it tried and the verdict for each — including the case that looks
 correct in Explorer, where the folder is there and `fifa.exe` is there but
 `Core\libeay32.dll` is not. Both are required.

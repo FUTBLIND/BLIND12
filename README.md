@@ -45,7 +45,7 @@ If you copied it across, check it arrived intact **before** setting up. A 6.2 GB
 transfer that drops or truncates a file does not announce itself:
 
 ```
-python server\gamehash.py --check
+python\python.exe server\gamehash.py --check
 ```
 
 Before `SETUP.cmd`, not after — setup replaces eleven of those files on purpose,
@@ -55,7 +55,7 @@ among them.
 ### If it says FIFA 12 was not found
 
 ```
-python server\gamepath.py --why
+python\python.exe server\gamepath.py --why
 ```
 
 That prints every location tried with the verdict for each — including the case
