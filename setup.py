@@ -370,9 +370,27 @@ def main():
 
     root, found = find_game()
     if not found:
-        say(BAD, "FIFA 12", "not found (looked at %s)" % root)
-        print("         Install FIFA 12, or put its Game folder path in")
-        print("         %s" % CONFIG)
+        # THE OLD MESSAGE NAMED ONE PATH AFTER TRYING A DOZEN. `root` here is
+        # gamepath's fallback guess, not the search - so it sent people to look
+        # at a folder that was never the point, and it never said the thing that
+        # actually matters: this folder does not contain a game.
+        say(BAD, "FIFA 12", "not found")
+        import gamepath as _gp
+        _hit, _lines = _gp.why()
+        print("")
+        print("         Looked here, in this order:")
+        print("")
+        for _ln in _lines:
+            print("    " + _ln)
+        print("")
+        print("         THIS FOLDER DOES NOT CONTAIN FIFA 12. It patches an")
+        print("         install you already have: 11 files, against a 6.2 GB")
+        print("         game. You need your own copy of FIFA 12 on this machine.")
+        print("")
+        print("         Install it, or copy an existing install across, then")
+        print("         either put its Game folder path on one line in")
+        print("             %s" % CONFIG)
+        print("         or set FUT12_GAME_DIR to it.")
         return 1
     say(OK, "FIFA 12", root)
 

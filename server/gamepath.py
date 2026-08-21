@@ -24,6 +24,7 @@ exist, because a wrong path in an error message is far more useful than None.
 """
 import io
 import os
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIG = os.path.join(HERE, "gamepath.txt")
@@ -177,6 +178,52 @@ def installed():
     return looks_like_game(game_dir())
 
 
+def probes():
+    """Every location this module would try, in order: (source, path).
+
+    Shared by --why and by setup.py's failure message, so the two can never
+    drift apart and claim different things about where we looked.
+    """
+    out = [("FUT12_GAME_DIR env var", os.environ.get(ENV_VAR)),
+           ("gamepath.txt beside this file", _from_config()),
+           ("Windows uninstall registry", _from_registry())]
+    out.extend(("standard location", c) for c in CANDIDATES)
+    return out
+
+
+def why():
+    r"""Explain the search, naming WHICH marker is missing at each candidate.
+
+    The message this replaces said "not found (looked at <one path>)" while
+    having tried a dozen, which sends people to the wrong place. And because
+    MARKERS needs BOTH fifa.exe and Core\libeay32.dll, an install that has the
+    exe but not the DLL - a partial copy, or a repack - reads as "not found"
+    while looking perfectly correct in Explorer. Saying which file is absent is
+    the difference between a two-minute fix and an evening.
+    """
+    lines, hit = [], None
+    for source, cand in probes():
+        if not cand:
+            lines.append("  -            %-30s (not set)" % source)
+            continue
+        if not os.path.isdir(cand):
+            lines.append("  no           %s\n               %s\n"
+                         "               no such folder" % (source, cand))
+            continue
+        absent = [m for m in MARKERS
+                  if not os.path.exists(os.path.join(cand, m))]
+        if absent:
+            lines.append("  INCOMPLETE   %s\n               %s\n"
+                         "               folder is there, but %s %s missing"
+                         % (source, cand, " and ".join(absent),
+                            "is" if len(absent) == 1 else "are"))
+            continue
+        lines.append("  FOUND        %s\n               %s" % (source, cand))
+        if hit is None:
+            hit = cand
+    return hit, lines
+
+
 def describe():
     """One line for a startup banner or a failure message."""
     d = game_dir()
@@ -184,6 +231,28 @@ def describe():
 
 
 if __name__ == "__main__":
+    if "--why" in sys.argv:
+        hit, lines = why()
+        print("")
+        print("  Looking for a FIFA 12 install, in this order:")
+        print("")
+        for ln in lines:
+            print(ln)
+        print("")
+        if hit:
+            print("  RESULT: %s" % hit)
+        else:
+            print("  RESULT: not found.")
+            print("")
+            print("  THIS FOLDER DOES NOT CONTAIN FIFA 12. It patches an install")
+            print("  you already have: 11 files, against a 6.2 GB game.")
+            print("")
+            print("  Install FIFA 12 or copy an existing install across, then")
+            print("  either put its Game folder path on one line in")
+            print("      %s" % CONFIG)
+            print("  or set FUT12_GAME_DIR to it.")
+        print("")
+        sys.exit(0 if hit else 1)
     print(describe())
     print("  core : %s" % core_dir())
     print("  dlc  : %s" % dlc_cards_dir())

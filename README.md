@@ -15,10 +15,52 @@ account to make.
 | | |
 |---|---|
 | **Windows 10 or 11** | the whole rig is Windows-specific |
-| **FIFA 12 for PC**, installed | your own copy — this folder patches it, it does not contain a game you can play without one |
+| **FIFA 12 for PC**, installed | your own copy — see below. This folder patches a game; it is not one |
 | **Debugging Tools for Windows** | see below. This one is not optional. |
 | Python | **not** needed — a copy is bundled in `python\` |
 | Any pip packages | none at all |
+
+### You need your own FIFA 12 — this is not it
+
+This folder is **46.8 MB against a 6.2 GB game**. It carries the eleven files
+that get *replaced*: `fifa.exe`, two DLLs, two `.big` archives, and six loose
+files under `data\ui\external\ion_fut\`. It does not carry `data6.big` (1.7 GB),
+`data3.big` (1.2 GB), the audio, the video, or the other 1,735 files. With no
+FIFA 12 on the machine there is nothing to patch, and `SETUP.cmd` says so and
+stops rather than half-finishing.
+
+**Copying an existing install works.** You do not have to reinstall, and you do
+not need the EA App or Origin:
+
+- the game folder is found at any standard location **with no registry entry**,
+  and `server\gamepath.txt` covers anywhere else
+- the launcher starts `fifa.exe` directly, so no store client is ever involved
+
+Copy the whole `FIFA 12` folder to the same path on the other machine, then run
+`SETUP.cmd`. That machine may still need the **Visual C++ runtimes and
+DirectX 9** the game itself depends on — those are FIFA's requirements, not this
+folder's.
+
+If you copied it across, check it arrived intact **before** setting up. A 6.2 GB
+transfer that drops or truncates a file does not announce itself:
+
+```
+python server\gamehash.py --check
+```
+
+Before `SETUP.cmd`, not after — setup replaces eleven of those files on purpose,
+so a check afterwards reports exactly those eleven and the real signal is lost
+among them.
+
+### If it says FIFA 12 was not found
+
+```
+python server\gamepath.py --why
+```
+
+That prints every location tried with the verdict for each — including the case
+that looks perfectly fine in Explorer, where the folder is there and `fifa.exe`
+is there but `Core\libeay32.dll` is not. Both are required.
 
 ### Debugging Tools for Windows
 

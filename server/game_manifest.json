@@ -1,0 +1,699 @@
+{
+ "bytes": 6292903456,
+ "count": 173,
+ "files": {
+  "Core/EACore.dll": [
+   "f29405c1230e41a4716cc864b733d78f",
+   11768104
+  ],
+  "Core/EACoreServer.exe": [
+   "c7fed3ae7d8aeb20f8ccfc1118dbd29a",
+   120112
+  ],
+  "Core/EACore_App.ini": [
+   "e23966246ca52c168387ef1948cc15d6",
+   1474
+  ],
+  "Core/EAProxyInstaller.exe": [
+   "36d09761e261b7525e8d542b9f2428e7",
+   206136
+  ],
+  "Core/Microsoft.VC80.CRT.manifest": [
+   "541423a06efdcd4e4554c719061f82cf",
+   1869
+  ],
+  "Core/PatchProgress.exe": [
+   "16a57ca515ca297707ba72d503f93c2f",
+   206128
+  ],
+  "Core/QtCore4.dll": [
+   "ad5f6f3d5c81de9d771bd8d9c7058204",
+   2199552
+  ],
+  "Core/QtGui4.dll": [
+   "5154a90bd4a235e6b970c5522eebcf2d",
+   8171520
+  ],
+  "Core/QtNetwork4.dll": [
+   "c535098db0857aa6dda9d9db91ade57d",
+   978944
+  ],
+  "Core/QtWebKit4.dll": [
+   "4af29045a3006518b4f5e8b0934d9717",
+   10858496
+  ],
+  "Core/QtXml4.dll": [
+   "39f39088834b4700ea399445023adbe7",
+   364544
+  ],
+  "Core/QtXmlPatterns4.dll": [
+   "97263660fe853c19c3dff8ae82b7d571",
+   3043328
+  ],
+  "Core/activation.exe": [
+   "9656956496a10d2fe186a7c63f326982",
+   888832
+  ],
+  "Core/awc.dll": [
+   "8c7db4d58ce1e9100932d2dc9f5d151b",
+   533792
+  ],
+  "Core/awc.dll.backup": [
+   "7b11c8a33bf3b124a99e893720a17090",
+   533792
+  ],
+  "Core/codecs/qcncodecs4.dll": [
+   "a455a73c0f6b61bbc72f9a61d1dfb96f",
+   155648
+  ],
+  "Core/codecs/qjpcodecs4.dll": [
+   "1860f8bdb4cc829848fc6044850c77a0",
+   180224
+  ],
+  "Core/codecs/qkrcodecs4.dll": [
+   "31c25346c21f9340f022502f2c90cc41",
+   94208
+  ],
+  "Core/codecs/qtwcodecs4.dll": [
+   "9db75cf943105a24d9114d0e536a10e4",
+   172032
+  ],
+  "Core/imageformats/Microsoft.VC80.CRT.manifest": [
+   "541423a06efdcd4e4554c719061f82cf",
+   1869
+  ],
+  "Core/imageformats/msvcr80.dll": [
+   "e4fece18310e23b1d8fee993e35e7a6f",
+   626688
+  ],
+  "Core/imageformats/qgif4.dll": [
+   "dc445762f943f215e29d106fe839f83b",
+   25600
+  ],
+  "Core/imageformats/qico4.dll": [
+   "a396fd9bd4d1d2d89bb57f08ffdd1051",
+   27648
+  ],
+  "Core/imageformats/qjpeg4.dll": [
+   "e9f7862d8e7084ad968c82d47dc67c3b",
+   135168
+  ],
+  "Core/lang/AWCStrings_cs_CZ.xml": [
+   "ec949006085808b04b317f88b12a3157",
+   7890
+  ],
+  "Core/lang/AWCStrings_da_DK.xml": [
+   "cbf654f1cef2354f5b99a8e565c546e6",
+   7916
+  ],
+  "Core/lang/AWCStrings_de_DE.xml": [
+   "e63a6388c7e1b39b40d9bec2c65c1af2",
+   8716
+  ],
+  "Core/lang/AWCStrings_el_GR.xml": [
+   "dcf32507477ffcb2c6b2fdc25d0054e3",
+   8990
+  ],
+  "Core/lang/AWCStrings_en_GB.xml": [
+   "ec39cb3d1cc154065bb56416782ce318",
+   7706
+  ],
+  "Core/lang/AWCStrings_en_US.xml": [
+   "bd1ff0902b6aca1b3b04172c49eabae6",
+   7706
+  ],
+  "Core/lang/AWCStrings_es_ES.xml": [
+   "7603cd92cbc0a502cae3f983e80ae408",
+   8170
+  ],
+  "Core/lang/AWCStrings_es_MX.xml": [
+   "9e2739f687968e9914513753640bb876",
+   8262
+  ],
+  "Core/lang/AWCStrings_fi_FI.xml": [
+   "0bce84c47592467f415d8e5f0d37a396",
+   7872
+  ],
+  "Core/lang/AWCStrings_fr_FR.xml": [
+   "ec89476e35d20372b10818dcd4e55b7a",
+   8330
+  ],
+  "Core/lang/AWCStrings_hu_HU.xml": [
+   "cebb40eea2868c1a3d1d78bf7747a38c",
+   8416
+  ],
+  "Core/lang/AWCStrings_it_IT.xml": [
+   "80353982da63f44e0e2bfe33f48f0838",
+   7820
+  ],
+  "Core/lang/AWCStrings_ja_JP.xml": [
+   "a319e49a47c53d98faafdbfb06559653",
+   5792
+  ],
+  "Core/lang/AWCStrings_ko_KR.xml": [
+   "260e923edb725c83afcdb5def10928ee",
+   5880
+  ],
+  "Core/lang/AWCStrings_nl_NL.xml": [
+   "75e402981415b7a835e23d3e3c5a4093",
+   8612
+  ],
+  "Core/lang/AWCStrings_no_NO.xml": [
+   "d2d7d9b74bbbb17a53cf6ce763467a9c",
+   7756
+  ],
+  "Core/lang/AWCStrings_pl_PL.xml": [
+   "49d8f97afd4967b22f5a238d712c48a0",
+   8178
+  ],
+  "Core/lang/AWCStrings_pt_BR.xml": [
+   "e684a0e901b393531b7de50a36ccfdb4",
+   8188
+  ],
+  "Core/lang/AWCStrings_pt_PT.xml": [
+   "ea99a9fdfba576e98254df1f5a5be749",
+   7914
+  ],
+  "Core/lang/AWCStrings_ru_RU.xml": [
+   "e363dd4923bd511a1b4f81965a85c960",
+   7814
+  ],
+  "Core/lang/AWCStrings_sv_SE.xml": [
+   "d71cc69596b1987b0394d277faf70d18",
+   7640
+  ],
+  "Core/lang/AWCStrings_th_TH.xml": [
+   "19dc1329425cde96146ee01739d07619",
+   7590
+  ],
+  "Core/lang/AWCStrings_zh_CN.xml": [
+   "5ef99eb7e5c9e57d50ac2151edf94fe5",
+   4886
+  ],
+  "Core/lang/AWCStrings_zh_TW.xml": [
+   "b25533af9236b4c659816f0f6af756ba",
+   4898
+  ],
+  "Core/lang/CoreStrings_cs_CZ.xml": [
+   "0244b168c3d8b411c8ee5154fb6b306d",
+   53944
+  ],
+  "Core/lang/CoreStrings_da_DK.xml": [
+   "4fd80e26b4a939671ec99ce26a80253e",
+   52618
+  ],
+  "Core/lang/CoreStrings_de_DE.xml": [
+   "105a6019262e7aec05f7fe0e9807936b",
+   59938
+  ],
+  "Core/lang/CoreStrings_el_GR.xml": [
+   "6ac390cd24eab2551c3562bfcfc6016d",
+   59782
+  ],
+  "Core/lang/CoreStrings_en_GB.xml": [
+   "0ef8b54eb165483cc1d6a7585ca88c72",
+   51494
+  ],
+  "Core/lang/CoreStrings_en_US.xml": [
+   "36480d4cafc1ee1e753d5d551e13d430",
+   51494
+  ],
+  "Core/lang/CoreStrings_es_ES.xml": [
+   "5e51abf5640276b4afc92a8d4a1aab90",
+   57766
+  ],
+  "Core/lang/CoreStrings_es_MX.xml": [
+   "9c72a92dfcfcd4fd89884dedb324fbb5",
+   56194
+  ],
+  "Core/lang/CoreStrings_fi_FI.xml": [
+   "ff7c8f8a274a4c361f1ee21190897ce4",
+   51486
+  ],
+  "Core/lang/CoreStrings_fr_FR.xml": [
+   "3058cefe75768470cf90d6b676703c5e",
+   58118
+  ],
+  "Core/lang/CoreStrings_hu_HU.xml": [
+   "bb8b2f30cc834a442d720c01a81b250f",
+   55228
+  ],
+  "Core/lang/CoreStrings_it_IT.xml": [
+   "4032e25db51b093d990278edbb3f48e4",
+   54688
+  ],
+  "Core/lang/CoreStrings_ja_JP.xml": [
+   "e36e9acb81f75145d4593fe73a7eb767",
+   36860
+  ],
+  "Core/lang/CoreStrings_ko_KR.xml": [
+   "cf72b0f7486497669aa487dc5701a9c1",
+   37804
+  ],
+  "Core/lang/CoreStrings_nl_NL.xml": [
+   "4a0b84baf972475c617687fdfc8c33de",
+   55656
+  ],
+  "Core/lang/CoreStrings_no_NO.xml": [
+   "a6e91e42661f95a941f380830ccd2661",
+   52602
+  ],
+  "Core/lang/CoreStrings_pl_PL.xml": [
+   "9fe094e9c90dfe53fb7f7c0de55173a6",
+   55116
+  ],
+  "Core/lang/CoreStrings_pt_BR.xml": [
+   "b3db8ea397652a80a3f979db86572d59",
+   59156
+  ],
+  "Core/lang/CoreStrings_pt_PT.xml": [
+   "1ae0144b8aa753e48a5959542a0955d0",
+   56416
+  ],
+  "Core/lang/CoreStrings_ru_RU.xml": [
+   "b5dd0e0805c40c13891a4c76e93f8b4d",
+   51140
+  ],
+  "Core/lang/CoreStrings_sv_SE.xml": [
+   "e4d0619db5969edfa17fedda8a593636",
+   53286
+  ],
+  "Core/lang/CoreStrings_th_TH.xml": [
+   "e7fe8d77872077378a9b912341e4f629",
+   50626
+  ],
+  "Core/lang/CoreStrings_zh_CN.xml": [
+   "f271a96866bf804dd1d86aa3e7a44d00",
+   30328
+  ],
+  "Core/lang/CoreStrings_zh_TW.xml": [
+   "a4afd3421d274fc934c4e1183c735a3b",
+   30748
+  ],
+  "Core/libeay32.dll": [
+   "c19e07810d22a48f22167a0720114aa5",
+   1032192
+  ],
+  "Core/msvcp80.dll": [
+   "4c8a880eabc0b4d462cc4b2472116ea1",
+   548864
+  ],
+  "Core/msvcr80.dll": [
+   "e4fece18310e23b1d8fee993e35e7a6f",
+   626688
+  ],
+  "Core/phonon4.dll": [
+   "71e0551dc03cd786fdede81c564e51a8",
+   258048
+  ],
+  "Core/ssleay32.dll": [
+   "4812428b4ab5dcda11a9af1a4f6750dc",
+   212992
+  ],
+  "buttonData.ini": [
+   "de10b9fb353aebbca0d3808fb271d7b9",
+   92890
+  ],
+  "buttonDataKeyBoardMouse.ini": [
+   "0d4d3cf16c768097993924e2ae5f4142",
+   4130
+  ],
+  "buttonDataXenon.ini": [
+   "a896d1ead73961074dc5321df20c665d",
+   5286
+  ],
+  "cards_patch.bh": [
+   "b22e498d98120ec8475e3a2647ecda12",
+   1296
+  ],
+  "cards_patch.big": [
+   "406eb5894b16a4a30efdcc3a9fdfcab8",
+   943634
+  ],
+  "data/ant.cbac": [
+   "b90de55f1d230bd7f368aa6a2038405c",
+   25073871
+  ],
+  "data/common.cbac": [
+   "eb9f82d489e9faec14e216d04f94c6a9",
+   199772
+  ],
+  "data/fifarna/debug/rnaSerial1.bin": [
+   "f750a6005f764b6ee372a3132fc3f8b1",
+   52512219
+  ],
+  "data/fifarna/debug/rnaSerial1_gpucrash.bin": [
+   "e85fa44509b1a010e8365786c91127b7",
+   15901225
+  ],
+  "data/fifarna/debug/rnaSerial2.bin": [
+   "1939a8d61553f4f5bfa5adf121a31a9e",
+   8388608
+  ],
+  "data/loc/locale.big": [
+   "a528bfa7c6be8ce862225c117a563796",
+   49689696
+  ],
+  "data/movies/FIFA12_ATTR.vp6": [
+   "99480edcef008a583a83cfb844a2f416",
+   87622308
+  ],
+  "data/movies/POW.vp6": [
+   "0818b1327c312c484c9ee9cf4af2d09b",
+   141522576
+  ],
+  "data/movies/POW_fr.vp6": [
+   "afbdf9d21541318efd4b5ac7499b18d8",
+   141416724
+  ],
+  "data/movies/bootflowintro_MARKER.vp6": [
+   "5a7ce6ef5027fb49fac567a6f132f9ba",
+   4313756
+  ],
+  "data/movies/bootflowoutro.vp6": [
+   "733532cda4df59e0c96c55206f4856be",
+   1727484
+  ],
+  "data/ui/artAssets/czdata.bh": [
+   "5682c1167fc25f8dac685c0416109d81",
+   239036
+  ],
+  "data/ui/artAssets/czdata.big": [
+   "c90d1dd4dab60ec44fe736409c60858c",
+   125769120
+  ],
+  "data/ui/external/ion_fut/screens/security/futSecurityQuestion.big": [
+   "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+   154172
+  ],
+  "data/ui/external/ion_fut/screens/security/futSecurityQuestion_-1.big": [
+   "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+   154172
+  ],
+  "data/ui/external/ion_fut/screens/security/futSecurityQuestion_0.big": [
+   "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+   154172
+  ],
+  "data/ui/external/ion_fut/screens/security/futSecurityQuestion_1.big": [
+   "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+   154172
+  ],
+  "data/ui/external/ion_fut/screens/security/notfound.big": [
+   "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+   154172
+  ],
+  "data/ui/external/ion_fut/ux/nav/fut.nav": [
+   "ce33df847b2190050aa99a5b982cb35a",
+   5085
+  ],
+  "data/ui/imgAssets/czdata.bh": [
+   "8dddd2c606949c9b8ef64416599f30ce",
+   48436
+  ],
+  "data/ui/imgAssets/czdata.big": [
+   "bf3b12637f348fbef38b29cde63a2f91",
+   28188028
+  ],
+  "data/ui/imgAssets/heads/2dheads0.bh": [
+   "328aa7093e4d705fbfff8394fff84669",
+   25696
+  ],
+  "data/ui/imgAssets/heads/2dheads0.big": [
+   "e861c87335c7b0c6dde3500bdfd89237",
+   9155499
+  ],
+  "data/ui/imgAssets/heads/2dheads1.bh": [
+   "f612603d792c3132ae053644258519da",
+   79256
+  ],
+  "data/ui/imgAssets/heads/2dheads1.big": [
+   "a02a749c7ba7e634da45fd1a78aa720d",
+   27929549
+  ],
+  "data/ui/imgAssets/heads/2dheads2.bh": [
+   "126fd39a67b06235bdad3b6b64318eda",
+   38636
+  ],
+  "data/ui/imgAssets/heads/2dheads2.big": [
+   "a766bf5adcee8b6e977aef931519e55a",
+   13523476
+  ],
+  "data/ui/imgAssets/heads/2dheads3.bh": [
+   "59a5b34b10c410ebe8e28e3cc0953f86",
+   155436
+  ],
+  "data/ui/imgAssets/heads/2dheads3.big": [
+   "6f69604efe3944bce8e76330fd288625",
+   54392150
+  ],
+  "data0.bh": [
+   "7bc01e26f7b6d54a0d39b35ace46fd9c",
+   3936
+  ],
+  "data0.big": [
+   "02ba6df6bb4c691b4b382e51c5c5610f",
+   10236756
+  ],
+  "data1.bh": [
+   "9ecc91ba29c784896ed800c703b2b325",
+   217756
+  ],
+  "data1.big": [
+   "8209058d25ae1227474191e4d988ba32",
+   205471276
+  ],
+  "data2.bh": [
+   "c80cfd98d2bc2b7d257b2d035bbd42f3",
+   3036
+  ],
+  "data2.big": [
+   "0c4b95b17814b2c89a0d7e715226d65e",
+   827959097
+  ],
+  "data3.bh": [
+   "45e2370d5fc54a02db2f12890a9a7ea4",
+   331796
+  ],
+  "data3.big": [
+   "b3958f1843165b032231350ea7cb7693",
+   1253865025
+  ],
+  "data4.bh": [
+   "820314b3d7792487144fe275988755d7",
+   36
+  ],
+  "data4.big": [
+   "ae3bbb45b1f09fc02d232eb82706fc3a",
+   22433552
+  ],
+  "data5.bh": [
+   "0626ab9df0a600d5cdd146de7632c842",
+   36
+  ],
+  "data5.big": [
+   "6521151f4411a805a40c056d741b65f6",
+   76337360
+  ],
+  "data6.bh": [
+   "888bf483703468b2b43792cea8a07770",
+   516
+  ],
+  "data6.big": [
+   "9effa0ce8ba1b0bb7d7be9e415c36a5f",
+   1823590032
+  ],
+  "data7.bh": [
+   "37a94f130c2582fbeceea0f3795b771a",
+   38136
+  ],
+  "data7.big": [
+   "90df6f3c761dcf350c7053b3f438bb79",
+   284680323
+  ],
+  "dlc/dlc_CardsDLL/dlc.toc": [
+   "ce986b84f4405aca39faebe36cde219d",
+   868
+  ],
+  "dlc/dlc_CardsDLL/dlc/CardsDLLzf.dll": [
+   "255c0aeab627bde48977a2051f553175",
+   1051648
+  ],
+  "dlc/dlc_CardsDLL/dlc/cards0.bh": [
+   "5eae19afc68f706a7c5f81dd0bab3c61",
+   43776
+  ],
+  "dlc/dlc_CardsDLL/dlc/cards0.big": [
+   "6acd7d3f42556f112ff40cb685b1f88f",
+   22272298
+  ],
+  "dlc/dlc_CardsDLL/info.dlc": [
+   "c816af7281f8be21cde81ab07eed7dd8",
+   403
+  ],
+  "dlc/dlc_FootballCompEng/dlc/FootballCompEng/FootballCompEngzf.dll": [
+   "bbe77c7b9fc1c1719ebb96df95e3a9c7",
+   415232
+  ],
+  "dlc/dlc_eurodll/dlc/eurodll/eurodllzf.dll": [
+   "fe58b815943c47c8903fee95eec80995",
+   593408
+  ],
+  "dlc/dlc_powdll/dlc/powdll/powdllzf.dll": [
+   "79d5707088617a8af86bc27a351eafa8",
+   298496
+  ],
+  "eng_us.bh": [
+   "989558812ee4fe3e57bb3ab663088b48",
+   36
+  ],
+  "eng_us.big": [
+   "01532a02999621341e96acff3820be0f",
+   461938040
+  ],
+  "eng_us_2.bh": [
+   "6961292aa6c3ad321462872b53c478f6",
+   36
+  ],
+  "eng_us_2.big": [
+   "5e3634f55e5ad41b5f9aeb5ff165e8c8",
+   383322656
+  ],
+  "fifa.exe": [
+   "1f4d172ade0f051dff594a5de82d9389",
+   23449504
+  ],
+  "fifa.exe.bak": [
+   "7a42135a456e5c8154ff3dd5be4b3db4",
+   23449504
+  ],
+  "fifa.par": [
+   "ed515064c2ce84984723a4c21d7b9207",
+   664
+  ],
+  "fifa_standalone_test.exe": [
+   "0866bb81e184776579ab729da46893e6",
+   23449504
+  ],
+  "fifapc.ico": [
+   "7c9e0796ecf44a6e4fe0aa93c0c7c4ea",
+   32783
+  ],
+  "fifasetup/VideoCards.xml": [
+   "52041325b3a679b06ff11f388c98bde3",
+   18620
+  ],
+  "fifasetup/VideoCardsLevelDetails.xml": [
+   "0b694d62f848ca9a3f71279d02d9039b",
+   485
+  ],
+  "fifasetup/af/fifaconfig.resources.dll": [
+   "4c7be706277cbef22df8c629aa947411",
+   307200
+  ],
+  "fifasetup/cs-CZ/fifaconfig.resources.dll": [
+   "599b5c8d2a3dc76619c444c2755e94bc",
+   32768
+  ],
+  "fifasetup/de-DE/fifaconfig.resources.dll": [
+   "7875568e191d3db74ea7baa63c249f49",
+   32768
+  ],
+  "fifasetup/es-ES/fifaconfig.resources.dll": [
+   "3a1baf60bfb07128229f3d54316aec2c",
+   32768
+  ],
+  "fifasetup/es-MX/fifaconfig.resources.dll": [
+   "eae12f7940363c20553df33742565d4e",
+   32768
+  ],
+  "fifasetup/fifaconfig.exe": [
+   "41cbe4ffc7965f69bf3af0dce0f30f2a",
+   304640
+  ],
+  "fifasetup/fifasetup_default.ini": [
+   "b92129613451de39225baa18960c3992",
+   125
+  ],
+  "fifasetup/fr-FR/fifaconfig.resources.dll": [
+   "2207dcd73aea83efe217dd4824726db8",
+   32768
+  ],
+  "fifasetup/hu-HU/fifaconfig.resources.dll": [
+   "499ec76590ee802d780d7c7fa1435929",
+   32768
+  ],
+  "fifasetup/it-IT/fifaconfig.resources.dll": [
+   "6ba83e59cda6563793294c81f2bdb0a1",
+   32768
+  ],
+  "fifasetup/ja-JP/fifaconfig.resources.dll": [
+   "026333c5bb8dd9d5c3c424026e042327",
+   24576
+  ],
+  "fifasetup/ko-KR/fifaconfig.resources.dll": [
+   "d2d5b530b83e5226b9a3e44be6f07faa",
+   24576
+  ],
+  "fifasetup/nl-NL/fifaconfig.resources.dll": [
+   "5960c2d2677e257559011f1aa49f8834",
+   32768
+  ],
+  "fifasetup/no/fifaconfig.resources.dll": [
+   "e96165ee49d0bae7f23e23dc015e0c49",
+   24576
+  ],
+  "fifasetup/pl-PL/fifaconfig.resources.dll": [
+   "0458a9bbee309310f3029576c9b5cfc5",
+   32768
+  ],
+  "fifasetup/pt-PT/fifaconfig.resources.dll": [
+   "f278a4ca94c220abada1a3064396ad64",
+   32768
+  ],
+  "fifasetup/resources/Controllers.PNG": [
+   "811925cc7be0a75e47fe6aa698485180",
+   388721
+  ],
+  "fifasetup/resources/FIFASetup.PNG": [
+   "ce99936e124b4788396ce704d205aef3",
+   819872
+  ],
+  "fifasetup/resources/Keyboard.PNG": [
+   "804d0549f41210e14cdcc244672134ae",
+   119105
+  ],
+  "fifasetup/resources/mainSetupButtonDisabled.png": [
+   "e9e3a9f484abc2204b0b843a58a0fa8e",
+   714
+  ],
+  "fifasetup/resources/mainSetupButton_off.png": [
+   "528dce7e48b84122445bf4c12ccfc8f0",
+   877
+  ],
+  "fifasetup/ru-RU/fifaconfig.resources.dll": [
+   "a73f7667c715fd1be85c0cb42dbe0d8d",
+   32768
+  ],
+  "patch.bh": [
+   "8808eca515ee28fbe4ad08f53b432bcf",
+   3436
+  ],
+  "patch.big": [
+   "4e0050b7b4b32f5b19b6965e3f28b696",
+   9868992
+  ],
+  "rna.ini": [
+   "995f34c2aafc59dec5b3bea7c748723b",
+   150
+  ],
+  "user.ini": [
+   "a50b86753661c7c43e91327d340cccc0",
+   12045
+  ],
+  "user.ini.bak_uselocal": [
+   "c2fe91fa291970a26c2ad6cc8ef54e77",
+   11113
+  ]
+ },
+ "root_hint": "C:\\Program Files\\EA Games\\FIFA 12\\Game"
+}

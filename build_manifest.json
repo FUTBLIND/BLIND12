@@ -2,8 +2,8 @@
  "files": [
   {
    "path": "README.md",
-   "md5": "e6fcb0791f34a47658efa9a67f578340",
-   "bytes": 5808
+   "md5": "b125fd066e9cc4ecc58053ce78ff33b8",
+   "bytes": 7539
   },
   {
    "path": "SETUP.cmd",
@@ -441,9 +441,19 @@
    "bytes": 9962
   },
   {
+   "path": "server/game_manifest.json",
+   "md5": "4463fde70d8afaf36663aec588bb15ba",
+   "bytes": 15464
+  },
+  {
+   "path": "server/gamehash.py",
+   "md5": "873a6f7385387ad19f2e66cfd43ece6d",
+   "bytes": 8799
+  },
+  {
    "path": "server/gamepath.py",
-   "md5": "97b00e4cfdcee7c2746237af34d707c3",
-   "bytes": 7169
+   "md5": "1f2fbce117f3461f1180fb4e9242333c",
+   "bytes": 10055
   },
   {
    "path": "server/identity.py",
@@ -592,12 +602,12 @@
   },
   {
    "path": "setup.py",
-   "md5": "905df0ec00cf4c82fdae712c06dfb06f",
-   "bytes": 14031
+   "md5": "844820edd2dfe379249a9c83da206a91",
+   "bytes": 14957
   }
  ],
- "count": 119,
- "bytes": 59347419,
+ "count": 121,
+ "bytes": 59377225,
  "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
  "excluded_personal": [
   "club.json",
