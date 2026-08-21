@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="NOR_NO" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Har du behov for ALT SAMMEN? Alt-i-ett-pakken inneholder alt det de andre pakkene fra skapersenteret har å tilby:
+- Turneringspakke
+- Karrierespillpakke
+- Lagpakke
+- 10 lag til-pakke
+- Lisenspakke
+- Full kontroll-pakke
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>Skapersenteret – Alt-i-ett-pakke</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Lyst til å spille KARRIERESPILLET med lagene dine fra Skapersenteret? Skaff deg karrierespillpakken for å få enda mer ut av Skapersenteret!
+
+Karrierespillpakken gir deg mulighet til å:
+- Bruke lag fra Skapersenteret i Karrierespillet ved å bytte lag når du starter en ny karriere.
+- Legge til og spille i en nedlastet liga fra Skapersenteret i Karrierespillet, ved å velge den når du starter en ny karriere.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>Skapersenteret – Karrierespillpakke</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Er du bare nødt til å bruke LISENSIERTE STADIONER, SPILLERE og LAG? Skaff deg lisenspakken!
+Lisenspakken lar deg:
+- Bruke lisensierte spillere på lag som du oppretter på Skapersenterets nettside (Creation Centre).
+- Bruke lisensierte lag i turneringene du oppretter på Skapersenterets nettside.
+- Velge lisensierte stadioner til lagene og turneringene du oppretter på nettsiden.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>Skapersenteret – Lisenspakke</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Må du bare ha KONTROLL på ALT? Skaff deg full kontroll-pakken for å få enda mer ut av Skapersenteret!
+Full kontroll-pakken lar deg styre showet gjennom funksjoner som:
+- Muligheten til å tildele en ekstra feiring.
+- Muligheten til å velge og rangere fire foretrukne posisjoner for hver spiller.
+- Valg av turneringsball.
+- Valg av tredjedrakt.
+- Muligheten til å skape egne formasjoner.
+- Og mye mer!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>Skapersenteret – Full kontroll-pakke</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Lysten på FLERE LAG? Skaff deg lagpakken for å få mer ut av Skapersenteret!
+
+Lagpakken gir deg:
+- Plass til å opprette ytterligere 50 lag på nettsiden.
+- Plass til å laste ned 24 ekstra lag.
+- Mulighet til å laste opp en egen klubblogo som du kan benytte på alle lagene du oppretter på nettsiden.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>Skapersenteret – Lagpakke</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Sulten på ENDA FLERE LAG? Skaff deg 10 lag til-pakken for å få mulighet til å laste ned ytterligere 10 lag.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>Skapersenteret – 10 lag til-pakke</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Trenger du FLERE TURNERINGER? Skaff deg turneringspakken for å få mer ut av Skapersenteret!
+Turneringspakken gir deg:
+- Plass til å opprette 5 turneringer på nettsiden.
+- Plass til å laste ned 5 turneringer.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>Skapersenteret – Turneringspakke</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Prøv først og kjøp etterpå UEFA EURO 2012™-tilleggspakken til EA SPORTS FIFA 12! Spill fotball-EM 2012 med autentiske lag og spillere. Bygg ditt eget drømmelag og dominer i Europa i den helt nye ekspedisjonsmodusen. Spill utfordringer hentet fra den virkelige turneringen. Konkurrer på nettet om heder og ære i Online UEFA EURO 2012™.
+Følgende språk støttes: Engelsk, fransk, tysk, italiensk, spansk, nederlandsk og polsk.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>UEFA EURO 2012™ Prøveversjon</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Kjøp UEFA EURO 2012™-tilleggspakken til EA SPORTS FIFA 12 med Ea SPORTS Season Ticket-rabatt! Spill finalekampene i fotball-EM 2012 med autentiske lag og spillere. Bygg ditt eget drømmelag og dominer i Europa i den helt nye ekspedisjonsmodusen. Spill utfordringer hentet fra den virkelige turneringen. Konkurrer på nettet om heder og ære i Online UEFA EURO 2012™.
+Følgende språk støttes: Engelsk, fransk, tysk, italiensk, spansk, nederlandsk og polsk.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Skaff deg UEFA EURO 2012™-tilleggspakken til FIFA 12! Spill finalekampene i fotball-EM 2012 med autentiske lag og spillere. Bygg ditt eget drømmelag og dominer i Europa i den helt nye ekspedisjonsmodusen. Spill utfordringer hentet fra den virkelige turneringen. Konkurrer på nettet om heder og ære i Online UEFA EURO 2012™.
+Følgende språk støttes: Engelsk, fransk, tysk, italiensk, spansk, nederlandsk og polsk.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Bygg opp ditt eget Ultimate Team med alle favorittspillerne dine, vær manager for ett eller flere lag og konkurrer i turneringer som oppdateres dynamisk på nettet.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Bygg opp ditt eget Ultimate Team med alle yndlingsfotballstjernene dine på laget. Velg å være trener for ett eller flere lag, og konkurrer i netturneringer med dynamisk oppdatering.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Barclays Premier League, Ligue 1, Serie A, Bundesliga &amp; Liga BBVA. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Live sesong - Alle ligaer</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Barclays Premier League, Ligue 1, Serie A, Bundesliga &amp; Liga BBVA til redusert pris. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Livesesong - Alle ligaer (20% avslag)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Barclays Premier League. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Livesesong – Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Barclays Premier League til redusert pris. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Livesesong – Barclays PL (20% avslag)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Ligue 1. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Live sesong - Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Ligue 1 til redusert pris. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Livesesong - Ligue 1 (20% avslag)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Bundesligaen. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Live sesong - Bundesliga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Bundesligaen til redusert pris. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Livesesong – Bundesliga (20% avslag)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Serie A. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Live sesong - Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Serie A til redusert pris. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Livesesong – Serie A (20% avslag)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Liga BBVA. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Live sesong - Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Skaff deg livesesongtjenesten for Liga BBVA til redusert pris. Oppdater spillerformen i spillet hver uke, basert på hvordan spillerne presterer i virkeligheten. Last ned ekte, oppdaterte kampoppsett hver uke til det nye spillet Min livesesong. Kjøpes én gang og er dermed aktivert for resten av 11/12-sesongen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Livesesong – Liga BBVA (20% avslag)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Tre inn i livesesongenes verden og omskriv historien til klubben din! Denne prøveversjonen lar deg spille om igjen opptil 5 kamper fra virkeligheten, i det helt nye spillet Min livesesong. Når du har aktivert prøveversjonen går du tilbake til hovedmenyen, finner livesesongmenyen og velger Min livesesong. Velg en liga og en klubb for å spille 5 kamper. Liker du det? Kom tilbake til FIFA 12 Butikken for å kjøpe fullversjonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>Min livesesong prøveperiode</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

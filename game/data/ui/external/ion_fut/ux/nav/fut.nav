@@ -1,0 +1,294 @@
+{
+	"name":"uberState",
+	"states":
+	[
+{
+	"name":"rootState",
+	"onEnter":[["invoke",["NAVPROBE"]]],
+	"initial":
+	{
+		"targets":["LegacyState"]
+	},
+	"transitions":
+	[
+		{
+			"event":"returnToLegacy",
+			"targets":["LegacyState"]
+		},
+		{
+			"event":"FUT_CREATE_CLUB",
+			"targets":["CreateClubState"]
+		}
+	],
+	"states":
+	[
+		{
+			"name":"LegacyState",
+			"transitions":
+			[
+				
+				{
+					"event":"FUT_CREATE_CLUB",
+					"targets":["CreateClubState"]
+				},
+				
+				{
+					"event":"FUT_AUCTION_SEARCH",
+					"targets":["AuctionSearchState"]
+				},
+				
+				{
+					"event":"FUT_LEADERBOARDS",
+					"targets":["LeaderboardsState"]
+				}
+			]
+		},
+		{
+			"name":"AdvanceCreateClubState",
+			"transitions":
+			[
+				
+				{
+					"event":"legacy_entrypoint_done",
+					"targets":["LegacyState"]
+				}
+			],
+			"onEnter":
+			[
+				["advanceLegacy",["external/ion_fut/screens/security/futSecurityQuestion"]],
+				["invoke",["legacy_entrypoint_done"]]
+			]
+			
+			
+		},
+		{
+			"name":"BackToLegacyState",
+			"transitions":
+			[
+				
+				{
+					"event":"legacy_entrypoint_done",
+					"targets":["LegacyState"]
+				}
+			],
+			"onEnter":
+			[
+				["backLegacy", []],
+				["invoke",["legacy_entrypoint_done"]]
+			]
+		},
+		{
+			"name":"LegacyStateLogout",
+			"transitions":
+			[
+				
+				{
+					"event":"legacy_entrypoint_done",
+					"targets":["LegacyState"]
+				}
+			],
+			"onEnter":
+			[
+				["advanceLegacy",["external/ion_fut/screens/fcc_logout"]],
+				["invoke",["legacy_entrypoint_done"]]
+			]
+		},
+		{
+			"name":"LegacyStateError",
+			"transitions":
+			[
+				
+				{
+					"event":"legacy_entrypoint_done",
+					"targets":["LegacyState"]
+				}
+			],
+			"onEnter":
+			[
+				["errorLegacy", []],
+				["invoke",["legacy_entrypoint_done"]]
+			]
+		},
+		{
+			"name":"CreateClubState",
+			"initial":
+			{
+				"targets":["UserEntrySubState"]
+			},
+			"onEnter":
+			[
+				["loadView",["CreateClubView"]]
+			],
+			"onExit":
+			[
+                ["exec", ["unloadView(_c, \"CreateClubView\", _properties)"]]
+			],
+			"states":
+			[
+				
+				{
+					"name":"UserEntrySubState",
+					"transitions":
+					[
+						
+						{
+							"event":"confirm",
+							"targets":["ConfirmCreateClubSubState"]
+						},
+						
+						{
+							"event":"back",
+							"targets":["LegacyStateLogout"],
+                            "properties":
+                            {
+                                "direction":"back"
+                            }
+						}
+					]
+				},
+				
+				{
+					"name":"ConfirmCreateClubSubState",
+					"transitions":
+					[
+						{
+							"event":"advance",
+							"targets":["AdvanceCreateClubState"]
+						},
+						{
+							"event":"error",
+							"targets":["CreateClubErrorSubState"]
+						},
+						{
+							"event":"profanity",
+							"targets":["CreateClubProfanitySubState"]
+						},
+						{
+							"event":"back",
+							"targets":["UserEntrySubState"]
+						}
+					],
+					"onEnter":
+					[
+						["loadView",["createClubPopup"]]
+					],
+					"onExit":
+					[
+						["unloadView",["createClubPopup"]]
+					]
+				},
+					{
+					"name":"CreateClubErrorSubState",
+					"transitions":
+					[
+						
+						{
+							"event":"advance",
+							"targets":["LegacyStateError"]
+						}
+					],
+					"onEnter":
+					[
+						["pushPopup",["CreateClubError"]]
+					],
+					
+					"onExit":
+					[
+						["popPopup",[]]
+					]
+				},
+				{
+					"name":"CreateClubProfanitySubState",
+					"transitions":
+					[
+						{
+							"event":"advance",
+							"targets":["UserEntrySubState"]
+						}
+					],
+					"onEnter":
+					[
+						["pushPopup",["CreateClubProfanity"]]
+					],
+					
+					"onExit":
+					[
+						["popPopup",[]]
+					]
+				}
+			]
+		},
+		
+		{
+			"name":"AdvanceAuctionSearchState",
+			"transitions":
+			[
+				
+				{
+					"event":"legacy_entrypoint_done",
+					"targets":["LegacyState"]
+				}
+			],
+			"onEnter":
+			[
+				["advanceLegacy",["external/ion_fut/screens/trading/searchresults"]],
+				["invoke",["legacy_entrypoint_done"]]
+			]
+		},
+		{
+			"name":"AuctionSearchState",
+			"transitions":
+			[
+				
+				{
+					"event":"back",
+					"targets":["BackToLegacyState"],
+                    "properties":
+                    {
+                        "direction":"back"
+                    }
+				},
+	
+{
+"event":"advance",
+"targets":["AdvanceAuctionSearchState"]
+}
+],
+"onEnter":
+[
+["loadView",["AuctionSearchView"]]
+],
+
+"onExit":
+[
+                ["exec", ["unloadView(_c, \"AuctionSearchView\", _properties)"]]
+]
+},
+{
+"name":"LeaderboardsState",
+"transitions":
+[
+
+{
+"event":"back",
+"targets":["BackToLegacyState"],
+                    "properties":
+                    {
+                        "direction":"back"
+                    }
+}
+],
+"onEnter":
+[
+["loadView",["LeaderboardsView"]]
+],
+
+"onExit":
+[
+                ["exec", ["unloadView(_c, \"LeaderboardsView\", _properties)"]]
+]
+}
+]
+}
+]
+}

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="DAN_DK" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Har du brug for DET HELE? Få fat i Alt-i-en-pakken, der indeholder alt det, alle de andre pakker i Creation Centre indeholder:
+- Turneringspakken
+- Karrierepakken
+- Holdpakken
+- 10-holds-pakken
+- Licenspakken
+- Opsætningspakken
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>Creation Centre - Alt-i-en-pakken</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Er du vild efter at spille KARRIERESPILLET med dine hold fra Creation Centre? Så få fat i Karrierepakken og få endnu mere ud af Creation Centre!
+
+Når du har Karrierepakken, kan du:
+- Bruge hold fra Creation Centre i karrierespillet ved at bytte hold, når du starter en Ny karriere.
+- Tilføje og spille i en liga fra Creation Centre i dit karrierespil, ved at vælge den, når du starter en Ny karriere.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>Creation Centre - Karrierepakken</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Vil du gerne bruge OFFICIELLE STADIONER, SPILLERE og HOLD? Så skaf dig Licenspakken!
+Når du har Licenspakken, kan du:
+- Bruge spillere, der kræver licens, på de hold fra Creation Centre, du laver på hjemmesiden.
+- Bruge hold, der kræver licens, i de turneringer du opretter på Creation Centre-hjemmesiden.
+- Bruge stadioner, der kræver licens, til de hold og turneringer, du opretter på hjemmesiden.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>Creation Centre - Licenspakken</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Går du virkelig op i at lave din helt egen opsætning? Så få fat i Opsætningspakken, så du kan gøre Creation Centre endnu bedre!
+Når du har Opsætningspakken kan du rigtigt slå dig løs på hjemmesiden og gøre følgende:
+- Tildele endnu en jubelscene ud over det normale.
+- Give spillere op til tre nye favoritpositioner på banen.
+- Vælge turneringsbold.
+- Vælge en tredje holdtrøje.
+- Lave en helt egen formation.
+- Plus meget andet!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>Creation Centre - Opsætningspakken</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Vil du gerne have FLERE HOLD? Så få fat i Holdpakken, så du kan få dit ønske opfyldt på Creation Centre!
+
+Når du får fat i Holdpakken, kan du:
+- Få 50 ekstra holdpladser på hjemmesiden.
+- Få plads til 24 ekstra downloadede hold.
+- Uploade eget holdlogo til alle hold, du opretter på hjemmesiden.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>Creation Centre - Holdpakken</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Har du brug for ENDNU FLERE HOLD? Så få fat i 10-holds-pakken, der giver dig plads til 10 ekstra downloadede hold.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>Creation Centre - 10-holds-pakken</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Vil du have FLERE TURNERINGER? Så få fat i Turneringspakken!
+Når du har pakken får du:
+- 5 pladser til at oprette turneringer på hjemmesiden.
+- 5 downloadpladser til turneringer.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>Creation Centre - Turneringspakken</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Prøv UEFA EURO 2012™-udvidelsespakken til EA SPORTS FIFA 12, før du køber den! Spil UEFA EURO 2012™ med de autentiske hold og spillere. Skab dit eget drømmehold, og læg Europa for dine fødder i den nye spiltype Expedition. Prøv kræfter med udfordringer baseret på den faktiske turnering. Kæmp for hæder og ære online i Online UEFA EURO 2012™.
+
+Understøttede tekstsprog: Engelsk, fransk, tysk, italiensk, spansk, hollandsk og polsk.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>UEFA EURO 2012™ – Prøveversion</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Få rabat på UEFA EURO 2012™-udvidelsespakken til EA SPORTS FIFA 12 med EA SPORTS Season Ticket! Spil UEFA EURO 2012™ med de autentiske hold og spillere. Skab dit eget drømmehold, og læg Europa for dine fødder i den nye spiltype Expedition. Prøv kræfter med udfordringer baseret på den faktiske turnering. Kæmp for hæder og ære online i Online UEFA EURO 2012™.
+
+Understøttede tekstsprog: Engelsk, fransk, tysk, italiensk, spansk, hollandsk og polsk.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Få fat på UEFA EURO 2012™-udvidelsespakken til EA SPORTS FIFA 12! Spil UEFA EURO 2012™ med de autentiske hold og spillere. Skab dit eget drømmehold, og læg Europa for dine fødder i den nye spiltype Expedition. Prøv kræfter med udfordringer baseret på den faktiske turnering. Kæmp for hæder og ære online i Online UEFA EURO 2012™.
+
+Understøttede tekstsprog: Engelsk, fransk, tysk, italiensk, spansk, hollandsk og polsk.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Byg dit eget Ultimate Team med alle dine yndlingsstjerner. Vælg at styre et eller flere hold, og konkurrer i dynamisk opdaterede online-turneringer.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Byg dit eget ultimative hold med alle dine yndlingsspillere. Vælg, om du vil træne ét eller flere hold, og spil med i onlineturneringer, der opdateres løbende.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA - Det Ultimative Hold</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Barclays Premier League, Ligue 1, Serie A, Bundesliga &amp; Liga BBVA. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Live-sæson - Alle ligaer</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Barclays Premier League, Ligue 1, Serie A, Bundesliga &amp; Liga BBVA. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Live-sæson - Alle ligaer (20 % rabat)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Barclays Premier League. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Live-sæson - Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Barclays Premier League. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Live-sæson - Barclays PL (20 % rabat)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Ligue 1. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Live-sæson - Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Ligue 1. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Live-sæson - Ligue 1 (20 % rabat)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Bundesligaen. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Live-sæson - Bundesligaen</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Bundesligaen. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Live-sæson - Bundesliga (20 % rabat)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Serie A. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Live-sæson - Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Serie A. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Live-sæson - Serie A (20 % rabat)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Liga BBVA. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Live-sæson - Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Få Live-sæson-servicen til Liga BBVA. Opdater spillerform, der er baseret på spillernes virkelige præstationer, til spillet hver uge. Download opdaterede kampe hver uge til spiltypen Min Live-sæson. Betal én gang for at få adgang til resten af 11/12-sæsonen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Live-sæson - Liga BBVA (20 % rabat)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Deltag i Live-sæsonen, og omskriv din klubs historie! Denne prøveperiode lader dig omspille op til fem kampe fra den virkelige verden i den helt nye spiltype Min Live-sæson. Når du har aktiveret prøveperioden, skal du gå tilbage til hovedmenuen og derfra ind i Live-sæson-menuen og vælge Min Live-sæson. Vælg en liga og en klub og spil fem kampe. Er det noget for dig? Så kom tilbage til FIFA 12-butikken, og køb den fulde version.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>Prøveperiode - Min Live-sæson</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

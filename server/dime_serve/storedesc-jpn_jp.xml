@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="JPN_JP" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>すべてが欲しい？　オールインワンパックを 入手して、クリエーションセンターパックを すべて獲得しましょう：
+- トーナメントパック
+- キャリアモードパック
+- チームパック
+- さらに10チームパック
+- ライセンサーパック
+- シリアスエディターパック</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>CC - オールインワンパック</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>キャリアモードをクリエーションセンターのチームで戦いたい？　キャリアモードパックを入手して、クリエーションセンターをもっと楽しみましょう！
+
+キャリアモードパックを入手すると：
+- 新しいキャリアを選択する時に チームを交換すれば、クリエーションセンターの チームをキャリアモードで使えます。
+- 新しいキャリアを選択する時に、 ダウンロードしたクリエーションセンターの リーグを追加しプレイできます。</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>CC - キャリアモードパック</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>ライセンスを受けたスタジアムや選手、チームを使いたい？　ライセンサーパックを入手しましょう！
+ライセンサーパックを入手すると：
+- ウェブサイト上で作成する クリエーションセンターチームに、 ライセンスを受けた選手を使用できます。
+- ウェブサイト上で作成する クリエーションセンタートーナメントに、 ライセンスを受けたチームを使用できます。
+- ウェブサイト上で作成する チームとトーナメントに、ライセンスを 受けたスタジアムを使用できます。</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>CC - ライセンサーパック</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>本格的なカスタマイズを楽しみたい？　シリアスエディターパックを入手して、クリエーションセンターをアップグレードしましょう！
+シリアスエディターパックを入手すると、ウェブサイト上で本格的な編集機能が使えます：
+- 2つ目のセレブレーション （走りと最後のポーズ）を 割り当て。
+- 2つ目／3つ目／4つ目に好むポジションを 各選手に設定。
+- トーナメントのボールを選択。
+- 第三ユニフォームの選択。
+- カスタムフォーメーションの割り当て。
+- などなど！</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>CC - シリアスエディターパック</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>もっとチームが欲しい？　チームパックを入手して、クリエーションセンターをさらに楽しみましょう！
+
+チームパックを入手すると：
+- ウェブサイトに50チームの作成スロットを追加。
+- 24チームのダウンロードスロットを追加。
+- ウェブサイト上で作成したすべてのチームに、 カスタムチームロゴのアップロードが可能。</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>CC - チームパック</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>もっとチームが欲しい？　「+10 チーム」パックを 使えば チームスロットを 10増やす事が出来ます。</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>CC - +10チームパック</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>トーナメントが足りない？　トーナメントパックを入手して、クリエーションセンターをさらに楽しみましょう！
+トーナメントパックを入手すると：
+- ウェブサイト上に5つのトーナメント作成スロット。
+- 5つのトーナメントダウンロードスロット。</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>CC - トーナメントパック</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>EA SPORTS FIFA 12の 拡張パック「UEFA EURO 2012™」。 実在のチームや選手で、UEFA EURO 2012™をプレイ可能。新モード「Expedition」では、ドリームチームを結成して、欧州選手権制覇に挑めます！ 実際のトーナメントをベースとしたチャレンジにも挑戦！ Online UEFA EURO 2012™で、オンラインの頂点を目指すことも！
+英語、フランス語、ドイツ語、イタリア語、スペイン語、オランダ語、ポーランド語に対応。</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>UEFA EURO 2012™ 体験版</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>EA SPORTS FIFA 12の拡張パック「UEFA EURO 2012™」をお買い得価格で！ 実在のチームや選手で、UEFA EURO 2012™ をプレイ可能。 新モード「Expedition」では夢のチームを結成して、欧州選手権制覇に挑め！ 実際のトーナメントをベースとしたチャレンジにも挑戦！ Online UEFA EURO 2012™で、オンラインの頂点を目指すことも！
+英語、フランス語、ドイツ語、イタリア語、スペイン語、オランダ語、ポーランド語に対応。</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>EA SPORTS FIFA 12の拡張パック「UEFA EURO 2012™」。　実在のチームや選手で、UEFA EURO 2012™ をプレイ可能。 新モード「Expedition」では夢のチームを結成して、欧州選手権制覇に挑めます！ 実際のトーナメントをベースとしたチャレンジにも挑戦！ Online UEFA EURO 2012™で、オンラインの頂点を目指すことも！
+英語、フランス語、ドイツ語、イタリア語、スペイン語、オランダ語、ポーランド語に対応。</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>好みのスター選手をすべて入れた 自分のUltimate Teamを作成し、 チームを1つ、または複数管理し、 日々アップデートされる オンライントーナメントで戦いましょう。</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>好みのスター選手をすべて入れた 自分のUltimate Teamを作成し、 チームを1つ、または複数管理し、 日々アップデートされる オンライントーナメントで戦いましょう。</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>ライブシーズンのサービスをバークレイズ・プレミアリーグ、リーグ1、セリエA、ブンデスリーガそしてリーガBBVAで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>LS - 全てのリーグ</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>ライブシーズンのサービスをバークレイズ・プレミアリーグ、リーグ1、セリエA、ブンデスリーガそしてリーガBBVAで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>LS - 全リーグ (20% オフ)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>ライブシーズンのサービスをバークレイズ・プレミアリーグで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>LS - バークレイズ・プレミアリーグ</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>特価でライブシーズンのサービスをバークレイズ・プレミアリーグで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>LS - バークレイズ・プレミアリーグ (20% オフ)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>ライブシーズンのサービスをリーグ1で 使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>LS - リーグ1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>特価でライブシーズンのサービスをリーグ1で使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>LS - リーグ1 (20% オフ)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>ライブシーズンのサービスをブンデスリーガで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>LS - ブンデスリーガ</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>特価でライブシーズンのサービスをブンデスリーガで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>LS - ブンデスリーガ (20% オフ)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>ライブシーズンのサービスをセリエAで 使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>LS - セリエA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>特価でライブシーズンのサービスをセリエAで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>LS - セリエA (20% オフ)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>ライブシーズンのサービスをリーガBBVAで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>LS - リーガBBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>特価でライブシーズンのサービスをリーガBBVAで使いましょう。実際の選手の活躍を元に、毎週選手の調子をアップデート。マイ・ライブ・シーズンモードでは毎週実際に行われるカードをダウンロードできます。一度購入すると11/12シーズン中有効になります。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>LS - リーガ BBVA (20% オフ)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>ライブシーズンで歴史を書き換えましょう！体験版ではマイ・ライブ・シーズンから実際に行われた試合を5試合プレイする事ができます。体験版を有効にしたら、一度メインメニューに戻り、ライブシーズンメニューのマイ・ライブ・シーズンを選択してください。リーグとチームを選択したら、5試合無料でプレイする事ができます。5試合以上プレイしたい場合は、FIFA 12 ストアから完全版を購入しましょう。</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>MLS体験版</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

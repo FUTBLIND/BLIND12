@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+================================================================================
+(c) 2011 Electronic Arts, Inc.
+================================================================================
+-->
+<eastore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../store.xsd">
+  <categories>
+    <category name="all">
+      <item id="EURO2012DLC" />
+      <item id="EURO2012DLCKEY" />
+      <item id="EURO2012DLCDSC" />
+      <item id="LIVESEASONALL" />
+      <item id="LIVESEASONENG" />
+      <item id="LIVESEASONFRA" />
+      <item id="LIVESEASONITA" />
+      <item id="LIVESEASONGER" />
+      <item id="LIVESEASONSPA" />
+      <item id="LIVESEASONALLDISC" />
+      <item id="LIVESEASONENGDISC" />
+      <item id="LIVESEASONFRADISC" />
+      <item id="LIVESEASONITADISC" />
+      <item id="LIVESEASONGERDISC" />
+      <item id="LIVESEASONSPADISC" />
+      <item id="LIVESEASONTRIAL" />
+      <item id="CCALLINONE" />
+      <item id="CCTOURNAMENTS" />
+      <item id="CCCAREERMODE" />
+      <item id="CCTEAMS1" />
+      <item id="CCTEAMS2" />
+      <item id="CCLICENSOR" />
+      <item id="CCSERIOUSEDITOR" />
+    </category>
+    <category name="liveseason">
+      <item id="LIVESEASONALLDISC" />
+      <item id="LIVESEASONENGDISC" />
+      <item id="LIVESEASONFRADISC" />
+      <item id="LIVESEASONITADISC" />
+      <item id="LIVESEASONGERDISC" />
+      <item id="LIVESEASONSPADISC" />
+      <item id="LIVESEASONALL" />
+      <item id="LIVESEASONENG" />
+      <item id="LIVESEASONFRA" />
+      <item id="LIVESEASONITA" />
+      <item id="LIVESEASONGER" />
+      <item id="LIVESEASONSPA" />
+      <item id="LIVESEASONTRIAL" />
+    </category>
+    <category name="creationcentre">
+      <item id="CCALLINONE" />
+      <item id="CCTOURNAMENTS" />
+      <item id="CCCAREERMODE" />
+      <item id="CCTEAMS1" />
+      <item id="CCTEAMS2" />
+      <item id="CCLICENSOR" />
+      <item id="CCSERIOUSEDITOR" />
+    </category>
+    <category name="euro">
+      <item id="EURO2012DLC" />
+      <item id="EURO2012DLCKEY" />
+      <item id="EURO2012DLCDSC" />
+    </category>
+    <!--category name="updates"-->
+    <!-- do not add, category populated at runtime -->
+    <!--/category-->
+  </categories>
+  <!--
+        for the following documentation:
+          "item A" refers to the item whose content id is specified in the "id" attribute of the "dependency" tag
+		  "condition D" refers to the condition tag that is specified in the "cond" attribute of the "dependency" tag
+		  "entitlement E" refers to the entitlement tag that is specified in the "entitlement" attribute of the "dependency" tag
+          "item B" refers to the item whose content id is specified in the type of dependency tag's id attribute
+
+		the "show" attribute governs whether or not the item is shown if its prerequisites are not fulfilled. If show="true" then they are visible but nonpurchasable.
+
+        <preclusion id="<contentid>" />
+                preclusion   is where the purchase of item A, truth of condition D, or presence of entitlement E
+				               "precludes" the purchase of item B
+                id           is the content id of item B
+				show		 true if want to show item B as disabled or false (default) to hide completely
+
+        <prerequisite {id="<contentid>",entitlement="<tag>"} type="{and,or}" />
+                prerequisite  is where item A cannot be purchased before purchasing item B and/or entitlement C
+                id            is the content id of item B
+				entitlement   is the tag of entitlement C
+				cond		  is condition D
+                type          use "and" to link one or more prerequisites as (B and C and D)
+                              use "or" to link one or more prerequisites as (B or C or D)
+
+                Specifying both types "and" and "or" for a single item will result in the "and"
+                prerequisites only being evaluated. Ie. currently it is not possible to form
+                simple expressions combining "and" and "or".
+
+      -->
+  <dependencies>
+    <!-- if All Leagues purchased, can't buy any other types of Live Season items. Preclude even discounted items    because the EASST might expire, and the user could have already bought the discounted item.  Or the user could have bought the non discounted item and then subscribed to EASST -->
+    <dependency id="LIVESEASONALL">
+      <preclusion id="LIVESEASONENG" show="true" />
+      <preclusion id="LIVESEASONFRA" show="true" />
+      <preclusion id="LIVESEASONITA" show="true" />
+      <preclusion id="LIVESEASONGER" show="true" />
+      <preclusion id="LIVESEASONSPA" show="true" />
+      <preclusion id="LIVESEASONTRIAL" show="true" />
+      <preclusion id="LIVESEASONALLDISC" show="false" />
+      <preclusion id="LIVESEASONENGDISC" show="false" />
+      <preclusion id="LIVESEASONFRADISC" show="false" />
+      <preclusion id="LIVESEASONITADISC" show="false" />
+      <preclusion id="LIVESEASONGERDISC" show="false" />
+      <preclusion id="LIVESEASONSPADISC" show="false" />
+    </dependency>
+    <dependency id="LIVESEASONALLDISC" show="false">
+      <prerequisite cond="EASST" type="or" />
+      <preclusion id="LIVESEASONENGDISC" show="true" />
+      <preclusion id="LIVESEASONFRADISC" show="true" />
+      <preclusion id="LIVESEASONITADISC" show="true" />
+      <preclusion id="LIVESEASONGERDISC" show="true" />
+      <preclusion id="LIVESEASONSPADISC" show="true" />
+      <preclusion id="LIVESEASONTRIAL" show="true" />
+      <preclusion id="LIVESEASONALL" show="false" />
+      <preclusion id="LIVESEASONENG" show="false" />
+      <preclusion id="LIVESEASONFRA" show="false" />
+      <preclusion id="LIVESEASONITA" show="false" />
+      <preclusion id="LIVESEASONGER" show="false" />
+      <preclusion id="LIVESEASONSPA" show="false" />
+    </dependency>
+    <dependency id="LIVESEASONENGDISC" show="false">
+      <prerequisite cond="EASST" type="or" />
+      <preclusion id="LIVESEASONENG" show="false" />
+    </dependency>
+    <dependency id="LIVESEASONFRADISC" show="false">
+      <prerequisite cond="EASST" type="or" />
+      <preclusion id="LIVESEASONFRA" show="false" />
+    </dependency>
+    <dependency id="LIVESEASONITADISC" show="false">
+      <prerequisite cond="EASST" type="or" />
+      <preclusion id="LIVESEASONITA" show="false" />
+    </dependency>
+    <dependency id="LIVESEASONGERDISC" show="false">
+      <prerequisite cond="EASST" type="or" />
+      <preclusion id="LIVESEASONGER" show="false" />
+    </dependency>
+    <dependency id="LIVESEASONSPADISC" show="false">
+      <prerequisite cond="EASST" type="or" />
+      <preclusion id="LIVESEASONSPA" show="false" />
+    </dependency>
+    <dependency id="EURO2012DLCDSC" show="false">
+      <prerequisite cond="EASST" type="or" />
+    </dependency>
+    <!-- if Creation Centre All-in-One purchased, can't buy any other types of Creation Centre items (show) -->
+    <dependency id="CCALLINONE">
+      <preclusion id="CCTOURNAMENTS" show="true" />
+      <preclusion id="CCCAREERMODE" show="true" />
+      <preclusion id="CCTEAMS1" show="true" />
+      <preclusion id="CCTEAMS2" show="true" />
+      <preclusion id="CCLICENSOR" show="true" />
+      <preclusion id="CCSERIOUSEDITOR" show="true" />
+    </dependency>
+    <!-- if EASST subscribed to, can't buy any Creation Centre items (show), or the non-discounted items (hide). -->
+    <dependency cond="EASST">
+      <preclusion id="CCALLINONE" show="true" />
+      <preclusion id="CCTOURNAMENTS" show="true" />
+      <preclusion id="CCCAREERMODE" show="true" />
+      <preclusion id="CCTEAMS1" show="true" />
+      <preclusion id="CCTEAMS2" show="true" />
+      <preclusion id="CCLICENSOR" show="true" />
+      <preclusion id="CCSERIOUSEDITOR" show="true" />
+      <preclusion id="LIVESEASONENG" show="false" />
+      <preclusion id="LIVESEASONFRA" show="false" />
+      <preclusion id="LIVESEASONITA" show="false" />
+      <preclusion id="LIVESEASONGER" show="false" />
+      <preclusion id="LIVESEASONSPA" show="false" />
+      <preclusion id="LIVESEASONALL" show="false" />
+      <preclusion id="EURO2012DLCKEY" show="false" />
+    </dependency>
+  </dependencies>
+  <!-- for purchased items which needs to be associated with a nucleus entitlement with a valid OFB entry for reporting -->
+  <nucleusassociations>
+    <xenon id="CCALLINONE" entitlement="CCALLINONE" ofbid="OFB-FIFA:109533103" />
+    <xenon id="CCTOURNAMENTS" entitlement="CCTOURNAMENTS" ofbid="OFB-FIFA:109533104" />
+    <xenon id="CCCAREERMODE" entitlement="CCCAREERMODE" ofbid="OFB-FIFA:109533247" />
+    <xenon id="CCTEAMS1" entitlement="CCTEAMS1" ofbid="OFB-FIFA:109533250 " />
+    <xenon id="CCTEAMS2" entitlement="CCTEAMS2" ofbid="OFB-FIFA:109533248" />
+    <xenon id="CCLICENSOR" entitlement="CCLICENSOR" ofbid="OFB-FIFA:109533252" />
+    <xenon id="CCSERIOUSEDITOR" entitlement="CCSERIOUSEDITOR" ofbid="OFB-FIFA:109533255" />
+    <ps3 id="CCALLINONE" entitlement="CCALLINONE" ofbid="OFB-FIFA:109533105" />
+    <ps3 id="CCTOURNAMENTS" entitlement="CCTOURNAMENTS" ofbid="OFB-FIFA:109533106" />
+    <ps3 id="CCCAREERMODE" entitlement="CCCAREERMODE" ofbid="OFB-FIFA:109533107" />
+    <ps3 id="CCTEAMS1" entitlement="CCTEAMS1" ofbid="OFB-FIFA:109533251" />
+    <ps3 id="CCTEAMS2" entitlement="CCTEAMS2" ofbid="OFB-FIFA:109533249" />
+    <ps3 id="CCLICENSOR" entitlement="CCLICENSOR" ofbid="OFB-FIFA:109533253" />
+    <ps3 id="CCSERIOUSEDITOR" entitlement="CCSERIOUSEDITOR" ofbid="OFB-FIFA:109533254" />
+    <ps3 id="BASICPREORDER" entitlement="BASIC_PREORDER" ofbid="OFB-FIFA:109532220" />
+    <ps3 id="STANDARDPREORDER" entitlement="STANDARD_PREORDER" ofbid="OFB-FIFA:109532222" />
+    <ps3 id="PREMIUMPREORDER" entitlement="PREMIUM_PREORDER" ofbid="OFB-FIFA:109532221" />
+    <ps3 id="ULTIMATEPREORDER" entitlement="ULTIMATE_PREORDER" ofbid="OFB-FIFA:109532223" />
+    <ps3 id="EAEMPXMASPROMO" entitlement="EA_EMPLOYEE_HOLIDAY_PACK" ofbid="OFB-FIFA:109535739" />
+  </nucleusassociations>
+</eastore>

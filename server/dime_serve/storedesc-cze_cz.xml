@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="CZE_CZ" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Potřebujete VŠECHNO? Pořiďte si balíček Vše v jednom a získejte všechny balíčky, které centrum tvorby nabízí:
+- balíček turnajů
+- balíček kariéry
+- balíček týmů
+- balíček 10 navíc
+- balíček licencí
+- balíček Tvůrce
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>Centrum tvorby - VŠE V JEDNOM</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Toužíte si zahrát Kariéru se svými týmy z Centra tvorby? Pořiďte si balíček kariéry a rozšiřte možnosti Centra tvorby!
+
+Pořízením balíčku kariéry budete moci:
+- Použít vytvořené týmy z Centra tvorby tím, že nahradíte ty stávající před začátkem Kariéry.
+- Přihlásit se a hrát ligu stáhnutou z Centra tvorby jejím vybráním na začátku Kariéry.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>Centrum tvorby - BALÍČEK KARIÉRY</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Prostě musíte používat LICENCOVANÉ STADIONY, TÝMY A HRÁČE? Pořiďte si balíček licencí!
+Pořízením licenčního balíčku budete moci:
+- Použít licencované hráče ve vytvořených týmech Centra tvorby z webových stránek
+- Použít licencované týmy ve vytvořených turnajích Centra tvorby z webových stránek.
+- Použít licencované stadiony pro týmy a turnaje vytvořených na webových stránkách</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>Centrum tvorby - BALÍČEK LICENCÍ</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Jste opravdu ZAPÁLENÍ do TVOŘENÍ?  Pořiďte si balíček Zapálený tvůrce a rozšiřte možnosti Centra tvorby!
+Pořízením balíčku zapáleného tvůrce budete moci na webových stránkách nastavit zajímavé možnosti jako:
+- Možnost nastavení druhého oslavování a zakončovacího stylu.
+- Možnost nastavení druhé, třetí a čtvrté preferované pozice hráče.
+- Možnost vybrat míč, se kterým se bude turnaj hrát.
+- Možnost vybrat týmu třetí dres.
+- Možnost vybrat týmu vlastní formaci.
+- A mnoho dalšího!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>Centrum tvorby - BALÍČEK TVŮRCE</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Jste hladoví po VÍCE TÝMECH? Pořiďte si balíček týmů a rozšiřte možnosti Centra tvorby!
+
+Pořízením týmového balíčku dostanete:
+- Dalších 50 míst pro vytvořené týmy na webových stránkách.
+- Dalších 24 míst pro stažené týmy.
+- Možnost nahrát libovolné logo všem týmům vytvořeným na webových stránkách.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>Centrum tvorby - BALÍČEK TÝMŮ</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Jste hladoví po JEŠTĚ VÍCE TÝMECH? Pořiďte si balíček 10 navíc, který Vám přidá dalších 10 míst pro stažené týmy.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>Centrum tvorby - BALÍČEK 10 NAVÍC</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Potřebujete VÍCE TURNAJŮ? Pořiďte si balíček turnajů a rozšiřte možnosti Centra tvorby!
+Pořízením turnajového balíčku dostanete:
+- 5 míst pro vytvořené turnaje na webových stránkách
+- 5 míst pro stažení turnajů navíc.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>Centrum tvorby - BALÍČEK TURNAJŮ</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Vyzkoušejte si a poté kupte rozšiřující balíček UEFA EURO 2012™ pro EA SPORTS FIFA 12! Zahrajte si UEFA EURO 2012™ s autentickými týmy a hráči. Vybudujte si vlastní tým snů a ovládněte Evropu v novém režimu Expedition. Zahrajte si výzvy inspirované skutečným průběhem turnaje. Bojujte o úspěchy v režimu Online UEFA EURO 2012™.
+Text dostupný v jazycích: angličtina, francouzština, němčina, italština, španělština, nizozemština a polština.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>UEFA EURO 2012™ - zkušební verze</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Získejte slevu na rozšiřující balíček UEFA EURO 2012™ pro EA SPORTS FIFA 12 a službu EA SPORTS Season Ticket!
+- Zahrajte si UEFA EURO 2012™ s autentickými týmy a hráči.
+- Vybudujte si vlastní tým snů a ovládněte fotbalovou Evropu v novém režimu Expedition.
+- Přijímejte výzvy inspirované skutečným průběhem turnaje.
+- Bojujte o úspěchy v režimu Online UEFA EURO 2012™.
+Text dostupný v jazycích: angličtina, francouzština, němčina, itaština, španělština, nizozemština a polština.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Pořiďte si rozšiřující balíček UEFA EURO 2012™ pro FIFA 12!
+- Zahrajte si UEFA EURO 2012™ s autentickými týmy a hráči.
+- Vybudujte si vlastní tým snů a ovládněte fotbalovou Evropu v novém režimu Expedition.
+- Přijímejte výzvy inspirované skutečným průběhem turnaje.
+- Bojujte o úspěchy v režimu Online UEFA EURO 2012™.
+Text dostupný v jazycích: angličtina, francouzština, němčina, italština, španělština, nizozemština a polština.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Vytvořte si vlastní špičkový tým ze svých nejoblíbenějších fotbalových hvězd, rozhodněte se, zda chcete vést jeden nebo více týmů, a pusťte se do hry v dynamicky aktualizovaných turnajích on-line.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Vybudujte si vlastní Ultimate Team se všemi oblíbenými fotbalovými hvězdami, zvolte si, zda budete řídit jedno či více mužstev najednou a poté začněte soutěžit v dynamicky aktualizovaných turnajích.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligy Premier League, Ligue 1, Serie A, Bundesliga a Liga BBVA. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Live Season – VŠECHNY LIGY</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligy Premier League, Ligue 1, Serie A, Bundesliga a Liga BBVA. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Live Season - VŠECHNY LIGY (sleva 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Premier League. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Live Season – Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Premier League za zvýhodněnou cenu. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Live Season - Barclays PL (sleva 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Ligue 1. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Live Season – Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Ligue 1 za zvýhodněnou cenu. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Live Season - Ligue 1 (sleva 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Bundesliga. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Live Season – Bundesliga </source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Bundesliga za zvýhodněnou cenu. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Live Season - Bundesliga (sleva 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Serie A. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Live Season – Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Serie A za zvýhodněnou cenu. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Live Season - Serie A (sleva 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Liga BBVA. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Live Season – Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Získejte službu Live Season pro ligu Liga BBVA za zvýhodněnou cenu. Herní formu hráčů můžete aktualizovat každý týden, a to na základě skutečných výkonů. Každý týden si můžete stáhnout aktualizované skutečné zápasy pro nový režim My Live Season. Jedním nákupem aktivujete tuto funkci pro zbytek sezony 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Live Season - Liga BBVA (sleva 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Vstupte do světa Live Season a přepište dějiny svého klubu! Tato zkušební verze vám umožní znovu si zahrát až 5 skutečných zápasů ve zcela novém herním režimu My Live Season. Jakmile provedete aktivaci zkušební verze, přejděte do hlavní nabídky a v nabídce Live Season vyberte možnost My Live Season. Vyberte ligu a v ní libovolný zápas, s nímž můžete odehrát 5 zápasů. Líbí se vám to? Vraťte se do obchodu FIFA 12 a kupte plnou verzi.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>My Live Season – zkušební verze</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

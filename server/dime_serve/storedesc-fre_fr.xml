@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="FRE_FR" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Vous voulez TOUT ? Prenez le pack Tout en un pour acquérir d'un coup tout ce qu'offrent les autres packs du centre de création :
+- Pack Compétitions
+- Pack Mode Carrière
+- Pack Équipes
+- Pack 10 équipes de plus
+- Pack Licences
+- Pack Éditeur sérieux
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>Centre de création -  Pack Tout en un</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Vous voulez jouer en MODE CARRIÈRE avec vos équipes du Centre de création ? Prenez le pack Mode Carrière pour approfondir votre expérience !
+
+Avec le pack Mode Carrière, vous pourrez :
+- Utiliser les équipes du Centre de création en mode Carrière en échangeant les équipes lorsque vous configurerez une nouvelle carrière.
+- Jouer en mode Carrière avec un championnat du Centre de création téléchargé en le sélectionnant lorsque vous configurerez une nouvelle carrière.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>Centre de création - Pack Mode Carr.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Vous voulez utiliser des STADES, JOUEURS et ÉQUIPES SOUS LICENCE ? Optez pour le pack Licences !
+Grâce au pack Licences, vous pourrez :
+- Utiliser des joueurs sous licence dans les équipes du Centre de création créées sur le site Internet.
+- Utiliser des équipes sous licence dans les compétitions du Centre de création créées sur le site Internet.
+- Sélectionner des stades sous licence pour les équipes et compétitions créées sur le site Internet.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>Centre de création - Pack Licences</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Vous prenez la PERSONNALISATION très au SÉRIEUX ? Prenez le pack Éditeur sérieux pour approfondir votre expérience dans le Centre de création !
+Grâce au pack Éditeur sérieux, vous bénéficierez sur le site Internet de fonctionnalités d'éditions telles que :
+- La capacité d'assigner les styles de course et de fin d'une deuxième célébration.
+- La capacité de choisir des postes préférés secondaire/tertiaire/... etc. pour chaque joueur.
+- La capacité de choisir un ballon de compétition.
+- La capacité de choisir une troisième tenue.
+- La capacité d'assigner une formation personnalisée.
+- Et bien plus encore !</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>Centre de création - Pack Édit. sérieux</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Vous voulez PLUS D'ÉQUIPES ? Prenez le pack Équipes pour approfondir votre expérience dans le Centre de création !
+
+Grâce au pack Équipes, vous bénéficierez de :
+- 50 emplacements de création d'équipes supplémentaires sur le site Internet.
+- 24 emplacements de téléchargement supplémentaires.
+- La capacité d'assigner un logo d'équipe personnalisé à toutes les équipes créées sur le site Internet.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>Centre de création - Pack Équipes</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Vous voulez ENCORE PLUS D'ÉQUIPES ? Prenez le pack 10 équipes de plus pour bénéficier de 10 emplacements de téléchargement d'équipes supplémentaires.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>Centre de création - Pack 10 éq. sup.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Besoin de PLUS DE COMPÉTITIONS ? Prenez le pack Compétitions pour approfondir votre expérience dans le Centre de création !
+Grâce au pack Compétitions, vous bénéficierez de :
+- 5 emplacements de création de compétitions sur le site Internet.
+- 5 emplacements de téléchargement de compétitions.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>Centre de création - Pack Compétitions</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Essayez et achetez le pack d'extension UEFA EURO 2012™ pour EA SPORTS FIFA 12 ! Disputez l'UEFA EURO 2012™ avec les vraies équipes et les véritables joueurs. Bâtissez votre propre équipe et essayez de régner sur l'Europe avec le tout nouveau mode Expédition. Relevez des défis basés sur la véritable compétition. Essayez de triompher en ligne avec le mode UEFA EURO 2012™ en ligne.
+Langues compatibles (texte) : anglais, français, allemand, italien, espagnol, néerlandais et polonais.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>Version d'essai UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>À vous le pack d'extension UEFA EURO 2012™ pour EA SPORTS FIFA 12, avec une remise pour les détenteurs d'un abonnement EA SPORTS Season Ticket ! Disputez l'UEFA EURO 2012™ avec les vraies équipes et les véritables joueurs. Bâtissez votre propre équipe et essayez de régner sur l'Europe avec le tout nouveau mode Expédition. Relevez des défis basés sur la véritable compétition. Essayez de triompher en ligne avec le mode UEFA EURO 2012™ en ligne.
+Langues compatibles (texte) : anglais, français, allemand, italien, espagnol, néerlandais et polonais.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>À vous le pack d'extension UEFA EURO 2012™ pour EA SPORTS FIFA 12 ! Disputez l'UEFA EURO 2012™ avec les vraies équipes et les véritables joueurs. Bâtissez votre propre équipe et essayez de régner sur l'Europe avec le tout nouveau mode Expédition. Relevez des défis basés sur la véritable compétition. Essayez de triompher en ligne avec le mode UEFA EURO 2012™ en ligne.
+Langues compatibles (texte): anglais, français, allemand, italien, espagnol, néerlandais et polonais.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Bâtissez votre équipe de rêve avec vos stars préférées, choisissez de gérer une ou plusieurs équipes et participez à des compétitions en ligne mises à jour de manière dynamique.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Bâtissez votre équipe de rêve avec vos stars préférées, choisissez de gérer une ou plusieurs équipes et disputez des tournois en ligne mis à jour de façon dynamique.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Offrez-vous le service Saison Live pour la Ligue 1, la Barclays Premier League, la Serie A, la Bundesliga et la Liga BBVA. Mettez à jour chaque semaine l'état de forme des joueurs en fonction de leurs véritables performances. Téléchargez chaque semaine les véritables rencontres mises à jour pour le nouveau mode Ma Saison Live. Un seul achat suffit pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Saison Live - Tous championnats</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Offrez-vous le service Saison Live à prix réduit pour la Ligue 1, la Barclays Premier League, la Serie A, la Bundesliga et la Liga BBVA. Mettez à jour chaque semaine l'état de forme des joueurs en fonction de leurs véritables performances. Téléchargez chaque semaine les véritables rencontres mises à jour pour le nouveau mode Ma Saison Live. Un seul achat suffit pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Saison Live - Toutes ligues (20% de remise)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Barclays Premier League, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Saison Live - Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Avec la Saison Live pour la Barclays Premier League à prix réduit, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Saison Live - Barclays PL (20% de remise)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Ligue 1, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Saison Live - Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Ligue 1 à prix réduit, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Saison Live - Ligue 1 (20% de remise)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Bundesliga, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Saison Live - Bundesliga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Bundesliga à prix réduit, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Saison Live - Bundesliga (20% de remise)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Serie A, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Saison Live - Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Serie A à prix réduit, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Saison Live - Serie A (20% de remise)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Liga BBVA, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Saison Live - Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Avec le service Saison Live pour la Liga BBVA à prix réduit, chaque semaine, mettez à jour l'état de forme des joueurs suivant leurs vraies performances et téléchargez les véritables matchs mis à jour pour le nouveau mode Ma Saison Live. Achetez une fois pour l'activer le reste de la saison 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Saison Live - Liga BBVA (20% de remise)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Entrez dans l'univers Saison Live et réécrivez l'histoire de votre club ! Cette offre vous permet de rejouer jusqu'à 5 matchs réels dans le tout nouveau mode Ma Saison Live. Une fois l'offre d'essai activée, retournez dans le menu principal, allez dans la section Saison Live et sélectionnez Ma Saison Live. Choisissez un championnat et un club avec lequel vous disputerez 5 matchs. Ça vous a plu ? Retournez dans la boutique FIFA 12 pour acheter la version complète.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>Essai Ma Saison Live</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

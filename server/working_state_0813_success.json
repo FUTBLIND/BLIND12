@@ -1,0 +1,195 @@
+{
+  "archives": {
+    "cards0.big": {
+      "entry_count": 2188,
+      "entry_table_matches_pristine": true,
+      "md5": "6acd7d3f42556f112ff40cb685b1f88f",
+      "modified_entries": {
+        "data/ui/external/ion_fut/ux/nav/fut.nav": {
+          "md5": "ce33df847b2190050aa99a5b982cb35a",
+          "pristine_size": 5085,
+          "size": 5085,
+          "size_neutral": true
+        },
+        "data/ui/ux/common/lua/packages/nav.lua": {
+          "md5": "7b14c88942fac33f27f79c9eab403604",
+          "pristine_size": 3892,
+          "size": 3892,
+          "size_neutral": true
+        },
+        "data/ui/ux/common/lua/packages/navtester.lua": {
+          "md5": "30fad06f003b6451f6a91a61324debe4",
+          "pristine_size": 4149,
+          "size": 4149,
+          "size_neutral": true
+        }
+      },
+      "present": true,
+      "pristine_size": 22272298,
+      "size": 22272298
+    },
+    "cards_patch.big": {
+      "entry_count": 64,
+      "entry_table_matches_pristine": true,
+      "md5": "13d4aefc40aa09c8c829396018f63d9f",
+      "modified_entries": {
+        "data/ui/external/ion_fut/screens/fcc_login2.big": {
+          "md5": "3c626bf64e3e212b904403b1e461263d",
+          "pristine_size": 3836,
+          "size": 3836,
+          "size_neutral": true
+        }
+      },
+      "present": true,
+      "pristine_size": 943634,
+      "size": 943634
+    }
+  },
+  "cdb": {
+    "active_breakpoints": 42,
+    "lines": 2801,
+    "md5": "4b97a0b13f9bab8749cdc05924db025d",
+    "memory_writing_breakpoints": 6,
+    "present": true,
+    "writers": [
+      "bp 112fceb \"bp30 poi(poi(@eax)+0x40) \\\"ed poi(@esp+0x18)+0x20 1; ed poi(@esp+0x18)+0x30 0; g\\\"; g\"",
+      "bp f728c0 \"eb @ecx+0x13c 0; eb @ecx+0x14d 1; eb @ecx+0x14e 0; eb @ecx+0x14f 0; eb @ecx+0x150 0; ed @ecx+0x11c 1; ed @ecx+0x140 1; g\"",
+      "bp c61611 \"ed poi(esp) 0x186a0; g\"",
+      "bp c61638 \"ed poi(esp) 0; g\"",
+      "bp c61659 \"ed poi(esp) 0x186a0; g\"",
+      "bp 125052b \"ed poi(ebp-4)+0x164 1; eb poi(ebp-4)+0x1a0 1; g\""
+    ]
+  },
+  "config": {
+    "fut_rs4_stub.py": {
+      "flags": {
+        "AUTO_CREATE_CLUB": "False",
+        "RESET_CLUB_ON_START": "True"
+      },
+      "present": true
+    },
+    "futpack.py": {
+      "flags": {
+        "STARTER_INCLUDE_NONPLAYER": "False",
+        "STARTER_PACK_ENABLED": "True",
+        "STARTER_PLAYER_RATING_AVG": "62",
+        "STARTER_PLAYER_RATING_HI": "64",
+        "STARTER_PLAYER_RATING_LO": "51",
+        "STARTER_RECIPE": "(\"Free Starter Pack\", 18, 0, False, 1)"
+      },
+      "present": true
+    },
+    "identity.py": {
+      "flags": {
+        "CANONICAL_ID": "2416848542",
+        "DEFAULT_NAME": "\"Player1\"",
+        "PERPETUITY": "False"
+      },
+      "present": true
+    }
+  },
+  "loose": {
+    "artAssets/czdata.bh": {
+      "md5": "5682c1167fc25f8dac685c0416109d81",
+      "size": 239036
+    },
+    "artAssets/czdata.big": {
+      "md5": "(skipped, >4MB)",
+      "size": 125769120
+    },
+    "external/ion_fut/screens/security/futSecurityQuestion.big": {
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "size": 154172
+    },
+    "external/ion_fut/screens/security/futSecurityQuestion_-1.big": {
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "size": 154172
+    },
+    "external/ion_fut/screens/security/futSecurityQuestion_0.big": {
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "size": 154172
+    },
+    "external/ion_fut/screens/security/futSecurityQuestion_1.big": {
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "size": 154172
+    },
+    "external/ion_fut/screens/security/notfound.big": {
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "size": 154172
+    },
+    "external/ion_fut/ux/nav/fut.nav": {
+      "md5": "ce33df847b2190050aa99a5b982cb35a",
+      "size": 5085
+    },
+    "imgAssets/czdata.bh": {
+      "md5": "8dddd2c606949c9b8ef64416599f30ce",
+      "size": 48436
+    },
+    "imgAssets/czdata.big": {
+      "md5": "(skipped, >4MB)",
+      "size": 28188028
+    },
+    "imgAssets/heads/2dheads0.bh": {
+      "md5": "328aa7093e4d705fbfff8394fff84669",
+      "size": 25696
+    },
+    "imgAssets/heads/2dheads0.big": {
+      "md5": "(skipped, >4MB)",
+      "size": 9155499
+    },
+    "imgAssets/heads/2dheads1.bh": {
+      "md5": "f612603d792c3132ae053644258519da",
+      "size": 79256
+    },
+    "imgAssets/heads/2dheads1.big": {
+      "md5": "(skipped, >4MB)",
+      "size": 27929549
+    },
+    "imgAssets/heads/2dheads2.bh": {
+      "md5": "126fd39a67b06235bdad3b6b64318eda",
+      "size": 38636
+    },
+    "imgAssets/heads/2dheads2.big": {
+      "md5": "(skipped, >4MB)",
+      "size": 13523476
+    },
+    "imgAssets/heads/2dheads3.bh": {
+      "md5": "59a5b34b10c410ebe8e28e3cc0953f86",
+      "size": 155436
+    },
+    "imgAssets/heads/2dheads3.big": {
+      "md5": "(skipped, >4MB)",
+      "size": 54392150
+    }
+  },
+  "services": {
+    "Blaze": {
+      "listening": true,
+      "port": 42127
+    },
+    "EASW": {
+      "listening": true,
+      "port": 8083
+    },
+    "FUT rs4": {
+      "listening": true,
+      "port": 8082
+    },
+    "POW": {
+      "listening": true,
+      "port": 10094
+    },
+    "QOS": {
+      "listening": true,
+      "port": 17502
+    },
+    "dynmsg": {
+      "listening": true,
+      "port": 8081
+    },
+    "novafusion": {
+      "listening": true,
+      "port": 80
+    }
+  }
+}

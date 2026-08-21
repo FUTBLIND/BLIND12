@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="HUN_HU" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>MINDET akarod? Vedd meg az Összes egyben csomagot, hogy hozzájuss mindahhoz, amit az alkotóközpont csomagok kínálnak:
+- Torna csomag
+- Karriermód csomag
+- Csapat csomag
+- Még tíz csapat csomag
+- Licenc csomag
+- Fő szerkesztő csomag
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>Alkotóközpont - Összes csomag</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>KARRIERMÓDBAN szeretnél játszani Alkotóközpontban készült csapataiddal? Vedd meg a Karriermód csomagot, hogy az Alkotóközpontot még sokoldalúbbá tedd!
+
+A Karriermód csomaggal jogosultságot szerzel:
+- Az Alkotóközpont csapatok Karriermódban való használatára, azok új karrier indításakor történő cseréjével
+- Karriermód indítását egy letöltött Alkotóközpont bajnokságban, melyet új karrier kezdetén választhatsz ki.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>Alkotóközpont - Karriermód csomag</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Többnyire LICENCELT STADIONOKAT, JÁTÉKOSOKAT és CSAPATOKAT használsz? Vedd meg a Licenc csomagot!
+A Licenc csomaggal jogosultságot szerzel:
+- Licencelt játékosok használatára a weboldal alkotóközpontjában készült csapatokban
+- Licencelt csapatok használatára az alkotóközpontjában készült kupatornákon
+- Licencelt stadionok kiválasztására a weboldalon készült csapatokhoz és kupatornákhoz.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>Alkotóközpont - Licenc csomag</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>A TESTRESZABÁS foglalkoztet FŐLEG? Vedd meg a Fő szerkesztő csomagot,  hogy az Alkotóközpontot még sokoldalúbbá tedd!
+A Fő szerkesztő csomaggal jogosultságot szerzel a weboldali Alkotóközpont haladó szerkesztési funkcióinak használatára:
+- Kiválaszthatsz egy második gólöröm, futás, lerogyás stílust.
+- Kiválaszthatsz egy második/harmadik/negyedik preferált posztot minden játékosnak
+- Kiválaszthatod a kupalabdát
+- Használhatsz egy harmadik mezt
+- Választhatsz saját felállást 
+- És ez csak ízelítő!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>Alkotóközpont - Fő szerkesztő csomag</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>MÉG TÖBB csapatot szeretnél? Vedd meg a Csapat csomagot, hogy az Alkotóközpontot még sokoldalúbbá tedd!
+
+A Csapat csomaggal jogosultságot szerzel:
+- További 50 csapatalkotó fiók megnyitására a weboldalon
+- További 24 csapat leöltési helyre
+- Egyedi címer feltöltésére az összes weboldalon készült csapathoz</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>Alkotóközpont - Csapat csomag</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>ENNÉL IS TÖBB csapatra vágysz? Vedd meg a Még 10 csapat csomagot, hogy további tíz csapat letöltési helyhez juss!</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>Alkotóközpont - Még 10 csomag</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>TÖBB KUPATORNÁT szeretnél? Vedd meg a bajnokság csomagot, hogy az Alkotóközpontot még sokoldalúbbá tedd!!
+A bajnokság csomaggal jogosultságot szerzel:
+- 5 bajnokságalkotó fiókra a weboldalon
+- 5 bajnokság letöltési helyre</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>Alkotóközpont - Bajnokság csomag</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Próbáld ki, majd vásárold meg az EA SPORTS FIFA 12 játék UEFA EURO 2012™ kiegészítő csomagját! Játszd az UEFA EURO 2012™ bajnoki döntőket eredeti csapatokkal és játékosokkal! Építs álomcsapatot, és urald Európát a vadonatúj Expedition módban! Játssz kihívásokat a valós bajnokság alakulása alapján! Versengj az online dicsőségért az Online UEFA EURO 2012™ keretében!
+Támogatott nyelvek: angol, francia, német, olasz, spanyol, holland és lengyel.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>UEFA EURO 2012™ próbaverzió</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Szerezd meg az EA SPORTS FIFA 12 játék UEFA EURO 2012™ kiegészítő csomagját, amely EA SPORTS Season Ticket tulajdonosok számára kedvezménnyel vásárolható meg! Játszd az UEFA EURO 2012™ bajnoki döntőket eredeti csapatokkal és játékosokkal! Építs álomcsapatot, és urald Európát a vadonatúj Expedition módban! Játssz kihívásokat a valós bajnokság alakulása alapján! Versengj az online dicsőségért az Online UEFA EURO 2012™ keretében!
+Támogatott nyelvek: angol, francia, német, olasz, spanyol, holland és lengyel.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Szerezd meg az EA SPORTS FIFA 12 játék UEFA EURO 2012™ kiegészítő csomagját! Játszd az UEFA EURO 2012™ bajnoki döntőket eredeti csapatokkal és játékosokkal! Építs álomcsapatot, és urald Európát a vadonatúj Expedition módban! Játssz kihívásokat a valós bajnokság alakulása alapján! Versengj az online dicsőségért az Online UEFA EURO 2012™ keretében!
+Támogatott nyelvek: angol, francia, német, olasz, spanyol, holland és lengyel.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Hozd létre saját csodacsapatodat az összes kedvenc futballsztároddal, menedzselj egy vagy több csapatot egyszerre, és küzdj dinamikusan frissített online bajnokságokon!</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Hozd létre saját csodacsapatodat az összes kedvenc futballsztároddal, menedzselj egy vagy több csapatot egyszerre, és küzdj dinamikusan frissített online bajnokságokon!</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Szerezz Élő idény szolgáltatást a Barclays Premier League, a Francia 1. Liga, az olasz A osztály, a Bundesliga és a BBVA Liga ligákra! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Élő idény – Minden liga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Szerezz kedvezményes Élő idény szolgáltatást a Barclays Premier League, a Francia 1. Liga, az olasz A osztály, a Bundesliga és a BBVA Liga ligákra! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Élő idény - Összes liga ( -20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Szerezz Élő idény szolgáltatást a Barclays Premier League mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Élő idény – Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Szerezz kedvezményes Élő idény szolgáltatást a Barclays Premier League mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Élő idény - Barclays PL ( -20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Szerezz Élő idény szolgáltatást a Francia 1. Liga mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Élő idény – Francia 1. Liga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Szerezz kedvezményes Élő idény szolgáltatást a Francia 1. Liga mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Élő idény - Ligue 1 ( -20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Szerezz Élő idény szolgáltatást a Bundesliga mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Élő idény – Bundesliga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Szerezz kedvezményes Élő idény szolgáltatást a Bundesliga mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Élő idény - Bundesliga ( -20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Szerezz Élő idény szolgáltatást az olasz A osztályra! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Élő idény – Olasz A osztály</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Szerezz kedvezményes Élő idény szolgáltatást az olasz A osztályra! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Élő idény - Serie A ( -20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Szerezz Élő idény szolgáltatást a BBVA Liga mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Élő idény – BBVA Liga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Szerezz kedvezményes Élő idény szolgáltatást a BBVA Liga mérkőzéseire! Automatikus játékos formafrissítés hetente, a valódi sportolók teljesítménye alapján. Frissített valós mérkőzés párosítások hetente a Saját élő idény módban. Egyszeri vásárlással a szolgáltatás az egész 11/12-es idény alatt aktív marad.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Élő idény - Barclays BBVA ( -20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Lépj be az Élő idény világába, írd újra klubod történetét! A kipróbálható módban akár 5 valós mérkőzést is lejátszhatsz a Saját élő idény módban. A próbaverzió aktiválását követően lépj vissza a főmenübe, majd válaszd az Élő idényt, ezen belül a Saját élő idény pontot. Válassz ligát, azon belül csapatot, ahol 5 mérkőzésen keresztül követheted az eseményeket. Tetszik a dolog? Térj vissza a FIFA 12 Store-ba, és vásárold meg a teljes verziót!</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>Saját élő idény próbaverzió</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

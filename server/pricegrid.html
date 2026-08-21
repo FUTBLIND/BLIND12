@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUT12 pricing grid</title>
+<style>
+:root{
+  --bg:#f6f6f4; --panel:#fff; --line:#e2e1dc; --ink:#1b1a17; --dim:#6f6d66;
+  --accent:#0f6b4f; --accent-bg:#e4f0ea;
+  --gold:#8a6d1f; --gold-bg:#f7efd6;
+  --silver:#5c6470; --silver-bg:#eceef1;
+  --bronze:#8a5230; --bronze-bg:#f5e7de;
+  --done:#0f6b4f; --todo:#b2b0a8;
+  --focus:#0f6b4f;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#15161a; --panel:#1c1e23; --line:#2c2f36; --ink:#e9e8e4; --dim:#8f8d87;
+    --accent:#4fd3a0; --accent-bg:#16302a;
+    --gold:#d9b95c; --gold-bg:#2e2716;
+    --silver:#a8b0bc; --silver-bg:#22262c;
+    --bronze:#d09268; --bronze-bg:#2d1f17;
+    --done:#4fd3a0; --todo:#4a4d55;
+    --focus:#4fd3a0;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15161a; --panel:#1c1e23; --line:#2c2f36; --ink:#e9e8e4; --dim:#8f8d87;
+  --accent:#4fd3a0; --accent-bg:#16302a;
+  --gold:#d9b95c; --gold-bg:#2e2716;
+  --silver:#a8b0bc; --silver-bg:#22262c;
+  --bronze:#d09268; --bronze-bg:#2d1f17;
+  --done:#4fd3a0; --todo:#4a4d55;
+  --focus:#4fd3a0;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  background:var(--bg); color:var(--ink);
+  font:14px/1.45 ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  display:flex; flex-direction:column;
+}
+header{
+  background:var(--panel); border-bottom:1px solid var(--line);
+  padding:10px 14px; display:flex; flex-direction:column; gap:8px;
+  position:sticky; top:0; z-index:5;
+}
+.top{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap}
+h1{font-size:15px; margin:0; letter-spacing:.02em; font-weight:650}
+.count{color:var(--dim); font-variant-numeric:tabular-nums}
+.bar{flex:1; min-width:160px; height:6px; background:var(--todo);
+     border-radius:3px; overflow:hidden}
+.bar i{display:block; height:100%; background:var(--done); width:0}
+.rowline{display:flex; gap:6px; flex-wrap:wrap; align-items:center}
+button,select,input{
+  font:inherit; color:inherit; background:var(--panel);
+  border:1px solid var(--line); border-radius:6px; padding:4px 8px;
+}
+button{cursor:pointer}
+button:hover{border-color:var(--accent)}
+button[aria-pressed="true"]{background:var(--accent-bg); border-color:var(--accent); color:var(--accent)}
+input[type=search]{min-width:190px}
+.spacer{flex:1}
+.saved{color:var(--accent); font-size:12px; opacity:0; transition:opacity .25s}
+.saved.on{opacity:1}
+.wrap{flex:1; overflow:auto}
+table{border-collapse:collapse; width:100%; font-variant-numeric:tabular-nums}
+thead th{
+  position:sticky; top:0; background:var(--panel); z-index:3;
+  border-bottom:1px solid var(--line); text-align:left; padding:6px 8px;
+  font-weight:600; font-size:12px; color:var(--dim); cursor:pointer;
+  white-space:nowrap;
+}
+thead th.num{text-align:right}
+tbody td{border-bottom:1px solid var(--line); padding:4px 8px; white-space:nowrap}
+tbody td.num{text-align:right}
+tbody tr:hover{background:var(--accent-bg)}
+tbody tr.sel{outline:2px solid var(--focus); outline-offset:-2px}
+tbody tr.done td.price{color:var(--done); font-weight:650}
+.name{max-width:210px; overflow:hidden; text-overflow:ellipsis}
+.club{max-width:150px; overflow:hidden; text-overflow:ellipsis; color:var(--dim)}
+.tag{
+  display:inline-block; padding:0 6px; border-radius:999px;
+  font-size:11px; font-weight:650; letter-spacing:.02em;
+}
+.t-gold{background:var(--gold-bg); color:var(--gold)}
+.t-silver{background:var(--silver-bg); color:var(--silver)}
+.t-bronze{background:var(--bronze-bg); color:var(--bronze)}
+.kind{font-size:11px; color:var(--dim)}
+.stat{color:var(--dim); width:2.4em; display:inline-block; text-align:right}
+.stat.hi{color:var(--ink); font-weight:650}
+td.price{width:120px; text-align:right; cursor:text}
+td.price .ph{color:var(--todo)}
+td.price input{
+  width:100%; text-align:right; padding:1px 4px; border-color:var(--accent);
+  background:var(--bg);
+}
+.snap{font-size:11px; color:var(--accent)}
+.why{color:var(--dim); font-size:11px; max-width:230px; overflow:hidden;
+     text-overflow:ellipsis}
+footer{
+  background:var(--panel); border-top:1px solid var(--line);
+  padding:6px 14px; font-size:12px; color:var(--dim);
+  display:flex; gap:16px; flex-wrap:wrap;
+}
+kbd{
+  border:1px solid var(--line); border-bottom-width:2px; border-radius:4px;
+  padding:0 5px; font:inherit; font-size:11px; background:var(--bg);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <h1>FUT12 pricing grid</h1>
+    <span class="count" id="progress">0 / 0</span>
+    <span class="bar"><i id="barfill"></i></span>
+    <span class="saved" id="saved">saved</span>
+  </div>
+  <div class="rowline" id="filters">
+    <select id="fkind">
+      <option value="">every card type</option>
+      <option value="base">base cards</option>
+      <option value="IF">In Forms</option>
+      <option value="TRANSFER">transfers</option>
+      <option value="UP">upgrades</option>
+    </select>
+    <select id="ftier">
+      <option value="">every tier</option>
+      <option value="gold">gold</option>
+      <option value="silver">silver</option>
+      <option value="bronze">bronze</option>
+    </select>
+    <select id="fwhy"><option value="">every reason</option></select>
+    <select id="fpos">
+      <option value="">every position</option>
+      <option value="ATT">attackers</option>
+      <option value="MID">midfielders</option>
+      <option value="DEF">defenders</option>
+      <option value="GK">keepers</option>
+    </select>
+    <button class="f" id="ftodo" aria-pressed="false">unpriced only</button>
+    <input type="search" id="fq" placeholder="name, club, league or nation">
+    <span class="spacer"></span>
+    <input id="bulkval" size="9" placeholder="price" title="apply to every visible row">
+    <button id="bulk">apply to all shown</button>
+    <button id="theme" title="light or dark">theme</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <table>
+    <thead><tr id="head"></tr></thead>
+    <tbody id="body"></tbody>
+  </table>
+</div>
+
+<footer>
+  <span><kbd>type</kbd> a price on the selected row</span>
+  <span><kbd>k</kbd> and <kbd>m</kbd> work &mdash; 12k, 1.5m</span>
+  <span><kbd>Enter</kbd> save and jump to the next unpriced row</span>
+  <span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> move</span>
+  <span><kbd>Del</kbd> back to the formula price</span>
+  <span id="ladder"></span>
+</footer>
+
+<script>
+const D = __DATA__;
+const ROWS = D.rows, PRICES = D.prices || {}, LABELS = D.labels || {};
+const MIN = D.minPrice, BRK = D["break"], LO = D.stepLow, HI = D.stepHigh;
+
+document.getElementById("ladder").textContent =
+  "ladder: " + LO + "s to " + BRK.toLocaleString() + ", " + HI + "s above, floor " + MIN;
+
+// Mirrors futprices.round_to_increment - HALF UP, never Math.round, which is
+// what the python side deliberately avoids.
+function snap(v){
+  if (!(v > MIN)) return MIN;
+  const step = v <= BRK ? LO : HI;
+  return Math.max(MIN, Math.floor(v / step + 0.5) * step);
+}
+function parsePrice(s){
+  s = String(s || "").trim().toLowerCase().replace(/[, ]/g, "");
+  if (!s) return 0;
+  let mult = 1;
+  if (s.endsWith("k")) { mult = 1000; s = s.slice(0, -1); }
+  else if (s.endsWith("m")) { mult = 1000000; s = s.slice(0, -1); }
+  const n = parseFloat(s);
+  if (!isFinite(n) || n <= 0) return 0;
+  return Math.round(n * mult);
+}
+const fmt = n => Number(n).toLocaleString();
+
+const POSGROUP = {
+  GK:"GK", CB:"DEF", LB:"DEF", RB:"DEF", LWB:"DEF", RWB:"DEF",
+  CDM:"MID", CM:"MID", CAM:"MID", LM:"MID", RM:"MID",
+  LW:"ATT", RW:"ATT", CF:"ATT", ST:"ATT", LF:"ATT", RF:"ATT"
+};
+const FACE = ["PAC","SHO","PAS","DRI","DEF","HEA"];
+
+// ---- filter menu built from what is actually in the data -------------------
+const whys = {};
+ROWS.forEach(r => r.why.forEach(w => { whys[w] = (whys[w] || 0) + 1; }));
+const fwhy = document.getElementById("fwhy");
+Object.keys(whys).sort((a,b) => whys[b] - whys[a]).forEach(w => {
+  const o = document.createElement("option");
+  o.value = w;
+  o.textContent = (LABELS[w] || w) + "  (" + whys[w] + ")";
+  fwhy.appendChild(o);
+});
+
+// ---- columns ---------------------------------------------------------------
+const COLS = [
+  {k:"n",  t:"player",  cls:"name"},
+  {k:"r",  t:"ovr",     cls:"num", num:true},
+  {k:"t",  t:"tier"},
+  {k:"k",  t:"card"},
+  {k:"p",  t:"pos"},
+  {k:"cl", t:"club",    cls:"club"},
+  {k:"lg", t:"league",  cls:"club"},
+  {k:"na", t:"nation",  cls:"club"},
+  {k:"f",  t:"pac sho pas dri def hea"},
+  {k:"sk", t:"sk",      cls:"num", num:true},
+  {k:"wf", t:"wf",      cls:"num", num:true},
+  {k:"ft", t:"foot"},
+  {k:"wr", t:"work"},
+  {k:"why",t:"why it is here", cls:"why"},
+  {k:"fm", t:"formula", cls:"num", num:true},
+  {k:"px", t:"your price", cls:"price num", num:true}
+];
+let sortKey = "r", sortDir = -1;
+const head = document.getElementById("head");
+COLS.forEach(c => {
+  const th = document.createElement("th");
+  th.textContent = c.t;
+  if (c.num) th.className = "num";
+  th.onclick = () => {
+    if (sortKey === c.k) sortDir = -sortDir; else { sortKey = c.k; sortDir = 1; }
+    render();
+  };
+  head.appendChild(th);
+});
+
+// ---- state -----------------------------------------------------------------
+let view = [], selected = 0, editing = null;
+const F = {kind:"", tier:"", why:"", pos:"", todo:false, q:""};
+
+function priceOf(r){ return PRICES[String(r.rid)] || 0; }
+
+function matches(r){
+  if (F.kind && r.k !== F.kind) return false;
+  if (F.tier && r.t !== F.tier) return false;
+  if (F.why && r.why.indexOf(F.why) < 0) return false;
+  if (F.pos && (POSGROUP[r.p] || "") !== F.pos) return false;
+  if (F.todo && priceOf(r)) return false;
+  if (F.q){
+    const hay = (r.n + " " + r.cl + " " + r.lg + " " + r.na).toLowerCase();
+    if (hay.indexOf(F.q) < 0) return false;
+  }
+  return true;
+}
+
+const TIER_RANK = {gold:3, silver:2, bronze:1};
+function sortVal(r){
+  if (sortKey === "px") return priceOf(r);
+  if (sortKey === "t") return TIER_RANK[r.t] || 0;
+  if (sortKey === "f") return Math.max.apply(null, r.f);
+  if (sortKey === "why") return r.why.length;
+  return r[sortKey];
+}
+function cmp(a, b){
+  const x = sortVal(a), y = sortVal(b);
+  if (typeof x === "string" || typeof y === "string")
+    return String(x).localeCompare(String(y)) * sortDir;
+  return ((x || 0) - (y || 0)) * sortDir;
+}
+
+function statCells(f){
+  return f.map((v, i) =>
+    '<span class="stat' + (v >= 80 ? " hi" : "") + '" title="' + FACE[i] + '">'
+    + v + "</span>").join(" ");
+}
+const esc = s => String(s == null ? "" : s)
+  .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;");
+
+function render(){
+  view = ROWS.filter(matches).sort(cmp);
+  if (selected >= view.length) selected = Math.max(0, view.length - 1);
+  const body = document.getElementById("body");
+  const html = view.map((r, i) => {
+    const px = priceOf(r);
+    return '<tr data-i="' + i + '" class="' + (px ? "done " : "")
+      + (i === selected ? "sel" : "") + '">'
+      + '<td class="name" title="' + esc(r.n) + '">' + esc(r.n) + "</td>"
+      + '<td class="num">' + r.r + "</td>"
+      + '<td><span class="tag t-' + r.t + '">' + r.t.charAt(0).toUpperCase()
+        + (r.rare ? " rare" : "") + "</span></td>"
+      + '<td class="kind">' + r.k + "</td>"
+      + "<td>" + esc(r.p) + "</td>"
+      + '<td class="club" title="' + esc(r.cl) + '">' + esc(r.cl) + "</td>"
+      + '<td class="club" title="' + esc(r.lg) + '">' + esc(r.lg) + "</td>"
+      + '<td class="club">' + esc(r.na) + "</td>"
+      + "<td>" + statCells(r.f) + "</td>"
+      + '<td class="num">' + r.sk + "</td>"
+      + '<td class="num">' + r.wf + "</td>"
+      + "<td>" + r.ft + "</td>"
+      + "<td>" + r.wr + "</td>"
+      + '<td class="why" title="' + esc(r.why.map(w => LABELS[w] || w).join(", "))
+        + '">' + esc(r.why.map(w => LABELS[w] || w).join(", ")) + "</td>"
+      + '<td class="num">' + fmt(r.fm) + "</td>"
+      + '<td class="price num">'
+        + (px ? fmt(px) : '<span class="ph">' + fmt(r.fm) + "</span>")
+      + "</td></tr>";
+  }).join("");
+  body.innerHTML = html;
+  progress();
+}
+
+function progress(){
+  const done = ROWS.filter(r => priceOf(r)).length;
+  const shownDone = view.filter(r => priceOf(r)).length;
+  document.getElementById("progress").textContent =
+    done + " / " + ROWS.length + " priced"
+    + (view.length !== ROWS.length
+        ? "  ·  " + shownDone + " / " + view.length + " shown" : "");
+  document.getElementById("barfill").style.width =
+    (100 * done / ROWS.length).toFixed(1) + "%";
+}
+
+// ---- saving ----------------------------------------------------------------
+let savedTimer = null;
+function flashSaved(){
+  const el = document.getElementById("saved");
+  el.classList.add("on");
+  clearTimeout(savedTimer);
+  savedTimer = setTimeout(() => el.classList.remove("on"), 900);
+}
+async function save(rid, price){
+  const res = await fetch("/api/price", {
+    method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({rid: rid, price: price})
+  });
+  const j = await res.json();
+  if (j.price) PRICES[String(rid)] = j.price; else delete PRICES[String(rid)];
+  flashSaved();
+  return j.price;
+}
+
+// ---- editing ---------------------------------------------------------------
+function rowEl(i){ return document.querySelector('tr[data-i="' + i + '"]'); }
+
+function select(i, scroll){
+  if (!view.length) return;
+  i = Math.max(0, Math.min(view.length - 1, i));
+  const old = rowEl(selected); if (old) old.classList.remove("sel");
+  selected = i;
+  const el = rowEl(selected);
+  if (el){
+    el.classList.add("sel");
+    if (scroll !== false) el.scrollIntoView({block:"nearest"});
+  }
+}
+
+function startEdit(seed){
+  if (editing !== null || !view.length) return;
+  const r = view[selected], el = rowEl(selected);
+  if (!el) return;
+  editing = selected;
+  const cell = el.querySelector("td.price");
+  cell.innerHTML = '<input value="' + (seed || "") + '"><div class="snap"></div>';
+  const inp = cell.querySelector("input");
+  const snapEl = cell.querySelector(".snap");
+  const preview = () => {
+    const v = parsePrice(inp.value);
+    snapEl.textContent = v ? ("→ " + fmt(snap(v))) : "";
+  };
+  inp.addEventListener("input", preview);
+  preview();
+  inp.focus();
+  inp.setSelectionRange(inp.value.length, inp.value.length);
+
+  inp.addEventListener("keydown", async ev => {
+    if (ev.key === "Escape"){ ev.preventDefault(); editing = null; render(); select(selected); return; }
+    if (ev.key === "Enter"){
+      ev.preventDefault();
+      const v = parsePrice(inp.value);
+      editing = null;
+      await save(r.rid, v);
+      const here = selected;
+      render();
+      // Jump to the next row still on the formula, which is what makes a long
+      // session a straight run rather than a hunt for gaps.
+      let next = here + 1;
+      while (next < view.length && priceOf(view[next])) next++;
+      select(next < view.length ? next : Math.min(here + 1, view.length - 1));
+    }
+  });
+  inp.addEventListener("blur", () => {
+    if (editing === null) return;
+    editing = null; render(); select(selected, false);
+  });
+}
+
+document.addEventListener("keydown", async ev => {
+  if (editing !== null) return;
+  const t = ev.target.tagName;
+  if (t === "INPUT" || t === "SELECT") return;
+  if (ev.key === "ArrowDown"){ ev.preventDefault(); select(selected + 1); return; }
+  if (ev.key === "ArrowUp"){ ev.preventDefault(); select(selected - 1); return; }
+  if (ev.key === "PageDown"){ ev.preventDefault(); select(selected + 15); return; }
+  if (ev.key === "PageUp"){ ev.preventDefault(); select(selected - 15); return; }
+  if (ev.key === "Enter"){ ev.preventDefault(); startEdit(""); return; }
+  if (ev.key === "Delete" || ev.key === "Backspace"){
+    ev.preventDefault();
+    if (!view.length) return;
+    const r = view[selected], here = selected;
+    await save(r.rid, 0);
+    render(); select(here);
+    return;
+  }
+  if (/^[0-9]$/.test(ev.key)){ ev.preventDefault(); startEdit(ev.key); }
+});
+
+document.getElementById("body").addEventListener("click", ev => {
+  const tr = ev.target.closest("tr");
+  if (!tr) return;
+  select(parseInt(tr.dataset.i, 10), false);
+  if (ev.target.closest("td.price")) startEdit("");
+});
+
+// ---- filters ---------------------------------------------------------------
+function bind(id, key){
+  document.getElementById(id).addEventListener("change", e => {
+    F[key] = e.target.value; selected = 0; render(); select(0);
+  });
+}
+bind("fkind","kind"); bind("ftier","tier"); bind("fwhy","why"); bind("fpos","pos");
+document.getElementById("fq").addEventListener("input", e => {
+  F.q = e.target.value.trim().toLowerCase(); selected = 0; render();
+});
+document.getElementById("ftodo").addEventListener("click", e => {
+  F.todo = !F.todo;
+  e.target.setAttribute("aria-pressed", F.todo ? "true" : "false");
+  selected = 0; render(); select(0);
+});
+document.getElementById("bulk").addEventListener("click", async () => {
+  const raw = document.getElementById("bulkval").value;
+  const v = parsePrice(raw);
+  if (!view.length) return;
+  const what = v ? fmt(snap(v)) : "the formula price";
+  if (!confirm("Set " + view.length + " visible card(s) to " + what + "?")) return;
+  const rids = view.map(r => r.rid);
+  const res = await fetch("/api/bulk", {
+    method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({rids: rids, price: v})
+  });
+  const j = await res.json();
+  rids.forEach(rid => {
+    if (j.price) PRICES[String(rid)] = j.price; else delete PRICES[String(rid)];
+  });
+  flashSaved(); render();
+});
+document.getElementById("theme").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const dark = cur ? cur === "dark"
+    : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
+});
+
+// Open on the cards that set the top of the market, so the expensive
+// judgements are made first and everything else has anchors to lean on.
+document.getElementById("fkind").value = "base"; F.kind = "base";
+document.getElementById("ftier").value = "gold"; F.tier = "gold";
+render(); select(0);
+</script>
+</body>
+</html>

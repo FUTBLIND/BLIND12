@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routing fileVersion="1" refresh="1800">
+	<files>
+		<file service="fut" type="network" osdkVar="FUTBOOTCFGFILE_URL" defaultFile="futBoot.xml"/>
+		<file service="dimecfglocal" type="local" base="data/store/" defaultFile="dimecfg.xml"/>
+		<file service="storedesclocal" type="local" base="data/store/" defaultFile="storedesc-%s.xml"  modifier="locale"/>
+		<file service="storecfglocal" type="local" base="data/store/" defaultFile="storecfg.xml"/>
+		<file service="dimecfg" type="network" osdkVar="DIME_FILES_PATH" defaultFile="dimecfg.xml"/>
+		<file service="dimecfgbin" type="network" osdkVar="DIME_FILES_PATH" defaultFile="dimecfg.xml.bin"/>
+		<file service="storecfg" type="network" osdkVar="DIME_FILES_PATH" defaultFile="storecfg.xml"/>
+		<file service="storedesc" type="network" osdkVar="DIME_FILES_PATH" defaultFile="storedesc-%s.xml" modifier="locale"/>
+		<file service="storeimage" type="network" osdkVar="DIME_IMG_FILES_PATH" defaultFile="item_%s.big" modifier="custom"/>
+		<file service="audiodnp" type="network" osdkVar="DOWNLOADER_PATH" defaultFile="audioDNPList.csv"/>
+	</files>
+</routing>

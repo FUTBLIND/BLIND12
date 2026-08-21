@@ -1,0 +1,13 @@
+python37.zip
+.
+
+# THE SERVER FOLDER, and without this line nothing works.
+#
+# An embeddable Python takes its ENTIRE sys.path from this file and does NOT
+# add the running script's own directory the way a normal install does. So
+# `python.exe server\fut_rs4_stub.py` starts, fails on `import futpack`, and
+# the message names a module that is sitting right beside the script.
+..\server
+
+# Uncomment to run site.main() automatically
+#import site

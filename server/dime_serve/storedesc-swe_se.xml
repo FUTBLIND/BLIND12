@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="SWE_SE" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Behöver du HELA KLABBET? Skaffa Allt-i-ett-paketet med allt det som de andra snickarbodspaketen erbjuder:
+- Turneringspaketet.
+- Karriärspaketet.
+- Lagpaketet.
+- Paketet tio lag till.
+- Licenspaketet.
+- Kreatörspaketet.</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>Snickarboden – Allt-i-ett-paketet</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Törstar du efter att spela KARRIÄRLÄGET med dina lag från Snickarboden? Skaffa Karriärspaketet och få ut ännu mer av Snickarboden!
+
+Med Karriärspaketet kan du:
+- Spela med lag från Snickarboden i karriärläget genom att byta lag när du startar en ny karriär.
+- Lägga till och spela med en nedladdad liga från Snickarboden i karriärläget genom att välja den när du startar en ny karriär.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>Snickarboden – Karriärspaketet</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Behöver du LICENSIERADE ARENOR, SPELARE och LAG? Skaffa Licenspaketet!
+
+Med Licenspaketet kan du:
+- Använda licensierade spelare i snickarbodslagen som du skapat på webbplatsen.
+- Använda licensierade lag i snickarbodsturneringarna som du skapat på webbplatsen.
+- Välja licensierade arenor till lagen och turneringarna som du skapar på webbplatsen.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>Snickarboden – Licenspaketet</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Är du en hängiven KREATÖR? Skaffa Kreatörspaketet och få ut ännu mer av Snickarboden!
+
+När du har Kreatörspaketet har du åtkomst till webbsidans kraftfulla redigeringsverktyg:
+- För målgester kan du lägga till en andra löpning och avslutning.
+- Du kan välja en andra, tredje och fjärde favoritspelplats för var och en av spelarna.
+- Du kan välja en turneringsboll.
+- Du kan välja ett tredjeställ.
+- Du kan lägga till en egen formation.
+- Och mycket mer!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>Snickarboden – Kreatörspaketet</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Törstar du efter FLER LAG? Skaffa Lagpaketet och få ut ännu mer av Snickarboden!
+
+Med Lagpaketet får du:
+- 50 nya lediga platser för skapade lag på webbplatsen.
+- 24 lediga nedladdningsplatser för lag.
+- Ladda upp en egen laglogotyp till alla lag som du skapar på webbplatsen.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>Snickarboden – Lagpaketet</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Törstar du efter ÄNNU FLER LAG? Skaffa paketet Tio lag till så får du plats för ytterligare tio nedladdade lag.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>Snickarboden – Paketet Tio lag till</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Behöver du FLER TURNERINGAR? Skaffa Turneringspaketet och få ut ännu mer av Snickarboden!
+
+Med Turneringspaketet får du:
+- Fem nya lediga platser för skapade lag på webbplatsen.
+- Fem nedladdningsplatser för turneringar.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>Snickarboden – Turneringspaketet</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Testa och köp expansionspaketet UEFA EURO 2012™ till EA SPORTS FIFA 12! Spela i EM-slutspelet med autentiska lag och spelare. Bygg ditt drömlag och styr och ställ i Europa i det nya expeditionsläget. Spela utmaningar baserade på den riktiga turneringen. Tävla om äran på nätet i UEFA EURO 2012™ Online.
+Finns med text på följande språk: engelska, franska, tyska, italienska, spanska, nederländska och polska.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>Prova på UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Testa och köp expansionspaketet UEFA EURO 2012™ till EA SPORTS FIFA 12 med EA SPORTS Season Ticket-rabatt! Spela i EM-slutspelet med autentiska lag och spelare. Bygg ditt drömlag och styr och ställ i Europa i det nya expeditionsläget. Spela utmaningar baserade på den riktiga turneringen. Tävla om äran på nätet i UEFA EURO 2012™ Online.
+Finns med text på följande språk: engelska, franska, tyska, italienska, spanska, nederländska och polska.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Skaffa expansionspaketet UEFA EURO 2012™ till EA SPORTS FIFA 12! Spela i EM-slutspelet med autentiska lag och spelare. Bygg ditt drömlag och styr och ställ i Europa i det nya expeditionsläget. Spela utmaningar baserade på den riktiga turneringen. Tävla om äran på nätet i UEFA EURO 2012™ Online.
+Finns på följande språk: engelska, franska, tyska, italienska, spanska, nederländska och polska.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™ </source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Bygg upp ditt ultimata drömlag med alla dina favoritstjärnor från fotbollshimlen, välj om du vill hålla i en eller flera trupper och tävla sedan i dynamiskt uppdaterade nätturneringar.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Bygg ditt eget drömlag med alla dina favoritspelare från fotbollens värld och välj att ta hand om en trupp eller mer – sedan är det bara att ge dig ut i dynamiskt uppdaterade turneringar på nätet.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Skaffa Live Season för Barclays Premier League, Ligue 1, Serie A, Bundesliga och Liga BBVA! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen, baserat på spelarnas form i verkligheten, utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season för resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Live Season – Alla ligor</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Skaffa Live Season till rabatt för Barclays Premier League, Ligue 1, Serie A, Bundesliga och Liga BBVA! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen, baserat på spelarnas form i verkligheten, utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season för resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Live Season – Alla ligor (20 % rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Skaffa Live Season för Barclays Premier League! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Live Season – Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Skaffa Live Season för Barclays Premier League med rabatt! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Live Season – Barclays PL (20 % rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Skaffa Live Season för Ligue 1! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Live Season – Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Skaffa Live Season för Ligue 1 med rabatt! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Live Season – Ligue 1 (20 % rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Skaffa Live Season för Bundesliga! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Live Season – Bundesliga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Skaffa Live Season för Bundesliga med rabatt! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Live Season – Bundesliga (20 % rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Skaffa Live Season för Serie A! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Live Season – Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Skaffa Live Season för Serie A med rabatt! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Live Season – Serie A (20 % rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Skaffa Live Season för Liga BBVA! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Live Season – Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Skaffa Live Season för Liga BBVA till rabatt! Direkt i spelet varje vecka uppdaterar du inte bara spelarformen baserat på spelarnas form i verkligheten utan också spelomgångarna, som du hämtar till det nya Min Live Season. Ett engångsinköp räcker för att aktivera Live Season resten av säsongen 2011–12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Live Season – Liga BBVA (20 % rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Välkommen till Live Season – spelläget där du kan skriva om ditt lags historia! I det här gratisprovet får du spela om upp till fem verkliga matcher i det helt nya spelläget Min Live Season. När du har aktiverat gratisprovet går du tillbaka till huvudmenyn, går in på menyn Live Season och väljer Min Live Season. Välj en liga och vilket lag som helst av dem som spelar i den så får du spela fem matcher. Tycker du om det lika mycket som vi? Då behöver du bara att gå tillbaka till FIFA 12-butiken och införskaffa fullängdsversionen.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>Min Live Season – Gratisprov</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™ </source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

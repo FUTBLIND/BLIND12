@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="RUS_RU" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Хотите ВСЕ? Значит, вам нужен набор "Все в одном", в котором собрано все содержимое остальных наборов творческого центра:
+- Набор турниров
+- Набор карьеры
+- Набор команд
+- Набор "Еще 10 команд"
+- Набор лицензий
+- Набор Серьезного редактора
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>ТЦ – Набор "Все в одном"</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Хотите играть КАРЬЕРУ командой, созданной в творческом центре? Вам нужен набор режима Карьеры!
+
+Обладатели этого набора могут:
+- Использовать команды Творческого центра в режиме Карьеры, заменяя команды при создании новой Карьеры.
+- Добавлять в режим Карьеры созданные в Творческом центре лиги, выбрав их при создании новой Карьеры. </source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>ТЦ – Набор карьеры</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>СТАДИОНЫ, ИГРОКИ и КОМАНДЫ просто обязаны иметь НАСТОЯЩИЕ имена и названия? К вашим услугам набор лицензий!
+Обладатели набора лицензий могут:
+- Использовать лицензированных игроков при создании команд в творческом центре на сайте. 
+- Использовать лицензированные команды при создании турниров в творческом центре на сайте.
+- Выбирать лицензированные стадионы для команд и турниров, создаваемых на сайте. </source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>ТЦ – Набор лицензий</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Вы СЕРЬЕЗНО хотите все ПОМЕНЯТЬ? Значит, вам нужен Набор Серьезного редактора!
+Обладатели набора Серьезного редактора получают серьезные возможности редактирования, в частности:
+- Возможность назначать второй способ празднования гола.
+- Возможность выбирать вторую, третью и четвертую позицию, на которой может играть футболист.
+- Возможность выбирать мяч турнира.
+- Возможность выбрать третью форму.
+- Возможность менять тактическую схему.
+- И множество других возможностей!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>ТЦ – Набор Серьезного редактора</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Хотите ЕЩЕ КОМАНД? Приобретайте набор команд!
+
+Обладатели набора команд получают:
+- 50 дополнительных ячеек на сайте для создания команд.
+- 24 дополнительные ячейки для загрузки команд.
+- Возможность загрузки эмблем для всех команд, создаваемых на сайте.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>ТЦ – Набор команд</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Хотите ЕЩЕ БОЛЬШЕ КОМАНД? Получите набор "Еще 10 команд", предоставляющий еще 10 ячеек для загрузки команд.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>ТЦ – Набор "Еще 10 команд"</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Хотите ЕЩЕ ТУРНИРОВ? Вам нужен набор турниров!
+Обладатели набора турниров получают:
+- 5 ячеек для создания турниров на сайте.
+- 5 ячеек для загрузки турниров.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>ТЦ – Набор турниров</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Попробуйте и купите дополнение UEFA EURO 2012™ для EA SPORTS FIFA 12! Играйте в UEFA EURO 2012™ с реально существующими командами и футболистами. Создайте свою "команду мечты" и покорите Европу в новейшем режиме Expedition. Участвуйте в состязаниях, основанных на реальном турнире. Сражайтесь за славу и почет в сетевой игре Online UEFA EURO 2012™.
+Поддерживается текст на следующих языках: английский, французский, немецкий, итальянский, испанский, голландский и польский.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>UEFA EURO 2012™ пробная версия</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Получите дополнение UEFA EURO 2012™ для EA SPORTS FIFA со скидкой по EA SPORTS Season Ticket!
+ Играйте в UEFA EURO 2012™ с реально существующими командами и футболистами.
+ Создайте свою "команду мечты" и покорите Европу в новейшем режиме Expedition. Участвуйте в состязаниях, основанных на реальном турнире.
+ Сражайтесь за славу и почет в сетевой игре Online UEFA EURO 2012™.
+Поддерживается текст на следующих языках: английский, французский, немецкий, итальянский, испанский, голландский и польский.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Получите дополнение UEFA EURO 2012™ для EA SPORTS FIFA 12! Играйте в UEFA EURO 2012™ с реально существующими командами и футболистами.
+ Создайте свою "команду мечты" и покорите Европу в новейшем режиме Expedition.
+ Участвуйте в состязаниях, основанных на реальном турнире.
+ Сражайтесь за славу и почет в сетевой игре Online UEFA EURO 2012™.
+Поддерживается текст на следующих языках: английский, французский, немецкий, итальянский, испанский, голландский и польский.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Создайте свою собственную команду, где будут собраны все ваши любимые футболисты, возьмите под свое управление один или несколько составов и принимайте участие в динамично обновляющихся сетевых турнирах.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Соберите любимых звезд футбола в команду мечты – Ultimate Team! Выбирайте составы, которыми вы будете управлять, и соревнуйтесь с соперниками в динамически обновляемых сетевых турнирах.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Виджет Live Season доступен для лиг Barclays Premier League, Ligue 1, Serie A, Bundesliga и Liga BBVA. Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Live Season – все лиги</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Виджет Live Season доступен для лиг Barclays Premier League, Ligue 1, Serie A, Bundesliga &amp; Liga BBVA – теперь со скидкой. Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Live Season – Все лиги (скидка 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для Barclays Premier League (Англия). Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Live Season – Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для Barclays Premier League (Англия) со скидкой. Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Live Season – Barclays PL (скидка 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для лиги Ligue 1 (Франция). Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Live Season – Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для лиги Ligue 1 (Франция) со скидкой. Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Live Season – Ligue 1 (скидка 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для Bundesliga (Германия). Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Live Season – Bundesliga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для лиги Bundesliga (Германия) со скидкой. Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Live Season – Bundesliga (скидка 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для Serie A (Италия). Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Live Season – Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для Serie A (Италия) со скидкой. Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Live Season – Serie A (скидка 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для лиги Liga BBVA (Испания). Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Live Season – Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Приобретайте виджет Live Season для лиги Liga BBVA (Испания) со скидкой. Он позволяет получить данные об актуальной спортивной форме игроков, основанные на их реальных выступлениях. Загружайте обновленные данные каждую неделю для игры в новом режиме "Мой Live Season". Вы платите один раз и активируете услугу до конца сезона 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Live Season – Liga BBVA (скидка 20%)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Откройте для себя мир Live Season и перепишите историю своего клуба! Пробная версия позволит вам переиграть до 5 действительно состоявшихся матчей в абсолютно новом режиме "Мой Live Season". После активации пробной версии вернитесь в главное меню и выберите пункт "Мой Live Season". Решите, в какой лиге и каким клубом вы хотите сыграть 5 матчей в пробной версии. Понравилось? Посетите FIFA 12 Store и приобретите полную версию!</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>Тест вер. Live Season</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

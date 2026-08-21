@@ -1,0 +1,12 @@
+# NO END-OF-LINE CONVERSION, ANYWHERE. This is not a style preference.
+#
+# build_manifest.json records an md5 for every shipped file, and SETUP.cmd
+# verifies the game files by md5 before it will replace anything. Git's default
+# behaviour on Windows rewrites line endings on checkout, which would change the
+# bytes of every .py, .ps1, .cmd and .txt in a clone - so `build_dist.py --check`
+# would fail on all of them, and cdb would be handed a patch script that is not
+# the one that was tested.
+#
+# A distribution whose whole contract is "these exact bytes" cannot let git
+# normalise anything.
+* -text

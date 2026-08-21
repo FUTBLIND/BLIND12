@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="GER_DE" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Du brauchst alles KOMPLETT? Dann hol dir das Komplett-Set, um in den Genuss aller Creation Centre-Sets zu kommen:
+- Turnier-Set
+- Karrieremodus-Set
+- Teams-Set
+- +10-Teams-Set
+- Lizenz-Set
+- Editor²-Set
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>Creation Centre - Komplett-Set</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Du willst unbedingt den KARRIEREMODUS mit deinen Creation Centre-Teams spielen? Dann hol dir das Karrieremodus-Set!
+
+Mit dem Karrieremodus-Set kannst du:
+- Creation Centre-Teams im Karrieremodus nutzen, indem du beim Start einer neuen Karriere die Mannschaften austauschst.
+- Im Karrieremodus mit einer heruntergeladenen Creation Centre-Liga spielen, indem du diese beim Start einer neuen Karriere auswählst.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>Creation Centre - Karrieremodus-Set</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Du brauchst LIZENZIERTE STADIEN, SPIELER und TEAMS? Dann hol dir das Lizenz-Set!
+Mit dem Lizenz-Set kannst du:
+- Lizenzierte Spieler in den Creation Centre-Teams einsetzen, die du auf der Website erstellst.
+- Lizenzierte Teams in den Creation Centre-Turnieren nutzen, die du auf der Website erstellst.
+- Lizenzierte Stadien für die Teams und Turniere auswählen, die du auf der Website erstellst.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>Creation Centre - Lizenz-Set</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Ist es dir echt ERNST mit dem EDITIEREN? Dann hol dir das Editor²-Set!
+Mit dem Editor²-Set kannst du auf der Website deine Editiermöglichkeiten erweitern, z. B.:
+- Einen zweiten Jubel-Stil (Laufen und Abschluss) zuweisen.
+- Eine zweite/dritte/vierte Lieblingsposition für jeden Spieler auswählen.
+- Einen Turnierball auswählen.
+- Ein drittes Trikot auswählen.
+- Eine individuelle Formation zuweisen.
+- Und vieles mehr!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>Creation Centre - Editor²-Set</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Du brauchst dringend MEHR TEAMS? Dann hol dir das Teams-Set!
+
+Mit dem Teams-Set kannst du:
+- 50 zusätzliche Speicherplätze für erstellte Teams auf der Website nutzen.
+- 24 zusätzliche Download-Slots nutzen.
+- Ein individuelles Team-Logo für alle auf der Website erstellten Mannschaften hochladen.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>Creation Centre - Teams-Set</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Du benötigst sogar NOCH MEHR TEAMS? Dann hol dir das +10-Teams-Set, um weitere 10 Download-Slots für Teams zu erhalten.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>Creation Centre - +10-Teams-Set</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Du brauchst MEHR TURNIERE? Dann hol dir das Turnier-Set!
+Mit dem Turnier-Set verfügst du über:
+- 5 Speicherplätze zum Erstellen von Turnieren auf der Website.
+- 5 Download-Slots für Turniere.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>Creation Centre - Turnier-Set</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Erst testen, dann kaufen: die UEFA EURO 2012™-Erweiterung für EA SPORTS FIFA 12! Bestreite die UEFA EURO 2012™ mit authentischen Teams und Spielern. Stelle dein Traumteam zusammen und dominiere Europa im brandneuen Expeditionsmodus. Bestehe Challenges, die auf dem echten Turnier basieren und stelle dich dem Wettkampf bei der Online UEFA EURO 2012™.
+Unterstützte Sprachen (Text): Englisch, Französisch, Deutsch, Italienisch, Spanisch, Niederländisch und Polnisch.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>UEFA EURO 2012™ Testversion</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Sichere dir die UEFA EURO 2012™-Erweiterung für EA SPORTS FIFA 12 mit dem EA SPORTS Season Ticket-Rabatt! Bestreite die UEFA EURO 2012™ mit authentischen Teams und Spielern. Stelle dein Traumteam zusammen und dominiere Europa im brandneuen Expeditionsmodus. Bestehe Challenges, die auf dem echten Turnier basieren und stelle dich dem Wettkampf bei der Online UEFA EURO 2012™.
+Unterstützte Sprachen (Text): Englisch, Französisch, Deutsch, Italienisch, Spanisch, Niederländisch und Polnisch.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Sichere dir die UEFA EURO 2012™-Erweiterung für EA SPORTS FIFA 12! Bestreite die UEFA EURO 2012™ mit authentischen Teams und Spielern. Stelle dein Traumteam zusammen und dominiere Europa im brandneuen Expeditionsmodus. Bestehe Herausforderungen, die auf dem echten Turnier basieren und stelle dich dem Wettkampf bei der Online UEFA EURO 2012™.
+Unterstützte Sprachen (Text): Englisch, Französisch, Deutsch, Italienisch, Spanisch, Niederländisch und Polnisch.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Stelle dein eigenes Ultimate Team mit all deinen Lieblingsfußballstars zusammen, manage ein oder mehrere Mannschaften und nimm dann an dynamisch aktualisierten Online-Turnieren teil.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Erstelle dein Ultimate Team aus deinen Lieblingsspielern, manage einen oder mehrere Kader und tritt in dynamisch aktualisierten Online-Turnieren an.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Hol dir Live Season für die Barclays Premier League, Ligue 1, Serie A, Bundesliga und Liga BBVA. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Live Season - Alle Ligen</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Hol dir Live Season für die Barclays Premier League, Ligue 1, Serie A, Bundesliga und Liga BBVA zum Spezialpreis. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Live Season - Alle Ligen (20 % Rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Hol dir Live Season für die Barclays Premier League. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Live Season - Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Hol dir Live Season für die Barclays Premier League zum Spezialpreis. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Live Season - Barclays PL (20 % Rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Hol dir Live Season für die Ligue 1. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Live Season - Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Hol dir Live Season für die Ligue 1 zum Spezialpreis. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Live Season - Ligue 1 (20 % Rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Hol dir Live Season für die Bundesliga. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Live Season - Bundesliga</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Hol dir Live Season für die Bundesliga zum Spezialpreis. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Live Season - Bundesliga (20 % Rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Hol dir Live Season für die Serie A. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Live Season - Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Hol dir Live Season für die Serie A zum Spezialpreis. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Live Season - Serie A (20 % Rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Hol dir Live Season für die Liga BBVA. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Live Season - Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Hol dir Live Season für die Liga BBVA zum Spezialpreis. Aktualisiere die Spielerform wöchentlich, basierend auf der Leistung der echten Spieler. Lade jede Woche aktuelle reale Partien für den neuen Modus "My Live Season" herunter. Einmal erworben, ist er für den Rest der Saison 2011/12 aktiviert.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Live Season - Liga BBVA (20 % Rabatt)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Betritt die Welt von Live Season und schreibe die Geschichte deines Vereins neu! Mit dieser Testversion kannst du 5 reale Partien im brandneuen Modus "My Live Season" nachspielen. Wenn du die Testversion aktiviert hast, gehe zurück ins Hauptmenü, dann ins Menü "Live Season" und wähle "My Live Season" aus. Wähle eine Liga und einen beliebigen Verein darin aus und spiele 5 Partien mit diesem. Das gefällt dir? Dann besuche den FIFA 12 Store und kaufe die Vollversion.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>My Live Season - Testversion</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

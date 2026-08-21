@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="POL_PL" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>Potrzebujesz WSZYSTKIEGO? Kup paczkę „wszystko w jednym”. Znajdziesz w niej wszystko, co można znaleźć w innych paczkach Centrum tworzenia:
+- paczkę turniejów
+- paczkę trybu kariery
+- paczkę zespołów
+- paczkę 10 dodatkowych zespołów
+- paczkę licencji
+- paczkę zaawansowanej edycji
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>CT - wszystko w jednym</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>Chcesz zagrać zespołami z „Centrum tworzenia” w TRYBIE KARIERY? Kup paczkę trybu kariery, aby czerpać jeszcze więcej przyjemności z Centrum tworzenia!
+
+Dzięki zakupieniu paczki trybu kariery zyskasz możliwość:
+- wykorzystywania zespołów z „Centrum tworzenia” w trybie kariery (poprzez zamianę istniejących drużyn na zespoły z centrum przy rozpoczynaniu nowej kariery);
+- dodania do trybu kariery pobranej z „Centrum tworzenia” ligi (liga będzie dostępna do wyboru podczas rozpoczynania nowej kariery).</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>CT - paczka trybu kariery</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>Musisz koniecznie korzystać z LICENCJONOWANYCH STADIONÓW, ZAWODNIKÓW i ZESPOŁÓW? Kup paczkę licencji!
+W ten sposób zyskasz możliwość:
+- używania w zespołach tworzonych w „Centrum tworzenia” licencjonowanych zawodników;
+- dodawania do turniejów tworzonych w „Centrum tworzenia” licencjonowanych zespołów;
+- wybierania dla zespołów i na potrzeby turniejów tworzonych w „Centrum tworzenia” licencjonowanych stadionów.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>CT - paczka licencji</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>Potrzebujesz ZAAWANSOWANYCH opcji EDYCJI? Kup paczkę zaawansowanej edycji i ciesz się nowymi możliwościami w Centrum tworzenia!
+Dzięki nabyciu tej paczki zyskasz dostęp do nowych, rozbudowanych funkcji edycji, takich jak:
+- możliwość przypisania do zawodników drugiego zestawu cieszynek w biegu i cieszynek końcowych;
+- możliwość wybrania dla każdego zawodnika drugiej, trzeciej itd. preferowanej pozycji;
+- możliwość wybrania oficjalnej piłki turnieju;
+- możliwość zaprojektowania trzeciego zestawu strojów dla zespołów;
+- możliwość stworzenia własnego ustawienia zawodników na boisku;
+- i wiele innych!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>CT - paczka zaawansowanej edycji</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>Chcesz utworzyć WIĘCEJ ZESPOŁÓW? Kup paczkę zespołów, aby móc czerpać jeszcze więcej przyjemności z zabawy Centrum tworzenia!
+
+Dzięki tej paczce zyskasz następujące możliwości:
+- 50 dodatkowych miejsc na nowe zespoły;
+- 24 dodatkowe miejsca na pobrane zespoły;- możliwość dodania do każdego utworzonego zespołu niestandardowego herbu.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>CT - paczka zespołów</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>Chcesz mieć JESZCZE WIĘCEJ ZESPOŁÓW? Kup paczkę 10 dodatkowych zespołów, a zyskasz 10 nowych miejsc na pobrane zespoły.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>CT - p. 10 dodatkowowych zespołów</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>Chcesz tworzyć WIĘCEJ TURNIEJÓW? Kup paczkę turniejów, aby czerpać jeszcze więcej radości z zabawy w Centrum tworzenia!
+Dzięki tej paczce zyskasz:
+- 5 nowych miejsc na utworzone turnieje;
+- 5 nowych miejsc na pobrane turnieje.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>CT - paczka turniejów</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>Wypróbuj i kup dodatek UEFA EURO 2012™ do gry EA SPORTS FIFA 12! Rozegraj cały turniej UEFA EURO 2012™ z prawdziwymi drużynami i piłkarzami. Zbuduj swoją drużynę marzeń i zdominuj Europę w nowym trybie Wyprawy. Wykonuj zadania bazujące na faktycznych wydarzeniach na turnieju. Walcz z innymi graczami o sławę i chwałę w trybie online.
+Gra jest dostępna w językach: polskim, angielskim, francuskim, niemieckim, włoskim, hiszpańskim i holenderskim.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>Wersja próbna UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>Kup dodatek UEFA EURO 2012™ do gry EA SPORTS FIFA 12 ze zniżką za karnet EA SPORTS Season Ticket! Rozegraj cały turniej z prawdziwymi drużynami i piłkarzami. Zbuduj swoją drużynę marzeń i zdominuj Europę w nowym trybie Wyprawy. Wykonuj zadania bazujące na faktycznych wydarzeniach na turnieju. Walcz z innymi graczami o sławę i chwałę w trybie sieciowym.
+Gra jest dostępna w językach polskim, angielskim, francuskim, niemieckim, włoskim, hiszpańskim i holenderskim.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>Kup dodatek UEFA EURO 2012™ do gry EA SPORTS FIFA 12! Rozegraj cały turniej z prawdziwymi drużynami i piłkarzami. Zbuduj swoją drużynę marzeń i zdominuj Europę w nowym trybie Wyprawy. Wykonuj zadania bazujące na faktycznych wydarzeniach na turnieju. Walcz z innymi graczami o sławę i chwałę w trybie sieciowym.
+Gra jest dostępna w językach polskim, angielskim, francuskim, niemieckim, włoskim, hiszpańskim i holenderskim.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>Zbuduj swój własny najlepszy zespół w trybie Ultimate Team. Ściągnij swoich ulubionych piłkarzy z całego świata, utwórz jeden lub więcej składów i bierz udział w aktualizowanych na bieżąco turniejach online.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>Zbuduj swój własny najlepszy zespół w trybie Ultimate Team. Ściągnij swoich ulubionych piłkarzy z całego świata, utwórz jeden lub więcej składów i bierz udział w aktualizowanych na bieżąco turniejach online.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla lig Barclays Premier League, Ligue 1, Serie A, Bundesliga oraz Liga BBVA. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>Sezon Live - wszystkie ligi</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla lig Barclays Premier League, Ligue 1, Serie A, Bundesliga oraz Liga BBVA po niższej cenie. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>Sezon Live - wszystkie ligi (20% taniej)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Barclays Premier League. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>Sezon Live - Barclays PL</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Barclays Premier League po niższej cenie. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>Sezon Live - Barclays PL (20% taniej)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Ligue 1. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>Sezon Live - Ligue 1</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Ligue 1 po niższej cenie. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>Sezon Live - Ligue 1 (20% taniej)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Bundesligi. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>Sezon Live - Bundesliga </source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Bundesligi po niższej cenie. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>Sezon Live - Bundesliga (20% taniej)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Serie A. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>Sezon Live - Serie A</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Serie A po niższej cenie. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>Sezon Live - Serie A (20% taniej)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Liga BBVA. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>Sezon Live - Liga BBVA</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>Kup usługę Sezon Live dla Liga BBVA po niższej cenie. Aktualizuj formę zawodników w grze co tydzień na podstawie ich występów na prawdziwych boiskach. Co tydzień będą udostępniane do pobrania rzeczywiste spotkania do rozegrania w trybie „Mój sezon Live”. Jednorazowy zakup aktywuje usługę na cały sezon 2011/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>Sezon Live - Liga BBVA (20% taniej)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>Wkrocz w świat trybu „Sezon Live” i napisz na nowo historię swojego ulubionego klubu. Wersja próbna umożliwia rozegranie maksymalnie 5 rzeczywistych meczów w nowym trybie „Mój sezon Live”. Po aktywowaniu wersji próbnej przejdź do menu głównego, wybierz opcję „Sezon Live”, a następnie wybierz tryb „Mój sezon Live”. Teraz możesz wybrać dowolny klub z dowolnej ligi i rozegrać nim 5 meczów. Podoba Ci się nasza usługa? Odwiedź sklep FIFA 12 i kup pełną wersję Sezonu Live.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>Wersja próbna Mój sezon Live</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,33 @@
+# Runtime state. The build already excludes all of this, but a rig started
+# inside a clone recreates it, and none of it belongs to anyone but the machine
+# that made it.
+
+# The club, and the account behind it. club.json carries a security-answer hash
+# and a device id.
+server/club.json
+server/club_state.json
+server/club_state.json.bak_*
+server/identities.json
+server/user_settings.json
+server/prices.json
+
+# Written by SETUP.cmd - a path and a record of what it changed on that machine.
+server/gamepath.txt
+setup_state.json
+
+# Written by the launcher at boot.
+server/launcher/rig_owner.json
+server/launcher/watchdog.pid
+server/launcher/PAUSE
+
+# The recipient's own untouched game files. Theirs, and the way back out.
+game/_backup_original/
+
+# Logs, bytecode, working backups.
+server/logs/
+*.log
+*.err
+*.out
+*.pyc
+__pycache__/
+*.bak_*

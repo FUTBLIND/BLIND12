@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file original="global" source-language="ARA_SA" datatype="utf-8" date="2012-03-12T06:37:54Z">
+    <header />
+    <body>
+      <trans-unit resname="CCALLINONE_DESCRIPTION">
+        <source>هل تريد كل شيء؟ إشتري "مركز التصميم - كل الحزم" للحصول على كل ما يمكن أن تقدمه كافة الحزم الأخرى: 
+- حزمة الدوات 
+- حزمة نمط المهنة 
+- حزمة الفِرق 
+- حزمة 10 فِرق أخرى إضافية 
+- حزمة التراخيص 
+- خزمة التحرير الفعلي
+</source>
+      </trans-unit>
+      <trans-unit resname="CCALLINONE_NAME">
+        <source>مركز التصميم - كل الحزم</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_DESCRIPTION">
+        <source>هل تتوق للعب في نمط المهنة مع فِرق مركز التصميم الخاصة بك ؟ إحصل على حزمة نمط المهنة لتوسيع تجربة مركز التصميم ! 
+
+بحصلوك على حزمة نمط المهنة ستكون مخولاً للتالي: 
+- استخدام فِرق مركز التصميم الخاصة بك في نمط المهنة عبر تبديل الفِرق حين تبدأ مهنة جديدة. 
+- إضافة واللعب في دوري مركز التصميم يمكن تنزيله داخل نمط المهنة عبر اختياره أثناء إعداد مهنة جديدة.</source>
+      </trans-unit>
+      <trans-unit resname="CCCAREERMODE_NAME">
+        <source>مركز التصميم - حزمة نمط المهنة</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_DESCRIPTION">
+        <source>أيجب عليك استخدام ملاعب، ولاعبين، وفِرق مرخصة؟ 
+احصل على حزمة التراخيص! 
+بحصلوك على حزمة التراخيص ستكون مخولاً للتالي: 
+- استخدام لاعبين مرخصين من فِرق مركز التصميم التي انشأتها في الموقع. 
+- استخدام فِرق مرخصة من دورات مركز التصميم التي انشأتها في الموقع. 
+- اختيار ملاعب مرخصة للفِرق والدورات التي انشأتها في الموقع.</source>
+      </trans-unit>
+      <trans-unit resname="CCLICENSOR_NAME">
+        <source>مركز التصميم - حزمة التراخيص</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_DESCRIPTION">
+        <source>هل أنت مهتم فعلاً بإجراء تخصيصات؟ احصل على حزمة التحرير الفعلي لتحسّن من تجربة مركز التصميم الخاص بك! 
+بحصلوك على حزمة التحرير الفعلي ستكون مخولاً في الموقع لتقوم بأعمال تحرير مهمة مثل: 
+- القدرة على وضع أساليب احتفال ركض وإنهاء ثانية. 
+- القدرة على اختيار مراكز ثانية/ثالثة/رابعة مفضلة لكل لاعب. 
+- القدرة على اختيار كرة دورة. 
+- القدرة على اختيار لباس ثالث. 
+- القدرة على تحديد تشكيلة مخصصة. 
+- والكثير غيرها!</source>
+      </trans-unit>
+      <trans-unit resname="CCSERIOUSEDITOR_NAME">
+        <source>مركز التصميم - حزمة التحرير الفعلي</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_DESCRIPTION">
+        <source>تطمح للمزيد من الفِرق؟ احصل على حزمة الفِرق لتحسّن من تجربتك لمركز التصميم الخاص بك! 
+
+بحصلوك على حزمة التراخيص ستكون مخولاً للتالي: 
+- مساحة لإضافة 50 فريقاً على الموقع. 
+- إمكانية تنزيل 24 مساحة فِرق إضافية. 
+- القدرة على تحميل شعار فريق مخصص لجميع الفِرق التي أنشأتها على الموقع.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS1_NAME">
+        <source>مركز التصميم - حزمة الفِرق</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_DESCRIPTION">
+        <source>تطمح لمزيد من الفِرق أكثر؟ احصل على حزمة 10 فِرق أخرى إضافية لتكون مخولاً للحصول على مساحة إضافية لعشر فِرق.</source>
+      </trans-unit>
+      <trans-unit resname="CCTEAMS2_NAME">
+        <source>مركز التصميم - حزمة 10 فِرق أخرى إضافية</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_DESCRIPTION">
+        <source>هل تريد المزيد من الدورات الإضافية ؟ إحصل على حزمة الدورات لتحسّن تجربة مركز التصميم ! بحصلوك على حزمة الدورات ستكون مخولاً للتالي : 
+- مساحة لخمسة دورات تصممها على الموقع. 
+- مساحة لخمسة دورات لتنزلها.</source>
+      </trans-unit>
+      <trans-unit resname="CCTOURNAMENTS_NAME">
+        <source>مركز التصميم - حزمة الدورات</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_DESCRIPTION">
+        <source>جرب ثم اشترِ إصدارة التوسعة UEFA EURO 2012™ للعبة فيفا 12 من EA SPORTS! العب في UEFA EURO 2012™ مع فِرق ولاعبين رسميين. اصنع فريق أحلامك ثم سيطر على أوروبا بأكملها في نمط الحملة الجديد. العب في تحديات مبنية على البطولة الحقيقية. تنافس عبر الشبكة للوصول إلى المجد في بطولة UEFA EURO 2012™ عبر الشبكة.
+لغات النص لللعبة: الإنجليزية، والفرنسية، والألمانية، والإيطالية، والإسبانية، والهولندية، والبولندية.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLC_NAME">
+        <source>إصدارة UEFA EURO 2012™ التجريبية</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_DESCRIPTION">
+        <source>احصل على إصدارة التوسعة UEFA EURO 2012™ للعبة فيفا 12 من EA SPORTS، وتذكرة EA SPORTS Season Ticket المخفّضة! العب بطولة UEFA EURO 2012™ مع فِرق ولاعبين رسميين. اصنع فريق أحلامك وسيطر على أوروبا ضمن نمط الحملة الجديد كلياً. العب ضمن تحديات مبنية على البطولة الحقيقية. تنافس عبر الشبكة للفوز بمجد بطولة UEFA EURO 2012™ عبر الشبكة.
+لغات النص لللعبة: الإنجليزية، والفرنسية، والألمانية، والإيطالية، والإسبانية، والهولندية، والبولندية.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCDSC_NAME">
+        <source>لعبة UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_DESCRIPTION">
+        <source>احصل على إصدارة التوسعة UEFA EURO 2012™ للعبة فيفا 12 من EA SPORTS! العب نهائيات بطولة UEFA EURO 2012™ مع فِرق ولاعبين رسميين. اصنع فريق أحلامك وسيطر على أوروبا ضمن نمط الحملة الجديد كلياً. العب ضمن تحديات مبنية على البطولة الحقيقية. تنافس عبر الشبكة للفوز بمجد بطولة UEFA EURO 2012™ عبر الشبكة.
+لغات النص لللعبة: الإنجليزية، والفرنسية، والألمانية، والإيطالية، والإسبانية، والهولندية، والبولندية.</source>
+      </trans-unit>
+      <trans-unit resname="EURO2012DLCKEY_NAME">
+        <source>لعبة UEFA EURO 2012™</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_DESCRIPTION">
+        <source>اصنع Ultimate Team الخاص بك مع كافة اللاعبين النجوم المفضلين لديك، اختر إدارة أحد أو مجموعة تشكيلات ثم تنافس ضمن دورة ديناميكية محدّثة عبر الشبكة.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC01_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_DESCRIPTION">
+        <source>اصنع Ultimate Team الخاص بك مع كافة اللاعبين النجوم المفضلين لديك، اختر إدارة أحد أو مجموعة تشكيلات ثم تنافس ضمن دورة ديناميكية محدّثة عبر الشبكة.</source>
+      </trans-unit>
+      <trans-unit resname="FUTDLC02_NAME">
+        <source>FIFA Ultimate Team</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر لدوري باركليز البريطاني الممتاز، ودوري الدرجة الأولى الفرنسي، ودوري الدرجة الأولى الإيطالي، والدوري الألماني الممتاز، والدوري الإسباني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي  المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALL_NAME">
+        <source>الموسم المباشر - جميع الدوريات</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر المخفّضة لدوري باركليز البريطاني الممتاز، ودوري الدرجة الأولى الفرنسي، ودوري الدرجة الأولى الإيطالي، والدوري الألماني الممتاز، والدوري الإسباني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONALLDISC_NAME">
+        <source>الموسم المباشر - جميع الدوريات (20% أقل)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر لدوري باركليز البريطاني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENG_NAME">
+        <source>الموسم المباشر - دوري باركلي البريطاني الممتاز</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر المخفّضة لدوري باركليز البريطاني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONENGDISC_NAME">
+        <source>الموسم المباشر - دوري باركلي البريطاني الممتاز (20% أقل)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر لدوري الدرجة الأولى الفرنسي. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRA_NAME">
+        <source>الموسم المباشر - دوري الدرجة الأولى الفرنسي</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر المخفّضة لدوري الدرجة الأولى الفرنسي. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONFRADISC_NAME">
+        <source>الموسم المباشر - دوري الدرجة الأولى الفرنسي (20% أقل)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر للدوري الألماني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGER_NAME">
+        <source>الموسم المباشر - الدوري الألماني الممتاز</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر المخفّضة للدوري الألماني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONGERDISC_NAME">
+        <source>الموسم المباشر - الدوري الألماني الممتاز (20% أقل)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر لدوري الدرجة الأولى الإيطالي. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITA_NAME">
+        <source>الموسم المباشر - دوري الدرجة الأولى الإيطالي</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر المخفّضة لدوري الدرجة الأولى الإيطالي. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONITADISC_NAME">
+        <source>الموسم المباشر - دوري الدرجة الأولى الإيطالي (20% أقل)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر للدوري الإسباني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPA_NAME">
+        <source>الموسم المباشر - الدوري الإسباني الممتاز</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_DESCRIPTION">
+        <source>احصل على خدمة الموسم المباشر المخفّضة للدوري الإسباني الممتاز. حدّث خصائص اللاعب في المباراة كل أسبوع، اعتماداً على أداء اللاعبي الحقيقي. نزّل نتائج حقيقية كل أسبوع لنمط موسمي المباشر. قم بالشراء مرة واحد لتفعيل باقي موسم 11/12.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONSPADISC_NAME">
+        <source>الموسم المباشر - الدوري الإسباني الممتاز (20% أقل)</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_DESCRIPTION">
+        <source>ادخل عالم الموسم المباشر وأعِد كتابة تاريخ ناديك! تسمح لك هذه التجربة بإعادة لعب ما يصل إلى 5 مباريات عالمية في نمط  موسمي المباشر للعب الجديد. ما أن تُفعّل هذه التجربة، عليك العودة إلى القائمة الرئيسة، ودخول قائمة الموسم المباشر واختيار موسمي المباشر. اختر دوري وأي نادي داخله للعب 5 مباريات. هل أعجبك ما شاهدته؟ عُد مرة أخرى إلى متجر FIFA12 لشراء النسخة الكاملة.</source>
+      </trans-unit>
+      <trans-unit resname="LIVESEASONTRIAL_NAME">
+        <source>تجربة موسمي المباشر</source>
+      </trans-unit>
+      <trans-unit resname="STORE_TAB_EURO">
+        <source>لعبة UEFA EURO 2012™</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
