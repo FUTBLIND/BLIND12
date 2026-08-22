@@ -119,10 +119,16 @@ $id = [Security.Principal.WindowsIdentity]::GetCurrent()
 $pr = New-Object Security.Principal.WindowsPrincipal($id)
 if (-not $pr.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "not elevated - relaunching with UAC..." -ForegroundColor Yellow
-    $a = @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", $MyInvocation.MyCommand.Path)
-    if ($PatchScript) { $a += @("-PatchScript", $PatchScript) }
-    if ($LeaveEaApp)  { $a += "-LeaveEaApp" }
-    if ($WhatIfOnly)  { $a += "-WhatIfOnly" }
+    # ONE QUOTED STRING, not an array. Start-Process joins an -ArgumentList array
+    # with spaces and adds NO quoting, so a folder path with a space in it -
+    # "FUT12-dist (1)", "My Games", any OneDrive path - truncates -File and the
+    # child dies with "does not have a '.ps1' extension" milliseconds after a
+    # silent success. Quote every path so the space survives.
+    $self = $MyInvocation.MyCommand.Path
+    $a = "-NoProfile -ExecutionPolicy Bypass -File `"$self`""
+    if ($PatchScript) { $a += " -PatchScript `"$PatchScript`"" }
+    if ($LeaveEaApp)  { $a += " -LeaveEaApp" }
+    if ($WhatIfOnly)  { $a += " -WhatIfOnly" }
     Start-Process powershell -Verb RunAs -ArgumentList $a
     return
 }
@@ -192,8 +198,16 @@ if (-not $LeaveEaApp) {
         # result was that the disable never actually happened and nobody noticed
         # - the Windows System log had zero SCM events for this service all day.
         # A failure here must be visible.
+        #
+        # -StartupType, NOT -StartType. Making the failure visible is what
+        # finally exposed this: both machines logged "could not disable
+        # EABackgroundService - A parameter cannot be found that matches
+        # parameter name 'StartType'", so the disable had never once worked.
+        # The trap is that `$svc.StartType` on the line above IS the right
+        # spelling - it is a property of ServiceController - while the
+        # Set-Service PARAMETER is -StartupType. Same concept, two names.
         try {
-            Set-Service $svcName -StartType Disabled -ErrorAction Stop
+            Set-Service $svcName -StartupType Disabled -ErrorAction Stop
             Write-Host "  StartType -> Disabled"
         } catch {
             Write-Host "  WARNING: could not disable $svcName - $($_.Exception.Message)" -ForegroundColor Yellow
@@ -262,7 +276,7 @@ finally {
         Write-Host ""
         Write-Host "--- restoring the EA App ---"
         try {
-            Set-Service $svcName -StartType $svcStart -ErrorAction Stop
+            Set-Service $svcName -StartupType $svcStart -ErrorAction Stop
             Write-Host "  $svcName StartType -> $svcStart"
         } catch {
             Write-Host "  WARNING: could not restore StartType - $($_.Exception.Message)" -ForegroundColor Yellow

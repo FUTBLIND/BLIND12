@@ -2,8 +2,8 @@
  "files": [
   {
    "path": "README.md",
-   "md5": "98dd7b31841696092675e12f67d58c7d",
-   "bytes": 7561
+   "md5": "dde1aac541db7f6738b80e4d37e1bd33",
+   "bytes": 9918
   },
   {
    "path": "SETUP.cmd",
@@ -22,13 +22,33 @@
   },
   {
    "path": "TRANSFER.md",
-   "md5": "43a626944cdea6ba84ba58e1645209e3",
-   "bytes": 5264
+   "md5": "ccaa673954e355a9e3123602420a0609",
+   "bytes": 5958
   },
   {
    "path": "UNINSTALL.cmd",
    "md5": "cb845bc02eff94796b6373501f156aaa",
    "bytes": 817
+  },
+  {
+   "path": "deps/d3dx9_41.dll",
+   "md5": "3fa06cf5079b84155d18b05c08f7131b",
+   "bytes": 4178264
+  },
+  {
+   "path": "deps/vcredist2005_x86.exe",
+   "md5": "738598f3c9f5755b4f89bdac92ba5ae6",
+   "bytes": 2748432
+  },
+  {
+   "path": "deps/vcredist2008_x86.exe",
+   "md5": "a92a4d8e784d8f859217f828fe879047",
+   "bytes": 4483040
+  },
+  {
+   "path": "deps/xinput1_3.dll",
+   "md5": "77f595dee5ffacea72b135b1fce1312e",
+   "bytes": 81768
   },
   {
    "path": "game/Core/awc.dll",
@@ -157,8 +177,8 @@
   },
   {
    "path": "server/cdb_patch_minimal.txt",
-   "md5": "bd1cc0ebeb5cd3a209c085b88d6669c8",
-   "bytes": 19938
+   "md5": "f04b9ce86fd85e45f2bf9b391a496d0a",
+   "bytes": 19966
   },
   {
    "path": "server/cdbpath.py",
@@ -452,8 +472,8 @@
   },
   {
    "path": "server/gamehash.py",
-   "md5": "873a6f7385387ad19f2e66cfd43ece6d",
-   "bytes": 8799
+   "md5": "05f2f51e7fadd7e279c4aa7bd2b8076d",
+   "bytes": 9370
   },
   {
    "path": "server/gamepath.py",
@@ -472,13 +492,13 @@
   },
   {
    "path": "server/launch_fifa.ps1",
-   "md5": "7f15116ead5bf8f1ceca4cc2b20f54b0",
-   "bytes": 13866
+   "md5": "0d38cc61c00a196dc792bf4cc3e5cec1",
+   "bytes": 14500
   },
   {
    "path": "server/launcher/boot.ps1",
-   "md5": "8908f25e996b2e673f8e17cf86bab8ad",
-   "bytes": 20674
+   "md5": "5c7183c6543147659a4ba88912fbbe69",
+   "bytes": 21124
   },
   {
    "path": "server/launcher/common.ps1",
@@ -607,12 +627,12 @@
   },
   {
    "path": "setup.py",
-   "md5": "844820edd2dfe379249a9c83da206a91",
-   "bytes": 14957
+   "md5": "f42808abe135bb316387301aa52df91b",
+   "bytes": 23352
   }
  ],
- "count": 122,
- "bytes": 59382511,
+ "count": 126,
+ "bytes": 70887144,
  "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
  "excluded_personal": [
   "club.json",

@@ -127,6 +127,18 @@ SETUP.cmd      right-click, Run as administrator
 START.cmd
 ```
 
+`SETUP.cmd` installs the game's own Microsoft runtimes from `deps\` — the
+VC++ 2008 SP1 x86 redistributable, and two DirectX 9 DLLs placed beside
+`fifa.exe`. You do not have to find those yourself.
+
+**If the game asks you to activate it or sign in to an EA account, that is a
+missing runtime, not a licence.** `Game\Core\EACoreServer.exe` failed to start,
+so `awc.dll` got no answer about the licence and fell back to its DRM dialog.
+No EA account will satisfy it. Re-run `SETUP.cmd` as administrator and read the
+runtime lines. The proof, if you want it: `server\logs\cdb_*.log` from a working
+launch loads around 200 modules, and a failing one stops near 97, at
+`MSVCP90.dll`.
+
 If setup says FIFA 12 was not found, `python\python.exe server\gamepath.py --why` prints
 every location it tried and the verdict for each — including the case that looks
 correct in Explorer, where the folder is there and `fifa.exe` is there but

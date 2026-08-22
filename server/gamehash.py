@@ -78,6 +78,14 @@ def md5(path):
 # rather than by remembering to tidy up.
 IGNORE_SUFFIX = (".dmp",)
 
+# Nor are these. SETUP.cmd places the two DirectX June 2010 DLLs beside
+# fifa.exe when Windows does not have them - app-local, because they carry no
+# side-by-side manifest and so need no installer. They are therefore present on
+# a set-up machine and absent on the machine the manifest was written from,
+# which would read as "2 files differ" on every single check. They belong to
+# setup, not to EA, and UNINSTALL.cmd takes them away again.
+IGNORE_NAMES = {"d3dx9_41.dll", "xinput1_3.dll"}
+
 _skipped = []
 
 
@@ -90,7 +98,7 @@ def walk(root):
         for f in sorted(files):
             q = os.path.join(base, f)
             rel = os.path.relpath(q, root).replace("\\", "/")
-            if f.lower().endswith(IGNORE_SUFFIX):
+            if f.lower().endswith(IGNORE_SUFFIX) or f.lower() in IGNORE_NAMES:
                 _skipped.append(rel)
                 continue
             try:
@@ -102,7 +110,8 @@ def walk(root):
 
 def report_skipped():
     if _skipped:
-        print("  ignored %d crash dump(s) - not game files:" % len(_skipped))
+        print("  ignored %d file(s) - crash dumps and setup's own DLLs, "
+              "not EA's:" % len(_skipped))
         for r in _skipped[:5]:
             print("      %s" % r)
 

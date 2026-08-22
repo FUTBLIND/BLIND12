@@ -324,9 +324,15 @@ try {
         # the pipe's write end open for as long as it lives - which is forever.
         # It also means this window can close the moment boot is done.
         $wdOut = Join-Path $FUT12_LOGS 'watchdog.out'
+        # ONE QUOTED STRING for the args, not an array. An -ArgumentList array is
+        # joined with spaces and NOT quoted, so a folder path with a space in it
+        # truncates -File and the watchdog dies instantly - while this block
+        # still prints "watchdog started" because powershell.exe DID launch and
+        # then exited in milliseconds. The pre-flight below also refuses a spaced
+        # $FUT12_ROOT outright; quote here too so the two agree.
+        $wdScript = Join-Path $FUT12_LAUNCHER 'watchdog.ps1'
         $wd = Start-Process -FilePath 'powershell.exe' `
-                            -ArgumentList @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File',
-                                            (Join-Path $FUT12_LAUNCHER 'watchdog.ps1')) `
+                            -ArgumentList ("-NoProfile -ExecutionPolicy Bypass -File `"$wdScript`"") `
                             -WorkingDirectory $FUT12_ROOT `
                             -RedirectStandardOutput $wdOut `
                             -RedirectStandardError ($wdOut -replace '\.out$', '.err') `

@@ -17,8 +17,37 @@ account to make.
 | **Windows 10 or 11** | the whole rig is Windows-specific |
 | **FIFA 12 for PC**, installed | your own copy — see below. This folder patches a game; it is not one |
 | **Debugging Tools for Windows** | see below. This one is not optional. |
+| **VC++ 2008 SP1 (x86)** | the game's own dependency. `SETUP.cmd` installs it from `deps\` |
+| **DirectX 9 (June 2010) files** | same — `SETUP.cmd` places them beside `fifa.exe` |
+| **VC++ 2005 (x86)** | the game's own dependency. Setup checks it and tells you if it is absent |
 | Python | **not** needed — a copy is bundled in `python\` |
 | Any pip packages | none at all |
+
+### The runtimes are the game's dependencies, not this folder's
+
+Worth stating plainly, because it cost an evening. FIFA 12 links against
+Microsoft runtimes that Windows does not ship: the **Visual C++ 2008 x86**
+assembly (`fifa.exe` and `powdllzf.dll` name it), the **Visual C++ 2005 x86**
+assembly (`awc.dll`, `activation.exe` and the Qt DLLs name it), and
+`d3dx9_41.dll` from the **DirectX June 2010** redistributable plus its
+companion `xinput1_3.dll`. A machine that has never had an older game installed
+will have none of them.
+
+When VC++ 2008 is missing, **`fifa.exe` itself cannot finish starting** — the
+dependency is the game's own, not EA Core's. `awc.dll` then never gets to
+answer the licence question and falls back to its DRM path, so what you
+actually see is **`activation.exe` demanding an EA account**, which points at
+nothing relevant. There is no EA account that fixes it; it is a missing DLL.
+
+`SETUP.cmd` now carries and installs the 2008 redistributable and the two
+DirectX DLLs, re-checks afterwards rather than trusting the installer, and
+refuses to report Ready if the machine still lacks them. **Everything is x86** —
+FIFA 12 and every binary in `Game\Core` is 32-bit, so the x64 redistributables
+do not satisfy any of it.
+
+`UNINSTALL.cmd` removes the two DirectX DLLs it placed. It deliberately does
+**not** uninstall the Visual C++ redistributable — that is a shared Microsoft
+component other software may now rely on.
 
 ### You need your own FIFA 12 — this is not it
 
@@ -148,6 +177,7 @@ running. Ports are machine-wide, so only one copy of this rig can run at a time.
 START.cmd  SETUP.cmd  STOP.cmd  UNINSTALL.cmd    what you click
 setup.py                                          what SETUP.cmd runs
 python\                    a bundled Python 3.7.9 32-bit — nothing to install
+deps\                      the game's Microsoft runtimes, installed by SETUP.cmd
 server\                    the seven services, their libraries and their data
   launcher\                pre-flight, boot, stop, watchdog
 game\                      the eleven patched game files
@@ -162,6 +192,13 @@ The seven services listen on `127.0.0.1` only.
 
 ## If it does not work
 
+- **It asks you to activate the game / sign in to an EA account** — a missing
+  Microsoft runtime, not a licence. `EACoreServer.exe` failed to start, so
+  `awc.dll` fell back to its DRM dialog. Run `SETUP.cmd` again as administrator
+  and read the runtime lines; nothing about your EA account is involved, and
+  signing in will not help. If you want to see it for yourself,
+  `server\logs\cdb_*.log` from a working launch loads around 200 modules and a
+  failing one stops near 97, at `MSVCP90.dll`.
 - **"EA servers are not available"** — `cdb.exe` is missing or did not attach.
   This is the usual one. See Debugging Tools above.
 - **A service will not start** — a port is taken. Run `SETUP.cmd --check`.

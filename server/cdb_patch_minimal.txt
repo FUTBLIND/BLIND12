@@ -123,6 +123,7 @@ ed 4007ffc0 40062a88
 * so the displacement must grow by one for both to land on the same target.
 eb 4001a5d1 e9 c8 03 00 00 90
 .printf "--- origin:// launch gate forced open (EA App will not be spawned) ---\n"
+bu awc+0x15ed2 "r eax=1; g"
 
 * FUT availability gate - without this, UT says the servers are unavailable
 bp f728c0 "eb @ecx+0x13c 0; eb @ecx+0x14d 1; eb @ecx+0x14e 0; eb @ecx+0x14f 0; eb @ecx+0x150 0; ed @ecx+0x11c 1; ed @ecx+0x140 1; g"

@@ -7,13 +7,22 @@ Run through SETUP.cmd, which checks for administrator first.
     setup.py --uninstall     put everything back
     setup.py --check         report only, change nothing
 
-FIVE THINGS, and every one of them is reversible:
+SIX THINGS, and every one of them is reversible:
 
     1. find FIFA 12 and record the path in server\gamepath.txt
     2. back up the eleven game files, then copy the patched ones in
     3. append seven hosts entries
     4. install the local certificate into Trusted Root
-    5. check cdb.exe, the ports and the interpreter, and report
+    5. install THE GAME'S own runtime dependencies - the VC++ 2008 SP1 x86
+       redistributable and two DirectX 9 DLLs, both carried in deps\
+    6. check cdb.exe, the ports and the interpreter, and report
+
+STEP 5 EXISTS BECAUSE OF A REAL FAILURE. Setup checked our requirements and
+none of the game's, so it printed "Ready" on a machine that could not run FIFA
+12 - and the symptom, hours later, was EA's activation dialog demanding an
+account. It was a missing C runtime: EACoreServer.exe could not start, awc.dll
+got no answer about the licence, and the DRM dialog was the fallback path.
+Nothing about that message pointed at a DLL.
 
 IT REFUSES RATHER THAN GUESSES. A missing game, a game that does not match, a
 hosts file it cannot write - each of those stops the run and says which one it
@@ -22,6 +31,7 @@ does nothing and explains itself.
 """
 import argparse
 import ctypes
+import glob
 import hashlib
 import io
 import json
@@ -62,6 +72,50 @@ UDP_PORTS = [17502]
 CDB_HELP = ("Install the Windows SDK and tick ONLY 'Debugging Tools for "
             "Windows'.\n         https://developer.microsoft.com/windows/downloads/windows-sdk/")
 
+# --------------------------------------------------------------------------
+# THE GAME'S OWN RUNTIME DEPENDENCIES
+# --------------------------------------------------------------------------
+# Setup used to check the game files, the ports, the debugger and the
+# interpreter - every one of them OUR requirement - and nothing the game itself
+# needs. So it printed "Ready" on a machine that could not run FIFA 12, and the
+# failure surfaced later as EA's activation dialog, which names none of this.
+#
+# What that machine was actually missing, measured by diffing two cdb logs: a
+# working launch loads 202 modules, that one stopped at 97, at the module where
+# the working one loads MSVCP90/MSVCR90 inside fifa.exe. fifa.exe's own manifest
+# names Microsoft.VC90.CRT, so without it fifa.exe cannot finish starting and
+# the DRM dialog is the visible tail. (It is NOT EACoreServer that needs VC90 -
+# that binary static-links its CRT. The dependency is fifa.exe's own.)
+#
+# TWO C runtimes are required, and this was checked against the binaries'
+# manifests, not guessed:
+#   VC90 (2008 SP1)  fifa.exe, powdllzf.dll
+#   VC80 (2005 SP1)  awc.dll - the module this rig patches - plus activation.exe
+#                    and the Qt DLLs. awc.dll loads into fifa.exe whose app dir
+#                    has no local CRT, so Core\'s msvcr80 copies do not cover it.
+#
+# EVERYTHING HERE IS x86. FIFA 12 and every binary in Game\Core is 32-bit, so
+# the x64 redistributables satisfy none of it - which is a very easy way to
+# install "the right thing" and still be missing it.
+WINDIR = os.environ.get("SystemRoot", r"C:\Windows")
+WINSXS = os.path.join(WINDIR, "WinSxS")
+SYSWOW = os.path.join(WINDIR, "SysWOW64")
+DEPS = os.path.join(HERE, "deps")
+
+# Side-by-side assemblies, matched by directory name. The version suffix on
+# these folders moves with Windows Update, so match the assembly identity and
+# NEVER a full version string. Each entry: (label, glob, bundled installer).
+VC_RUNTIMES = [
+    ("VC++ 2008 SP1 (x86)", "x86_microsoft.vc90.crt_*", "vcredist2008_x86.exe"),
+    ("VC++ 2005 SP1 (x86)", "x86_microsoft.vc80.crt_*", "vcredist2005_x86.exe"),
+]
+
+# Ordinary DLLs, no manifest, no side-by-side. Windows ships d3d9.dll and
+# xinput1_4.dll but neither of these, so they arrive only with the DirectX
+# June 2010 redistributable - or, as here, beside the executable that wants
+# them, which is a documented Windows search path and needs no installer.
+DX_FILES = ["d3dx9_41.dll", "xinput1_3.dll"]
+
 OK, WARN, BAD = "[ OK ]", "[WARN]", "[FAIL]"
 _faults = []
 
@@ -95,8 +149,22 @@ def load_state():
 
 
 def save_state(d):
-    io.open(STATE, "w", encoding="utf-8", newline="\n").write(
-        json.dumps(d, indent=1))
+    # GUARDED, because this is called AFTER the hosts file has been changed and
+    # the cert installed. An unguarded write that failed - AV lock, a read-only
+    # extract, a synced folder holding the file open - would throw a raw
+    # traceback on a machine that already had seven hosts lines added and now has
+    # NO record of them, which is exactly the half-done state the module
+    # docstring promises never to leave. Name the file and what is unrecorded so
+    # UNINSTALL's fallback (remove HOST_NAMES, drop the cert) can still be run.
+    try:
+        io.open(STATE, "w", encoding="utf-8", newline="\n").write(
+            json.dumps(d, indent=1))
+    except Exception as e:
+        say(BAD, "state file", "could not write %s: %s" % (STATE, e))
+        print("         Setup has changed the hosts file and/or the certificate")
+        print("         but could not record it. UNINSTALL.cmd falls back to")
+        print("         removing the known host names and the cert by name, so")
+        print("         the machine can still be cleaned up.")
 
 
 # ---------------------------------------------------------------- the game
@@ -344,6 +412,118 @@ def check_cdb():
     return None
 
 
+def _sxs(pattern):
+    """Directories under WinSxS matching an assembly identity."""
+    try:
+        return glob.glob(os.path.join(WINSXS, pattern))
+    except Exception:
+        return []
+
+
+def _dx_present(root, name):
+    """A DirectX DLL counts if Windows has it OR it sits beside fifa.exe."""
+    return (os.path.exists(os.path.join(SYSWOW, name))
+            or os.path.exists(os.path.join(root, name)))
+
+
+def _check_vc(label, sxs_glob, installer, dry):
+    """One VC runtime: detect, install what we carry if missing, RE-DETECT.
+
+    The re-detect is the whole point. An installer's exit code says what the
+    installer thinks happened; the only thing that matters is whether this
+    machine now has the assembly. Those two disagreed often enough during
+    diagnosis to make trusting the first one a mistake.
+    """
+    if _sxs(sxs_glob):
+        say(OK, label, "present")
+        return
+    if dry:
+        say(BAD, label, "missing - setup would install it")
+        return
+    exe = os.path.join(DEPS, installer)
+    if not os.path.exists(exe):
+        say(BAD, label, "missing, and deps\\%s is not here either" % installer)
+        return
+    print("         installing %s - this takes a moment" % label)
+    try:
+        subprocess.call([exe, "/q"])
+    except Exception as e:
+        say(WARN, label, "installer failed: %s" % e)
+    if _sxs(sxs_glob):
+        say(OK, label, "installed")
+        st = load_state()
+        st.setdefault("vc_installed", [])
+        if installer not in st["vc_installed"]:
+            st["vc_installed"].append(installer)
+        save_state(st)
+    else:
+        # Not fatal-with-no-advice: name the file the recipient already has,
+        # because a hand-run installer shows errors a silent one swallows.
+        say(BAD, label,
+            "still missing after install - run deps\\%s by hand" % installer)
+
+
+def check_runtimes(root, dry=False):
+    r"""The game's own dependencies: two C runtimes, then the DirectX DLLs."""
+    for label, sxs_glob, installer in VC_RUNTIMES:
+        _check_vc(label, sxs_glob, installer, dry)
+
+    # DirectX - two loose DLLs, dropped beside fifa.exe rather than installed.
+    missing = [f for f in DX_FILES if not _dx_present(root, f)]
+    if not missing:
+        say(OK, "DirectX 9 files", "present")
+    elif dry:
+        say(BAD, "DirectX 9 files",
+            "missing: %s - setup would copy them beside fifa.exe"
+            % ", ".join(missing))
+    else:
+        placed = []
+        for f in missing:
+            src = os.path.join(DEPS, f)
+            if not os.path.exists(src):
+                continue
+            try:
+                shutil.copy2(src, os.path.join(root, f))
+                placed.append(f)
+            except Exception as e:
+                say(WARN, f, "could not copy: %s" % e)
+        still = [f for f in DX_FILES if not _dx_present(root, f)]
+        if still:
+            say(BAD, "DirectX 9 files", "missing: %s" % ", ".join(still))
+        else:
+            say(OK, "DirectX 9 files", "copied beside fifa.exe: %s"
+                % ", ".join(placed))
+            st = load_state()
+            # Recorded so UNINSTALL.cmd removes exactly what we put there and
+            # nothing that was already the recipient's.
+            st["dx_placed"] = sorted(set(st.get("dx_placed", []) + placed))
+            save_state(st)
+
+
+def remove_runtimes(root):
+    """Take back only the DirectX DLLs setup itself placed.
+
+    The redistributable is deliberately NOT uninstalled. It is a shared
+    Microsoft component that other software may now depend on, and removing it
+    to tidy up after a game server would be a genuinely destructive act.
+    """
+    placed = load_state().get("dx_placed") or []
+    gone = []
+    for f in placed:
+        p = os.path.join(root, f)
+        try:
+            if os.path.exists(p):
+                os.remove(p)
+                gone.append(f)
+        except Exception:
+            pass
+    st = load_state()
+    st.pop("dx_placed", None)
+    save_state(st)
+    say(OK, "DirectX 9 files",
+        "removed %s" % ", ".join(gone) if gone else "nothing to remove")
+
+
 def check_python():
     import struct
     bits = struct.calcsize("P") * 8
@@ -396,6 +576,7 @@ def main():
 
     if a.uninstall:
         restore_game(root)
+        remove_runtimes(root)
         remove_hosts()
         remove_cert()
         print("")
@@ -411,6 +592,7 @@ def main():
     install_cert(dry)
     check_ports()
     check_cdb()
+    check_runtimes(root, dry)
     check_python()
 
     print("")
