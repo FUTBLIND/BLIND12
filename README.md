@@ -19,7 +19,7 @@ account to make.
 | **Debugging Tools for Windows** | see below. This one is not optional. |
 | **VC++ 2008 SP1 (x86)** | the game's own dependency. `SETUP.cmd` installs it from `deps\` |
 | **DirectX 9 (June 2010) files** | same — `SETUP.cmd` places them beside `fifa.exe` |
-| **VC++ 2005 (x86)** | the game's own dependency. Setup checks it and tells you if it is absent |
+| **VC++ 2005 (x86)** | the game's own dependency. `SETUP.cmd` installs it from `deps\` |
 | Python | **not** needed — a copy is bundled in `python\` |
 | Any pip packages | none at all |
 
@@ -39,7 +39,7 @@ answer the licence question and falls back to its DRM path, so what you
 actually see is **`activation.exe` demanding an EA account**, which points at
 nothing relevant. There is no EA account that fixes it; it is a missing DLL.
 
-`SETUP.cmd` now carries and installs the 2008 redistributable and the two
+`SETUP.cmd` now carries and installs the 2008 and 2005 redistributables and the two
 DirectX DLLs, re-checks afterwards rather than trusting the installer, and
 refuses to report Ready if the machine still lacks them. **Everything is x86** —
 FIFA 12 and every binary in `Game\Core` is 32-bit, so the x64 redistributables

@@ -109,7 +109,7 @@ $EA_PROCS = @("EACefSubProcess", "EALocalHostSvc", "EADesktop",
               "OriginLegacyCompatibility", "fifaconfig")
 
 # rig ports that must be listening, from start_all.ps1
-$RIG_PORTS = @(80, 443, 8080, 8081, 8082, 8083, 10094, 17502, 42127)
+$RIG_PORTS = @(80, 443, 8080, 8081, 8082, 8099, 8083, 10094, 17502, 42127)
 
 function Fail($m) { Write-Host "  FAIL  $m" -ForegroundColor Red; $script:problems += $m }
 function Good($m) { Write-Host "  ok    $m" }

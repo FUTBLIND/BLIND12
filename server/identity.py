@@ -59,8 +59,8 @@ CANONICAL_ID = 2416848542
 # saved account in identities.json is what actually serves - but the two must
 # agree, or a store that ever went missing would silently resurrect "Player1"
 # and reopen the four-names-for-one-account problem.
-DEFAULT_NAME = "Blind"
-EMAIL_DOMAIN = "FUTBLIND"
+DEFAULT_NAME = "player1"
+EMAIL_DOMAIN = "test"
 DEFAULT_EMAIL = "%s@%s" % (DEFAULT_NAME, EMAIL_DOMAIN)
 
 NAME_RE = re.compile(r"^[A-Za-z0-9_\- ]{3,16}$")

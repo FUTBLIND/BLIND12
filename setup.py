@@ -40,6 +40,8 @@ import shutil
 import socket
 import subprocess
 import sys
+import tempfile
+import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SERVER = os.path.join(HERE, "server")
@@ -71,6 +73,17 @@ UDP_PORTS = [17502]
 
 CDB_HELP = ("Install the Windows SDK and tick ONLY 'Debugging Tools for "
             "Windows'.\n         https://developer.microsoft.com/windows/downloads/windows-sdk/")
+
+# Microsoft's Windows SDK web installer (winsdksetup.exe). Setup fetches this
+# and installs ONLY its Debugging Tools feature to get cdb.exe. This fwlink was
+# VERIFIED to resolve to .../windowssdk/winsdksetup.exe (a real MZ/PE, ~1.35 MB)
+# - confirm any replacement the same way, because a link that returns an HTML
+# page would download fine and only fail when run. Any winsdksetup.exe fwlink
+# works: the feature id below (OptionId.WindowsDesktopDebuggers) is stable across
+# SDK versions. A moved/bad link is caught (download error, or the saved file is
+# not a valid Win32 app) and setup prints CDB_HELP - it degrades to the manual
+# path rather than tracebacking.
+SDK_URL = "https://go.microsoft.com/fwlink/p/?linkid=2120843"
 
 # --------------------------------------------------------------------------
 # THE GAME'S OWN RUNTIME DEPENDENCIES
@@ -392,14 +405,21 @@ def check_ports():
             % (len(PORTS), ", ".join(str(u) for u in UDP_PORTS)))
 
 
-def check_cdb():
-    r"""Where cdb.exe is, asked properly rather than guessed.
+def install_cdb(dry=False):
+    r"""cdb.exe: resolve it, and if it is genuinely absent, install the Windows
+    SDK's Debugging Tools and resolve again.
 
-    This used to be two hardcoded C:\Program Files literals. cdb is the one
-    dependency that cannot be shipped or worked around, so a machine with the
-    SDK installed somewhere unusual - another drive, a localised Program Files -
-    was told NOT READY about a tool it actually had. cdbpath asks the registry
-    for the Windows Kits root first, which is the authoritative answer.
+    cdb is the one dependency this rig used to be unable to ship OR install -
+    and six of the breakpoints it applies are load-bearing for CONNECTIVITY, not
+    diagnostics (without `bp f728c0` the client never asks for futBoot.xml and
+    shows "EA servers are not available"). cdbpath asks the KitsRoot10 registry,
+    which is exactly where the SDK's debuggers land, so a machine that already
+    has the SDK short-circuits here with no download. A bare machine gets ONLY
+    the x86 Debugging Tools installed, silently.
+
+    The re-resolve after installing is the same contract as _check_vc: the
+    installer's exit code says what the installer thinks; the only thing that
+    matters is whether cdbpath can now find cdb.exe.
     """
     sys.path.insert(0, SERVER)
     import cdbpath
@@ -407,7 +427,66 @@ def check_cdb():
     if cdbpath.looks_like_cdb(p):
         say(OK, "cdb.exe", p)
         return p
-    say(BAD, "cdb.exe", "not found - the game cannot reach the server without it")
+    if dry:
+        say(BAD, "cdb.exe", "missing - setup would install the SDK debuggers")
+        print("         %s" % CDB_HELP)
+        return None
+
+    # Absent for real. Fetch Microsoft's web installer and install ONLY the
+    # Debugging Tools feature. This needs internet; every failure below is
+    # reported as a named fault with the manual link, never a traceback.
+    print("         cdb.exe not found - installing the Windows debugger.")
+    print("         This downloads from Microsoft and takes several minutes;")
+    print("         it needs an internet connection.")
+    tmp = os.path.join(tempfile.gettempdir(), "fut12_winsdksetup.exe")
+    try:
+        urllib.request.urlretrieve(SDK_URL, tmp)
+    except Exception as e:
+        say(BAD, "cdb.exe", "SDK download failed: %s" % e)
+        print("         No internet, or the link moved. Install it by hand:")
+        print("         %s" % CDB_HELP)
+        return None
+    # A rotted fwlink can return an HTML page with HTTP 200, which urlretrieve
+    # saves happily; running that would fail with a cryptic WinError 193. Check
+    # the MZ/PE header so a moved link fails HERE, plainly, before we exec it.
+    try:
+        with io.open(tmp, "rb") as fh:
+            magic = fh.read(2)
+    except Exception:
+        magic = b""
+    if magic != b"MZ":
+        say(BAD, "cdb.exe",
+            "the SDK download was not an installer - the link may have moved")
+        print("         Install the debugger by hand:")
+        print("         %s" % CDB_HELP)
+        try:
+            os.remove(tmp)
+        except Exception:
+            pass
+        return None
+    try:
+        # /features picks ONLY the debuggers; /quiet no UI; /norestart never
+        # reboots under us; /ceip off opts out of telemetry.
+        subprocess.call([tmp, "/features", "OptionId.WindowsDesktopDebuggers",
+                         "/quiet", "/norestart", "/ceip", "off"])
+    except Exception as e:
+        say(BAD, "cdb.exe", "SDK installer failed: %s" % e)
+        print("         %s" % CDB_HELP)
+        return None
+    finally:
+        try:
+            os.remove(tmp)
+        except Exception:
+            pass
+
+    p = cdbpath.cdb_path(reload=True)
+    if cdbpath.looks_like_cdb(p):
+        say(OK, "cdb.exe", "installed: %s" % p)
+        st = load_state()
+        st["cdb_installed"] = True          # recorded; the SDK is NOT uninstalled
+        save_state(st)
+        return p
+    say(BAD, "cdb.exe", "still not found after installing the SDK debuggers")
     print("         %s" % CDB_HELP)
     return None
 
@@ -591,7 +670,7 @@ def main():
     install_hosts(dry)
     install_cert(dry)
     check_ports()
-    check_cdb()
+    install_cdb(dry)
     check_runtimes(root, dry)
     check_python()
 

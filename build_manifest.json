@@ -2,8 +2,8 @@
  "files": [
   {
    "path": "README.md",
-   "md5": "dde1aac541db7f6738b80e4d37e1bd33",
-   "bytes": 9918
+   "md5": "836b5bb9c3a97e0292edfc96d4e88532",
+   "bytes": 9919
   },
   {
    "path": "SETUP.cmd",
@@ -137,7 +137,7 @@
   },
   {
    "path": "server/build_response.py",
-   "md5": "fc9b70964290552aa77aee21af88ee0a",
+   "md5": "73a4f32764bca56244c5f628c80f1984",
    "bytes": 45539
   },
   {
@@ -422,8 +422,8 @@
   },
   {
    "path": "server/easw_stub.py",
-   "md5": "f57657affdaab572f416462f74f350de",
-   "bytes": 16440
+   "md5": "5291801d4ba5573285467906fc2d9510",
+   "bytes": 16442
   },
   {
    "path": "server/fifauteam_cards.json",
@@ -442,8 +442,8 @@
   },
   {
    "path": "server/fut_rs4_stub.py",
-   "md5": "d04fe188e60a756ee031ca7a6c2e73bf",
-   "bytes": 297674
+   "md5": "0e4da54f8d59567c75f3e0f50f983b57",
+   "bytes": 297662
   },
   {
    "path": "server/futflow.py",
@@ -482,8 +482,8 @@
   },
   {
    "path": "server/identity.py",
-   "md5": "3bdeef34aadacc7ba07cc3dbf7dbc7fc",
-   "bytes": 11253
+   "md5": "0522aa99fd0367aeb7bb6689dcfe552c",
+   "bytes": 11251
   },
   {
    "path": "server/inform_fifa12.json",
@@ -492,8 +492,8 @@
   },
   {
    "path": "server/launch_fifa.ps1",
-   "md5": "0d38cc61c00a196dc792bf4cc3e5cec1",
-   "bytes": 14500
+   "md5": "bc14d647d187b45d6f8ef426f48c05cf",
+   "bytes": 14506
   },
   {
    "path": "server/launcher/boot.ps1",
@@ -627,12 +627,12 @@
   },
   {
    "path": "setup.py",
-   "md5": "f42808abe135bb316387301aa52df91b",
-   "bytes": 23352
+   "md5": "75f8dcdb212ca6b334f2b5c582fc1160",
+   "bytes": 27054
   }
  ],
  "count": 126,
- "bytes": 70887144,
+ "bytes": 70890841,
  "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
  "excluded_personal": [
   "club.json",

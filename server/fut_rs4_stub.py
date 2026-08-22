@@ -85,9 +85,9 @@ def _auth_response():
     persona = {
         "personaId": FAKE_USER_ID,
         "nucleusPersonaId": FAKE_USER_ID,
-        "nucleusPersonaDisplayName": "LocalPlayer",
+        "nucleusPersonaDisplayName": "player1",
         "nucleusPersonaPlatform": "pc",
-        "personaName": "LocalPlayer",
+        "personaName": "player1",
         "sku": "FFA12PCC",
         "returningUser": False,
     }
@@ -101,7 +101,7 @@ def _auth_response():
         "sessionPercentage": 100,
         "nucleusId": str(FAKE_USER_ID),
         "nucleusPersonaId": FAKE_USER_ID,
-        "nucleusPersonaDisplayName": "LocalPlayer",
+        "nucleusPersonaDisplayName": "player1",
         "nucleusPersonaPlatform": "pc",
         "personaId": FAKE_USER_ID,
         "personaIdList": [FAKE_USER_ID],

@@ -67,7 +67,7 @@ AUTH_FAIL_FAST = False
 # identity from every persona route. The default matches Blaze/FUT rather than
 # inventing a third name.
 # ---------------------------------------------------------------------------
-DEFAULT_NAME = "Blind"
+DEFAULT_NAME = "player1"
 
 import identity            # the shared registry - see identity.py
 

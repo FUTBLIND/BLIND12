@@ -139,8 +139,8 @@ def build_ping_response(seq=0):
 # constants that disagreed, which is why the name shown in-game never matched
 # the account in use.
 FAKE_USER_ID = 2416848542
-FAKE_USER_NAME = "Blind"
-FAKE_USER_EMAIL = "Blind@FUTBLIND"
+FAKE_USER_NAME = "player1"
+FAKE_USER_EMAIL = "player1@test"
 
 # Where the terms live, for getTosInfo (0x0020). Served by the local HTTP stub
 # on port 80, so the client fetches them from us and never reaches EA.
