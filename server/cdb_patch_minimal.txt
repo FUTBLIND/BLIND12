@@ -6,12 +6,13 @@
 * PACE's decryption.
 *
 * What this script DOES is the private-server NETWORK layer + FUT enablement -
-* exactly the functional patches that used to be BAKED into the cracked exe.
-* On a stock exe they cannot be baked (the .text is PACE-ciphertext on disk),
-* so they are re-applied at RUNTIME, after PACE has decrypted the code in
-* memory. This is the same class of change as any community-server client
-* patch (point the game at our server, accept our cert); it is NOT a DRM
-* bypass - the game is licensed.
+* exactly the functional patches that the previous build baked into its
+* pre-decrypted exe. On a stock exe they cannot be baked (the .text is
+* PACE-ciphertext on disk), so they are re-applied at RUNTIME, after PACE has
+* decrypted the code in memory. This is the same class of change as any
+* community-server client patch (point the game at our own server, and let it
+* trust our own server's certificate). It does not touch the licence or PACE -
+* the game is genuinely licensed and does its own DRM.
 *
 * THE ONE NEW MECHANISM vs the baked build: a HARDWARE execute breakpoint at
 * the original entry point. fifa.exe is PACE-packed; its .text is ciphertext

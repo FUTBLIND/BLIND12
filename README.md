@@ -11,7 +11,7 @@ Everything runs on your own machine. Nothing is sent anywhere for gameplay.
 > FIFA 12** — the game must already launch normally for you first (it needs its
 > own real licence, `C:\ProgramData\Electronic Arts\EA Services\License\71055.dlf`).
 > This folder does **not** ship or modify `fifa.exe`/`awc.dll` and does **not**
-> bypass activation. It only adds the private-server layer: it points the game's
+> touch activation. It only adds the private-server layer: it points the game's
 > dead online services at a local server, and — via the debugger — tells the
 > game to trust that local server's certificate. Your activated game and its
 > licence are left untouched.
