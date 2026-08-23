@@ -1,635 +1,635 @@
 {
- "files": [
-  {
-   "path": "README.md",
-   "md5": "836b5bb9c3a97e0292edfc96d4e88532",
-   "bytes": 9919
-  },
-  {
-   "path": "SETUP.cmd",
-   "md5": "40e81127f65b441238f8cdd89f30a45f",
-   "bytes": 1107
-  },
-  {
-   "path": "START.cmd",
-   "md5": "8d111b5cc1ca4b7021d4dbfdb6615243",
-   "bytes": 1377
-  },
-  {
-   "path": "STOP.cmd",
-   "md5": "cf22623834dcbb138f635069a10895a4",
-   "bytes": 391
-  },
-  {
-   "path": "TRANSFER.md",
-   "md5": "ccaa673954e355a9e3123602420a0609",
-   "bytes": 5958
-  },
-  {
-   "path": "UNINSTALL.cmd",
-   "md5": "cb845bc02eff94796b6373501f156aaa",
-   "bytes": 817
-  },
-  {
-   "path": "deps/d3dx9_41.dll",
-   "md5": "3fa06cf5079b84155d18b05c08f7131b",
-   "bytes": 4178264
-  },
-  {
-   "path": "deps/vcredist2005_x86.exe",
-   "md5": "738598f3c9f5755b4f89bdac92ba5ae6",
-   "bytes": 2748432
-  },
-  {
-   "path": "deps/vcredist2008_x86.exe",
-   "md5": "a92a4d8e784d8f859217f828fe879047",
-   "bytes": 4483040
-  },
-  {
-   "path": "deps/xinput1_3.dll",
-   "md5": "77f595dee5ffacea72b135b1fce1312e",
-   "bytes": 81768
-  },
-  {
-   "path": "game/cards_patch.big",
-   "md5": "406eb5894b16a4a30efdcc3a9fdfcab8",
-   "bytes": 943634
-  },
-  {
-   "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion.big",
-   "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
-   "bytes": 154172
-  },
-  {
-   "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion_-1.big",
-   "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
-   "bytes": 154172
-  },
-  {
-   "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion_0.big",
-   "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
-   "bytes": 154172
-  },
-  {
-   "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion_1.big",
-   "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
-   "bytes": 154172
-  },
-  {
-   "path": "game/data/ui/external/ion_fut/screens/security/notfound.big",
-   "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
-   "bytes": 154172
-  },
-  {
-   "path": "game/data/ui/external/ion_fut/ux/nav/fut.nav",
-   "md5": "ce33df847b2190050aa99a5b982cb35a",
-   "bytes": 5085
-  },
-  {
-   "path": "game/dlc/dlc_CardsDLL/dlc/CardsDLLzf.dll",
-   "md5": "255c0aeab627bde48977a2051f553175",
-   "bytes": 1051648
-  },
-  {
-   "path": "game/dlc/dlc_CardsDLL/dlc/cards0.big",
-   "md5": "6acd7d3f42556f112ff40cb685b1f88f",
-   "bytes": 22272298
-  },
-  {
-   "path": "server/aptread.py",
-   "md5": "36e14593b98c4cd3381293c2abdbd3e3",
-   "bytes": 11658
-  },
-  {
-   "path": "server/asset_extract/cards_ng_db-meta.xml",
-   "md5": "1c49aa5403678a568ff9fa580090e70a",
-   "bytes": 345028
-  },
-  {
-   "path": "server/asset_extract/cards_ng_db.db",
-   "md5": "cb852960d73bd8187cd7faea2177fe16",
-   "bytes": 3057960
-  },
-  {
-   "path": "server/asset_extract/fifa_ng_db-meta.xml",
-   "md5": "c6dd1ce379559cf085478819fc3b6e4b",
-   "bytes": 333123
-  },
-  {
-   "path": "server/asset_extract/fifa_ng_db.db",
-   "md5": "dacfe66c0e0f65a09bae17051b7f598b",
-   "bytes": 2407008
-  },
-  {
-   "path": "server/audit.py",
-   "md5": "a6583caa62c83259149e646a4af2ca89",
-   "bytes": 13022
-  },
-  {
-   "path": "server/build_response.py",
-   "md5": "73a4f32764bca56244c5f628c80f1984",
-   "bytes": 45539
-  },
-  {
-   "path": "server/cardcats.py",
-   "md5": "aa809697ee8283555504d2764881b85c",
-   "bytes": 9593
-  },
-  {
-   "path": "server/carddb.py",
-   "md5": "9394c4e05af55392a0ec2f7701e0d95a",
-   "bytes": 21862
-  },
-  {
-   "path": "server/cardids.py",
-   "md5": "36a26337cf5454f1aa1817a6e2cd6dad",
-   "bytes": 7988
-  },
-  {
-   "path": "server/cardids_cache.json",
-   "md5": "7c168b6d7a4daba465512530a059bf20",
-   "bytes": 136157
-  },
-  {
-   "path": "server/cardsdb.py",
-   "md5": "0703e24e527b2ceee833c1fa6755b4db",
-   "bytes": 14819
-  },
-  {
-   "path": "server/cardsdll_unpacked.bin",
-   "md5": "014dd0cc63fd428a2d24056c873ffe2e",
-   "bytes": 1110016
-  },
-  {
-   "path": "server/cdb_patch_clean.txt",
-   "md5": "f7c57f0553b153f04b6f4cde64a449bd",
-   "bytes": 207859
-  },
-  {
-   "path": "server/cdb_patch_minimal.txt",
-   "md5": "f04b9ce86fd85e45f2bf9b391a496d0a",
-   "bytes": 19966
-  },
-  {
-   "path": "server/cdbpath.py",
-   "md5": "53fd5267100b1edbe61bbb5dca355a13",
-   "bytes": 5727
-  },
-  {
-   "path": "server/chunkzip_extract.py",
-   "md5": "7ee14d70766adf5a677d257b280f0d9b",
-   "bytes": 3484
-  },
-  {
-   "path": "server/client_sslv3_test.py",
-   "md5": "ba50798356fcf5127afc4aafb328cb42",
-   "bytes": 3914
-  },
-  {
-   "path": "server/clubstore.py",
-   "md5": "6ae6b62aaccd198054a42a221d12a3ad",
-   "bytes": 192837
-  },
-  {
-   "path": "server/diagnose.py",
-   "md5": "5046bfdf9d44f2be1f07d60642ffab50",
-   "bytes": 16323
-  },
-  {
-   "path": "server/dime_serve/dimecfg.xml",
-   "md5": "b70c465a6fbe523018ea9e37abace6de",
-   "bytes": 220189
-  },
-  {
-   "path": "server/dime_serve/dimecfg_ddp.xml",
-   "md5": "9c8a0224f453c6148ce8b373bb45482a",
-   "bytes": 5491
-  },
-  {
-   "path": "server/dime_serve/dimecfg_init.xml",
-   "md5": "79383abd0fd7f2fca5cd74580c04fca6",
-   "bytes": 12649
-  },
-  {
-   "path": "server/dime_serve/storecfg.xml",
-   "md5": "434cb3b505ccc83ffb23399448465a44",
-   "bytes": 10190
-  },
-  {
-   "path": "server/dime_serve/storedesc-ara_sa.xml",
-   "md5": "d052077360913eb3391a35bb710a7b5f",
-   "bytes": 18868
-  },
-  {
-   "path": "server/dime_serve/storedesc-cze_cz.xml",
-   "md5": "44dc5220a3e7769a3ca79723d6432e75",
-   "bytes": 14902
-  },
-  {
-   "path": "server/dime_serve/storedesc-dan_dk.xml",
-   "md5": "01c30c7edec3e41742f2f6bcded6357c",
-   "bytes": 13668
-  },
-  {
-   "path": "server/dime_serve/storedesc-dut_nl.xml",
-   "md5": "ba8d1338056a805262a9128eb265724a",
-   "bytes": 14311
-  },
-  {
-   "path": "server/dime_serve/storedesc-eng_us.xml",
-   "md5": "21567a2858a55de0ff115859edbffaf3",
-   "bytes": 13565
-  },
-  {
-   "path": "server/dime_serve/storedesc-fre_fr.xml",
-   "md5": "7c735283b2006dc3128a1013c4777818",
-   "bytes": 15145
-  },
-  {
-   "path": "server/dime_serve/storedesc-ger_de.xml",
-   "md5": "03485a834d75aac297608ced90337f11",
-   "bytes": 14036
-  },
-  {
-   "path": "server/dime_serve/storedesc-hun_hu.xml",
-   "md5": "634b8a2c11419f107250a7b975977867",
-   "bytes": 15105
-  },
-  {
-   "path": "server/dime_serve/storedesc-ita_it.xml",
-   "md5": "6820794d0e64ba79f4e8aa7e67f95f66",
-   "bytes": 14112
-  },
-  {
-   "path": "server/dime_serve/storedesc-jpn_jp.xml",
-   "md5": "df316bddc9998408c9cb9cd10ab1d70a",
-   "bytes": 16201
-  },
-  {
-   "path": "server/dime_serve/storedesc-nor_no.xml",
-   "md5": "68a654c5ed74ae2fa092aef465e583f4",
-   "bytes": 14079
-  },
-  {
-   "path": "server/dime_serve/storedesc-pol_pl.xml",
-   "md5": "67a6896023e6e15ca135ac8ac12b10d7",
-   "bytes": 15047
-  },
-  {
-   "path": "server/dime_serve/storedesc-por_pt.xml",
-   "md5": "568bd86a2c834fb9e3cd6ec7c1707f50",
-   "bytes": 14761
-  },
-  {
-   "path": "server/dime_serve/storedesc-rus_ru.xml",
-   "md5": "df4670d6793d03055090cc54869f2745",
-   "bytes": 20537
-  },
-  {
-   "path": "server/dime_serve/storedesc-spa_es.xml",
-   "md5": "06ee340e24eb586f961c13733bbdaee6",
-   "bytes": 14895
-  },
-  {
-   "path": "server/dime_serve/storedesc-spa_mx.xml",
-   "md5": "83294115d514902d60460e36ffa99ab1",
-   "bytes": 14813
-  },
-  {
-   "path": "server/dime_serve/storedesc-swe_se.xml",
-   "md5": "7a22b162c6ae804b478cb05721491649",
-   "bytes": 14319
-  },
-  {
-   "path": "server/dime_serve_z/dimecfg.xml",
-   "md5": "66527f6627bd919eafa10473a9d1e6d0",
-   "bytes": 8822
-  },
-  {
-   "path": "server/dime_serve_z/dimecfg_ddp.xml",
-   "md5": "2d046a79add0a1f624982ef8a6b5f384",
-   "bytes": 1088
-  },
-  {
-   "path": "server/dime_serve_z/dimecfg_init.xml",
-   "md5": "9925026857cf94db60261a4e4ed07ac8",
-   "bytes": 1942
-  },
-  {
-   "path": "server/dime_serve_z/storecfg.xml",
-   "md5": "6d7a9e05513a8be7f191805345723e54",
-   "bytes": 1974
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-ara_sa.xml",
-   "md5": "01a08f8304eaf2463e0a1ac5b979108a",
-   "bytes": 2641
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-cze_cz.xml",
-   "md5": "4fc5d53e701b8ca7d77ed96a9575000d",
-   "bytes": 2671
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-dan_dk.xml",
-   "md5": "25e951c518f40c1b97940f937c25c639",
-   "bytes": 2368
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-dut_nl.xml",
-   "md5": "b23463ac88b1d8b6317b00369da06bc3",
-   "bytes": 2328
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-eng_us.xml",
-   "md5": "b1b9805e22d5e2b28184fe22a049f246",
-   "bytes": 2174
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-fre_fr.xml",
-   "md5": "56f9f9401a6d81dd438b3746ca736854",
-   "bytes": 2581
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-ger_de.xml",
-   "md5": "95d2c5b95392365af719917e964070b6",
-   "bytes": 2408
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-hun_hu.xml",
-   "md5": "fefd29799d91a3555974c2f51e9cccde",
-   "bytes": 2604
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-ita_it.xml",
-   "md5": "a9a0e81567475cee3fa1f193d5b5c90d",
-   "bytes": 2346
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-jpn_jp.xml",
-   "md5": "5544cdc6904ec63b46ae94630787387f",
-   "bytes": 2506
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-nor_no.xml",
-   "md5": "317f934c14ab38ab1b7d8e69ba8f742f",
-   "bytes": 2396
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-pol_pl.xml",
-   "md5": "a0fe3a24066af9e3024ed8a871e603b8",
-   "bytes": 2732
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-por_pt.xml",
-   "md5": "cf8e08df8f37324d648e01018dcbb671",
-   "bytes": 2448
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-rus_ru.xml",
-   "md5": "12266f644f0f0af09273ed9abdb9bcba",
-   "bytes": 3133
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-spa_es.xml",
-   "md5": "77d79f40b74e37638d56eeb76712b62e",
-   "bytes": 2474
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-spa_mx.xml",
-   "md5": "70c0e7cc59ffe517571288a30c9cb983",
-   "bytes": 2508
-  },
-  {
-   "path": "server/dime_serve_z/storedesc-swe_se.xml",
-   "md5": "145337c5d3f02d1d21c56acd005797cd",
-   "bytes": 2458
-  },
-  {
-   "path": "server/ea_local_stub_TRUST_ME.crt",
-   "md5": "7ad2fecb35a4601bbdf9542d46eaa223",
-   "bytes": 1666
-  },
-  {
-   "path": "server/easw_stub.py",
-   "md5": "5291801d4ba5573285467906fc2d9510",
-   "bytes": 16442
-  },
-  {
-   "path": "server/fifauteam_cards.json",
-   "md5": "8358370cadc353fb3b0abcc0130813de",
-   "bytes": 177187
-  },
-  {
-   "path": "server/freezescan.py",
-   "md5": "dcaccfb1b8378e207af40183c9b165c9",
-   "bytes": 17317
-  },
-  {
-   "path": "server/fut_dynmsg_stub.py",
-   "md5": "70b469dca9e2526296d7cd1f5c9e276c",
-   "bytes": 52685
-  },
-  {
-   "path": "server/fut_rs4_stub.py",
-   "md5": "0e4da54f8d59567c75f3e0f50f983b57",
-   "bytes": 297662
-  },
-  {
-   "path": "server/futflow.py",
-   "md5": "c7277a5da0c2206125449216b2cc5002",
-   "bytes": 10930
-  },
-  {
-   "path": "server/futmarket.py",
-   "md5": "bd5518e6747bd1a81a9fdd3ed9849783",
-   "bytes": 39059
-  },
-  {
-   "path": "server/futpack.py",
-   "md5": "c4a1b4c775b745833927b9671903ca6b",
-   "bytes": 290488
-  },
-  {
-   "path": "server/futprices.py",
-   "md5": "cdb974377b33335e0d9ae0094d052c79",
-   "bytes": 9962
-  },
-  {
-   "path": "server/game_manifest.json",
-   "md5": "4463fde70d8afaf36663aec588bb15ba",
-   "bytes": 15464
-  },
-  {
-   "path": "server/gamehash.py",
-   "md5": "05f2f51e7fadd7e279c4aa7bd2b8076d",
-   "bytes": 9370
-  },
-  {
-   "path": "server/gamepath.py",
-   "md5": "1f2fbce117f3461f1180fb4e9242333c",
-   "bytes": 10055
-  },
-  {
-   "path": "server/identity.py",
-   "md5": "0522aa99fd0367aeb7bb6689dcfe552c",
-   "bytes": 11251
-  },
-  {
-   "path": "server/inform_fifa12.json",
-   "md5": "6d920a2cd1994d1288054e6a82e8d5ad",
-   "bytes": 281678
-  },
-  {
-   "path": "server/launch_fifa.ps1",
-   "md5": "bc14d647d187b45d6f8ef426f48c05cf",
-   "bytes": 14506
-  },
-  {
-   "path": "server/launcher/boot.ps1",
-   "md5": "5c7183c6543147659a4ba88912fbbe69",
-   "bytes": 21124
-  },
-  {
-   "path": "server/launcher/common.ps1",
-   "md5": "5d42d31a77bcf1ee678de7cde753095d",
-   "bytes": 22785
-  },
-  {
-   "path": "server/launcher/healthgate.py",
-   "md5": "e141bfd5c61af30819c50e940f2bc13a",
-   "bytes": 8075
-  },
-  {
-   "path": "server/launcher/stop.ps1",
-   "md5": "54be46db6e89f9f373060b402198c2f2",
-   "bytes": 6412
-  },
-  {
-   "path": "server/launcher/watchdog.ps1",
-   "md5": "ceab3b98f2f51adb8686589774740e46",
-   "bytes": 10399
-  },
-  {
-   "path": "server/novafusion_stub.py",
-   "md5": "a2c1f36c405de1582c42580aad2dfd06",
-   "bytes": 6384
-  },
-  {
-   "path": "server/packcheck.py",
-   "md5": "7507156a5db5d63c4e242c85bed2904e",
-   "bytes": 33528
-  },
-  {
-   "path": "server/pow_stub.py",
-   "md5": "dcabaf06a21a67a15cadfb4edf2ea580",
-   "bytes": 17879
-  },
-  {
-   "path": "server/prewarm.py",
-   "md5": "e41023b64f3647e926bd01baf9770656",
-   "bytes": 3561
-  },
-  {
-   "path": "server/pricegrid.html",
-   "md5": "3ac0d50e5827d985f2d811a552c33d53",
-   "bytes": 18125
-  },
-  {
-   "path": "server/pricegrid.py",
-   "md5": "eb1000438edd796921b38cdb17b6d200",
-   "bytes": 18488
-  },
-  {
-   "path": "server/qos_stub.py",
-   "md5": "eec55eddfa9420545f194d226e659bf2",
-   "bytes": 6755
-  },
-  {
-   "path": "server/routing_extract/cfgrouting.dec.xml",
-   "md5": "a454ea00f3287f39b78839cb063baccc",
-   "bytes": 1155
-  },
-  {
-   "path": "server/routing_extract/cfgrouting.xml",
-   "md5": "8094e18c1b7c6748504d015d98e51adf",
-   "bytes": 385
-  },
-  {
-   "path": "server/server.crt",
-   "md5": "4b044b1b6e23bcbfd7e0ffd3b457d691",
-   "bytes": 804
-  },
-  {
-   "path": "server/server.key",
-   "md5": "82a63f333d773ceced149388be964223",
-   "bytes": 932
-  },
-  {
-   "path": "server/server_sslv3.py",
-   "md5": "48ccafc31c9412cd64ef67ca868fc4ee",
-   "bytes": 66434
-  },
-  {
-   "path": "server/snapshot.py",
-   "md5": "a92c5f1c381ae4b88629cab7013ffc3f",
-   "bytes": 10675
-  },
-  {
-   "path": "server/specials_fifa12.json",
-   "md5": "899deba54512102f5e0fdfc1761237db",
-   "bytes": 217672
-  },
-  {
-   "path": "server/start_all.ps1",
-   "md5": "6dd22bc65ba1060ea441ab36759035ac",
-   "bytes": 27642
-  },
-  {
-   "path": "server/stub_https.crt",
-   "md5": "7ad2fecb35a4601bbdf9542d46eaa223",
-   "bytes": 1666
-  },
-  {
-   "path": "server/stub_https.key",
-   "md5": "f5a5f5ac493abd0b3e45705929f99cc2",
-   "bytes": 1732
-  },
-  {
-   "path": "server/tdf.py",
-   "md5": "be0be1492454af14822058d76c1e3704",
-   "bytes": 6814
-  },
-  {
-   "path": "server/usersettings.py",
-   "md5": "5e2f11b43d21974b0dbdce7c6b532a50",
-   "bytes": 4001
-  },
-  {
-   "path": "server/uxtrace.py",
-   "md5": "8bd832ca70c44b511149eac7d81d42bc",
-   "bytes": 23855
-  },
-  {
-   "path": "server/working_state_0813_success.json",
-   "md5": "a86c4fe201c02b11e7e7b7e1198dd811",
-   "bytes": 5521
-  },
-  {
-   "path": "setup.py",
-   "md5": "75f8dcdb212ca6b334f2b5c582fc1160",
-   "bytes": 27054
-  }
- ],
- "count": 126,
- "bytes": 70890841,
- "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
- "excluded_personal": [
-  "club.json",
-  "club_state.json",
-  "identities.json",
-  "user_settings.json",
-  "prices.json",
-  "market_capture.log"
- ]
+  "files": [
+    {
+      "path": "README.md",
+      "md5": "c9a2e553e34567cffa419300fd7cadb9",
+      "bytes": 11049
+    },
+    {
+      "path": "SETUP.cmd",
+      "md5": "40e81127f65b441238f8cdd89f30a45f",
+      "bytes": 1107
+    },
+    {
+      "path": "START.cmd",
+      "md5": "8d111b5cc1ca4b7021d4dbfdb6615243",
+      "bytes": 1377
+    },
+    {
+      "path": "STOP.cmd",
+      "md5": "cf22623834dcbb138f635069a10895a4",
+      "bytes": 391
+    },
+    {
+      "path": "TRANSFER.md",
+      "md5": "0c319ffa5910ac0145e853748f9d69a4",
+      "bytes": 6841
+    },
+    {
+      "path": "UNINSTALL.cmd",
+      "md5": "cb845bc02eff94796b6373501f156aaa",
+      "bytes": 817
+    },
+    {
+      "path": "deps/d3dx9_41.dll",
+      "md5": "3fa06cf5079b84155d18b05c08f7131b",
+      "bytes": 4178264
+    },
+    {
+      "path": "deps/vcredist2005_x86.exe",
+      "md5": "738598f3c9f5755b4f89bdac92ba5ae6",
+      "bytes": 2748432
+    },
+    {
+      "path": "deps/vcredist2008_x86.exe",
+      "md5": "a92a4d8e784d8f859217f828fe879047",
+      "bytes": 4483040
+    },
+    {
+      "path": "deps/xinput1_3.dll",
+      "md5": "77f595dee5ffacea72b135b1fce1312e",
+      "bytes": 81768
+    },
+    {
+      "path": "game/cards_patch.big",
+      "md5": "406eb5894b16a4a30efdcc3a9fdfcab8",
+      "bytes": 943634
+    },
+    {
+      "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion.big",
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "bytes": 154172
+    },
+    {
+      "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion_-1.big",
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "bytes": 154172
+    },
+    {
+      "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion_0.big",
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "bytes": 154172
+    },
+    {
+      "path": "game/data/ui/external/ion_fut/screens/security/futSecurityQuestion_1.big",
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "bytes": 154172
+    },
+    {
+      "path": "game/data/ui/external/ion_fut/screens/security/notfound.big",
+      "md5": "3bd43dcbb431a8b88d6a73fcc7a30b2f",
+      "bytes": 154172
+    },
+    {
+      "path": "game/data/ui/external/ion_fut/ux/nav/fut.nav",
+      "md5": "ce33df847b2190050aa99a5b982cb35a",
+      "bytes": 5085
+    },
+    {
+      "path": "game/dlc/dlc_CardsDLL/dlc/CardsDLLzf.dll",
+      "md5": "255c0aeab627bde48977a2051f553175",
+      "bytes": 1051648
+    },
+    {
+      "path": "game/dlc/dlc_CardsDLL/dlc/cards0.big",
+      "md5": "6acd7d3f42556f112ff40cb685b1f88f",
+      "bytes": 22272298
+    },
+    {
+      "path": "server/aptread.py",
+      "md5": "36e14593b98c4cd3381293c2abdbd3e3",
+      "bytes": 11658
+    },
+    {
+      "path": "server/asset_extract/cards_ng_db-meta.xml",
+      "md5": "1c49aa5403678a568ff9fa580090e70a",
+      "bytes": 345028
+    },
+    {
+      "path": "server/asset_extract/cards_ng_db.db",
+      "md5": "cb852960d73bd8187cd7faea2177fe16",
+      "bytes": 3057960
+    },
+    {
+      "path": "server/asset_extract/fifa_ng_db-meta.xml",
+      "md5": "c6dd1ce379559cf085478819fc3b6e4b",
+      "bytes": 333123
+    },
+    {
+      "path": "server/asset_extract/fifa_ng_db.db",
+      "md5": "dacfe66c0e0f65a09bae17051b7f598b",
+      "bytes": 2407008
+    },
+    {
+      "path": "server/audit.py",
+      "md5": "a6583caa62c83259149e646a4af2ca89",
+      "bytes": 13022
+    },
+    {
+      "path": "server/build_response.py",
+      "md5": "73a4f32764bca56244c5f628c80f1984",
+      "bytes": 45539
+    },
+    {
+      "path": "server/cardcats.py",
+      "md5": "aa809697ee8283555504d2764881b85c",
+      "bytes": 9593
+    },
+    {
+      "path": "server/carddb.py",
+      "md5": "9394c4e05af55392a0ec2f7701e0d95a",
+      "bytes": 21862
+    },
+    {
+      "path": "server/cardids.py",
+      "md5": "36a26337cf5454f1aa1817a6e2cd6dad",
+      "bytes": 7988
+    },
+    {
+      "path": "server/cardids_cache.json",
+      "md5": "7c168b6d7a4daba465512530a059bf20",
+      "bytes": 136157
+    },
+    {
+      "path": "server/cardsdb.py",
+      "md5": "0703e24e527b2ceee833c1fa6755b4db",
+      "bytes": 14819
+    },
+    {
+      "path": "server/cardsdll_unpacked.bin",
+      "md5": "014dd0cc63fd428a2d24056c873ffe2e",
+      "bytes": 1110016
+    },
+    {
+      "path": "server/cdb_patch_clean.txt",
+      "md5": "f7c57f0553b153f04b6f4cde64a449bd",
+      "bytes": 207859
+    },
+    {
+      "path": "server/cdb_patch_minimal.txt",
+      "md5": "d4b52505e20bb1800e438716b4302196",
+      "bytes": 5284
+    },
+    {
+      "path": "server/cdbpath.py",
+      "md5": "53fd5267100b1edbe61bbb5dca355a13",
+      "bytes": 5727
+    },
+    {
+      "path": "server/chunkzip_extract.py",
+      "md5": "7ee14d70766adf5a677d257b280f0d9b",
+      "bytes": 3484
+    },
+    {
+      "path": "server/client_sslv3_test.py",
+      "md5": "ba50798356fcf5127afc4aafb328cb42",
+      "bytes": 3914
+    },
+    {
+      "path": "server/clubstore.py",
+      "md5": "6ae6b62aaccd198054a42a221d12a3ad",
+      "bytes": 192837
+    },
+    {
+      "path": "server/diagnose.py",
+      "md5": "5046bfdf9d44f2be1f07d60642ffab50",
+      "bytes": 16323
+    },
+    {
+      "path": "server/dime_serve/dimecfg.xml",
+      "md5": "b70c465a6fbe523018ea9e37abace6de",
+      "bytes": 220189
+    },
+    {
+      "path": "server/dime_serve/dimecfg_ddp.xml",
+      "md5": "9c8a0224f453c6148ce8b373bb45482a",
+      "bytes": 5491
+    },
+    {
+      "path": "server/dime_serve/dimecfg_init.xml",
+      "md5": "79383abd0fd7f2fca5cd74580c04fca6",
+      "bytes": 12649
+    },
+    {
+      "path": "server/dime_serve/storecfg.xml",
+      "md5": "434cb3b505ccc83ffb23399448465a44",
+      "bytes": 10190
+    },
+    {
+      "path": "server/dime_serve/storedesc-ara_sa.xml",
+      "md5": "d052077360913eb3391a35bb710a7b5f",
+      "bytes": 18868
+    },
+    {
+      "path": "server/dime_serve/storedesc-cze_cz.xml",
+      "md5": "44dc5220a3e7769a3ca79723d6432e75",
+      "bytes": 14902
+    },
+    {
+      "path": "server/dime_serve/storedesc-dan_dk.xml",
+      "md5": "01c30c7edec3e41742f2f6bcded6357c",
+      "bytes": 13668
+    },
+    {
+      "path": "server/dime_serve/storedesc-dut_nl.xml",
+      "md5": "ba8d1338056a805262a9128eb265724a",
+      "bytes": 14311
+    },
+    {
+      "path": "server/dime_serve/storedesc-eng_us.xml",
+      "md5": "21567a2858a55de0ff115859edbffaf3",
+      "bytes": 13565
+    },
+    {
+      "path": "server/dime_serve/storedesc-fre_fr.xml",
+      "md5": "7c735283b2006dc3128a1013c4777818",
+      "bytes": 15145
+    },
+    {
+      "path": "server/dime_serve/storedesc-ger_de.xml",
+      "md5": "03485a834d75aac297608ced90337f11",
+      "bytes": 14036
+    },
+    {
+      "path": "server/dime_serve/storedesc-hun_hu.xml",
+      "md5": "634b8a2c11419f107250a7b975977867",
+      "bytes": 15105
+    },
+    {
+      "path": "server/dime_serve/storedesc-ita_it.xml",
+      "md5": "6820794d0e64ba79f4e8aa7e67f95f66",
+      "bytes": 14112
+    },
+    {
+      "path": "server/dime_serve/storedesc-jpn_jp.xml",
+      "md5": "df316bddc9998408c9cb9cd10ab1d70a",
+      "bytes": 16201
+    },
+    {
+      "path": "server/dime_serve/storedesc-nor_no.xml",
+      "md5": "68a654c5ed74ae2fa092aef465e583f4",
+      "bytes": 14079
+    },
+    {
+      "path": "server/dime_serve/storedesc-pol_pl.xml",
+      "md5": "67a6896023e6e15ca135ac8ac12b10d7",
+      "bytes": 15047
+    },
+    {
+      "path": "server/dime_serve/storedesc-por_pt.xml",
+      "md5": "568bd86a2c834fb9e3cd6ec7c1707f50",
+      "bytes": 14761
+    },
+    {
+      "path": "server/dime_serve/storedesc-rus_ru.xml",
+      "md5": "df4670d6793d03055090cc54869f2745",
+      "bytes": 20537
+    },
+    {
+      "path": "server/dime_serve/storedesc-spa_es.xml",
+      "md5": "06ee340e24eb586f961c13733bbdaee6",
+      "bytes": 14895
+    },
+    {
+      "path": "server/dime_serve/storedesc-spa_mx.xml",
+      "md5": "83294115d514902d60460e36ffa99ab1",
+      "bytes": 14813
+    },
+    {
+      "path": "server/dime_serve/storedesc-swe_se.xml",
+      "md5": "7a22b162c6ae804b478cb05721491649",
+      "bytes": 14319
+    },
+    {
+      "path": "server/dime_serve_z/dimecfg.xml",
+      "md5": "66527f6627bd919eafa10473a9d1e6d0",
+      "bytes": 8822
+    },
+    {
+      "path": "server/dime_serve_z/dimecfg_ddp.xml",
+      "md5": "2d046a79add0a1f624982ef8a6b5f384",
+      "bytes": 1088
+    },
+    {
+      "path": "server/dime_serve_z/dimecfg_init.xml",
+      "md5": "9925026857cf94db60261a4e4ed07ac8",
+      "bytes": 1942
+    },
+    {
+      "path": "server/dime_serve_z/storecfg.xml",
+      "md5": "6d7a9e05513a8be7f191805345723e54",
+      "bytes": 1974
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-ara_sa.xml",
+      "md5": "01a08f8304eaf2463e0a1ac5b979108a",
+      "bytes": 2641
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-cze_cz.xml",
+      "md5": "4fc5d53e701b8ca7d77ed96a9575000d",
+      "bytes": 2671
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-dan_dk.xml",
+      "md5": "25e951c518f40c1b97940f937c25c639",
+      "bytes": 2368
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-dut_nl.xml",
+      "md5": "b23463ac88b1d8b6317b00369da06bc3",
+      "bytes": 2328
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-eng_us.xml",
+      "md5": "b1b9805e22d5e2b28184fe22a049f246",
+      "bytes": 2174
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-fre_fr.xml",
+      "md5": "56f9f9401a6d81dd438b3746ca736854",
+      "bytes": 2581
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-ger_de.xml",
+      "md5": "95d2c5b95392365af719917e964070b6",
+      "bytes": 2408
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-hun_hu.xml",
+      "md5": "fefd29799d91a3555974c2f51e9cccde",
+      "bytes": 2604
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-ita_it.xml",
+      "md5": "a9a0e81567475cee3fa1f193d5b5c90d",
+      "bytes": 2346
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-jpn_jp.xml",
+      "md5": "5544cdc6904ec63b46ae94630787387f",
+      "bytes": 2506
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-nor_no.xml",
+      "md5": "317f934c14ab38ab1b7d8e69ba8f742f",
+      "bytes": 2396
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-pol_pl.xml",
+      "md5": "a0fe3a24066af9e3024ed8a871e603b8",
+      "bytes": 2732
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-por_pt.xml",
+      "md5": "cf8e08df8f37324d648e01018dcbb671",
+      "bytes": 2448
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-rus_ru.xml",
+      "md5": "12266f644f0f0af09273ed9abdb9bcba",
+      "bytes": 3133
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-spa_es.xml",
+      "md5": "77d79f40b74e37638d56eeb76712b62e",
+      "bytes": 2474
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-spa_mx.xml",
+      "md5": "70c0e7cc59ffe517571288a30c9cb983",
+      "bytes": 2508
+    },
+    {
+      "path": "server/dime_serve_z/storedesc-swe_se.xml",
+      "md5": "145337c5d3f02d1d21c56acd005797cd",
+      "bytes": 2458
+    },
+    {
+      "path": "server/ea_local_stub_TRUST_ME.crt",
+      "md5": "7ad2fecb35a4601bbdf9542d46eaa223",
+      "bytes": 1666
+    },
+    {
+      "path": "server/easw_stub.py",
+      "md5": "5291801d4ba5573285467906fc2d9510",
+      "bytes": 16442
+    },
+    {
+      "path": "server/fifauteam_cards.json",
+      "md5": "8358370cadc353fb3b0abcc0130813de",
+      "bytes": 177187
+    },
+    {
+      "path": "server/freezescan.py",
+      "md5": "dcaccfb1b8378e207af40183c9b165c9",
+      "bytes": 17317
+    },
+    {
+      "path": "server/fut_dynmsg_stub.py",
+      "md5": "70b469dca9e2526296d7cd1f5c9e276c",
+      "bytes": 52685
+    },
+    {
+      "path": "server/fut_rs4_stub.py",
+      "md5": "0e4da54f8d59567c75f3e0f50f983b57",
+      "bytes": 297662
+    },
+    {
+      "path": "server/futflow.py",
+      "md5": "c7277a5da0c2206125449216b2cc5002",
+      "bytes": 10930
+    },
+    {
+      "path": "server/futmarket.py",
+      "md5": "bd5518e6747bd1a81a9fdd3ed9849783",
+      "bytes": 39059
+    },
+    {
+      "path": "server/futpack.py",
+      "md5": "c4a1b4c775b745833927b9671903ca6b",
+      "bytes": 290488
+    },
+    {
+      "path": "server/futprices.py",
+      "md5": "cdb974377b33335e0d9ae0094d052c79",
+      "bytes": 9962
+    },
+    {
+      "path": "server/game_manifest.json",
+      "md5": "4463fde70d8afaf36663aec588bb15ba",
+      "bytes": 15464
+    },
+    {
+      "path": "server/gamehash.py",
+      "md5": "05f2f51e7fadd7e279c4aa7bd2b8076d",
+      "bytes": 9370
+    },
+    {
+      "path": "server/gamepath.py",
+      "md5": "1f2fbce117f3461f1180fb4e9242333c",
+      "bytes": 10055
+    },
+    {
+      "path": "server/identity.py",
+      "md5": "0522aa99fd0367aeb7bb6689dcfe552c",
+      "bytes": 11251
+    },
+    {
+      "path": "server/inform_fifa12.json",
+      "md5": "6d920a2cd1994d1288054e6a82e8d5ad",
+      "bytes": 281678
+    },
+    {
+      "path": "server/launch_fifa.ps1",
+      "md5": "bc14d647d187b45d6f8ef426f48c05cf",
+      "bytes": 14506
+    },
+    {
+      "path": "server/launcher/boot.ps1",
+      "md5": "5c7183c6543147659a4ba88912fbbe69",
+      "bytes": 21124
+    },
+    {
+      "path": "server/launcher/common.ps1",
+      "md5": "5d42d31a77bcf1ee678de7cde753095d",
+      "bytes": 22785
+    },
+    {
+      "path": "server/launcher/healthgate.py",
+      "md5": "e141bfd5c61af30819c50e940f2bc13a",
+      "bytes": 8075
+    },
+    {
+      "path": "server/launcher/stop.ps1",
+      "md5": "54be46db6e89f9f373060b402198c2f2",
+      "bytes": 6412
+    },
+    {
+      "path": "server/launcher/watchdog.ps1",
+      "md5": "ceab3b98f2f51adb8686589774740e46",
+      "bytes": 10399
+    },
+    {
+      "path": "server/novafusion_stub.py",
+      "md5": "a2c1f36c405de1582c42580aad2dfd06",
+      "bytes": 6384
+    },
+    {
+      "path": "server/packcheck.py",
+      "md5": "7507156a5db5d63c4e242c85bed2904e",
+      "bytes": 33528
+    },
+    {
+      "path": "server/pow_stub.py",
+      "md5": "dcabaf06a21a67a15cadfb4edf2ea580",
+      "bytes": 17879
+    },
+    {
+      "path": "server/prewarm.py",
+      "md5": "e41023b64f3647e926bd01baf9770656",
+      "bytes": 3561
+    },
+    {
+      "path": "server/pricegrid.html",
+      "md5": "3ac0d50e5827d985f2d811a552c33d53",
+      "bytes": 18125
+    },
+    {
+      "path": "server/pricegrid.py",
+      "md5": "eb1000438edd796921b38cdb17b6d200",
+      "bytes": 18488
+    },
+    {
+      "path": "server/qos_stub.py",
+      "md5": "eec55eddfa9420545f194d226e659bf2",
+      "bytes": 6755
+    },
+    {
+      "path": "server/routing_extract/cfgrouting.dec.xml",
+      "md5": "a454ea00f3287f39b78839cb063baccc",
+      "bytes": 1155
+    },
+    {
+      "path": "server/routing_extract/cfgrouting.xml",
+      "md5": "8094e18c1b7c6748504d015d98e51adf",
+      "bytes": 385
+    },
+    {
+      "path": "server/server.crt",
+      "md5": "4b044b1b6e23bcbfd7e0ffd3b457d691",
+      "bytes": 804
+    },
+    {
+      "path": "server/server.key",
+      "md5": "82a63f333d773ceced149388be964223",
+      "bytes": 932
+    },
+    {
+      "path": "server/server_sslv3.py",
+      "md5": "48ccafc31c9412cd64ef67ca868fc4ee",
+      "bytes": 66434
+    },
+    {
+      "path": "server/snapshot.py",
+      "md5": "a92c5f1c381ae4b88629cab7013ffc3f",
+      "bytes": 10675
+    },
+    {
+      "path": "server/specials_fifa12.json",
+      "md5": "899deba54512102f5e0fdfc1761237db",
+      "bytes": 217672
+    },
+    {
+      "path": "server/start_all.ps1",
+      "md5": "6dd22bc65ba1060ea441ab36759035ac",
+      "bytes": 27642
+    },
+    {
+      "path": "server/stub_https.crt",
+      "md5": "7ad2fecb35a4601bbdf9542d46eaa223",
+      "bytes": 1666
+    },
+    {
+      "path": "server/stub_https.key",
+      "md5": "f5a5f5ac493abd0b3e45705929f99cc2",
+      "bytes": 1732
+    },
+    {
+      "path": "server/tdf.py",
+      "md5": "be0be1492454af14822058d76c1e3704",
+      "bytes": 6814
+    },
+    {
+      "path": "server/usersettings.py",
+      "md5": "5e2f11b43d21974b0dbdce7c6b532a50",
+      "bytes": 4001
+    },
+    {
+      "path": "server/uxtrace.py",
+      "md5": "8bd832ca70c44b511149eac7d81d42bc",
+      "bytes": 23855
+    },
+    {
+      "path": "server/working_state_0813_success.json",
+      "md5": "a86c4fe201c02b11e7e7b7e1198dd811",
+      "bytes": 5521
+    },
+    {
+      "path": "setup.py",
+      "md5": "5be2a0450ba06eae90b8347d277b73dc",
+      "bytes": 31744
+    }
+  ],
+  "count": 124,
+  "bytes": 46899566,
+  "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
+  "excluded_personal": [
+    "club.json",
+    "club_state.json",
+    "identities.json",
+    "user_settings.json",
+    "prices.json",
+    "market_capture.log"
+  ]
 }

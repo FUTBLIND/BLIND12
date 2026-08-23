@@ -59,9 +59,12 @@ component other software may now rely on.
 
 ### You need your own FIFA 12 — this is not it
 
-This folder is **46.8 MB against a 6.2 GB game**. It carries the eleven files
-that get *replaced*: `fifa.exe`, two DLLs, two `.big` archives, and six loose
-files under `data\ui\external\ion_fut\`. It does not carry `data6.big` (1.7 GB),
+This folder is **about 58 MB against a 6.2 GB game**, and it carries nine game
+files in two kinds. Three are *replaced* — `CardsDLLzf.dll` and the two `.big`
+archives EA ships. Six are *added* — the loose files under
+`data\ui\external\ion_fut\`, which EA ships nothing of and which no FIFA 12
+install has ever had. `SETUP.cmd` expects exactly that: the three must already
+be present, the six must not. It does not carry `data6.big` (1.7 GB),
 `data3.big` (1.2 GB), the audio, the video, or the other 1,735 files. With no
 FIFA 12 on the machine there is nothing to patch, and `SETUP.cmd` says so and
 stops rather than half-finishing.
@@ -85,9 +88,12 @@ transfer that drops or truncates a file does not announce itself:
 python\python.exe server\gamehash.py --check
 ```
 
-Before `SETUP.cmd`, not after — setup replaces eleven of those files on purpose,
-so a check afterwards reports exactly those eleven and the real signal is lost
-among them.
+Before `SETUP.cmd`, not after — setup replaces three of those files on purpose,
+so a check afterwards reports exactly those three and the real signal is lost
+among them. One known quirk either way: the manifest was captured on a machine
+that already had the six added `ion_fut` files, so on a stock install this check
+lists those six as "missing". They are supposed to be missing until `SETUP.cmd`
+adds them; it is not a fault.
 
 ### If it says FIFA 12 was not found
 
@@ -127,16 +133,16 @@ Get-ChildItem -Recurse | Unblock-File
 ```
 
 1. **`SETUP.cmd`** — right-click, *Run as administrator*. Once, ever.
-   It finds FIFA 12, backs up the eleven files it is about to replace, copies
-   the patched ones in, appends seven `hosts` entries, installs a local
-   certificate, and checks the ports and the debugger. If anything is wrong it
-   stops and says which thing — it never half-finishes.
+   It finds FIFA 12, backs up the three files it is about to replace, copies
+   those in and adds the six loose `ion_fut` files, appends six `hosts` entries,
+   installs a local certificate, and checks the ports and the debugger. If
+   anything is wrong it stops and says which thing — it never half-finishes.
 2. **`START.cmd`** — run as administrator. Brings the seven services up, arms a
    watchdog, and launches the game.
 3. **`STOP.cmd`** — stops the services. Leaves the game alone.
 4. **`UNINSTALL.cmd`** — puts the game and the machine back exactly as they
-   were: the eleven files restored from backup, the `hosts` lines removed, the
-   certificate dropped.
+   were: the three replaced files restored from backup, the six added ones
+   deleted, the `hosts` lines removed, the certificate dropped.
 
 ### First launch
 
@@ -188,7 +194,7 @@ python\                    a bundled Python 3.7.9 32-bit — nothing to install
 deps\                      the game's Microsoft runtimes, installed by SETUP.cmd
 server\                    the seven services, their libraries and their data
   launcher\                pre-flight, boot, stop, watchdog
-game\                      the eleven patched game files
+game\                      nine game files: 3 replaced, 6 added (ion_fut)
   _backup_original\        your originals, created by SETUP.cmd
 build_manifest.json        every shipped file with its md5
 ```

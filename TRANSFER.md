@@ -1,5 +1,17 @@
 # Getting FIFA 12 onto the other machine
 
+> **SUPERSEDED BY LICENSED MODE (2026-08-23) — you probably do not need this.**
+> The intended route now is to install FIFA 12 on the other machine **through the
+> EA App, from your own library**, so it activates itself and holds its own real
+> licence. `SETUP.cmd` then adds only the private-server layer on top. Copying
+> this machine's `Game\` folder is no longer the path, and it has a trap: a copy
+> of an install this rig has **already patched** brings the six added
+> `data\ui\external\ion_fut\` files with it, which hid a setup bug for weeks —
+> `SETUP.cmd` only ever saw those files already present, so nobody noticed it
+> refused to *add* them. Keep this document for the case where you genuinely
+> need to move an install (no EA App, or a machine that cannot download 6.29 GB),
+> and read it knowing the destination should ideally be a **stock** install.
+
 This repo is **46.8 MB of patched files against a 6.29 GB game**. It does not
 contain FIFA 12 and cannot — GitHub blocks any file over 100 MB, and `data6.big`
 alone is 1.7 GB. So the game travels separately, and this is how.

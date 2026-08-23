@@ -188,6 +188,38 @@ def save_state(d):
 
 
 # ---------------------------------------------------------------- the game
+#
+# SHIPPED GAME FILES COME IN TWO KINDS, AND THEY ARE NOT INTERCHANGEABLE.
+#
+#   REPLACE  - EA ships the file and we overwrite it (cards_patch.big,
+#              dlc\dlc_CardsDLL\dlc\cards0.big, ...\CardsDLLzf.dll). These MUST
+#              already exist: if one is absent this is not the FIFA 12 layout we
+#              patched, and copying in anyway produces a game that starts and
+#              then fails somewhere far from here.
+#
+#   ADDITIVE - the loose ion_fut overrides. EA ships NOTHING in that folder;
+#              these six files were authored by this project on 2026-08-12/13 to
+#              work around a segmented-loader bug (the client asks for
+#              futSecurityQuestion_-1.big, falls back to notfound.big, finds
+#              neither, and the package is never allocated - FUT then sits on a
+#              buttonless "Loading" popup forever). They are EXPECTED to be
+#              absent. Their whole purpose is that they did not exist before.
+#
+# Conflating the two is what produced "[FAIL] game layout - 6 expected file(s)
+# absent" on a machine with a perfectly good EA-App install (2026-08-23). It was
+# masked while the far machine received a byte-copy of this machine's already-
+# patched install; a genuine install correctly has no ion_fut tree.
+#
+# Keep this prefix in step with build_dist.py's _LOOSE / GAME_LOOSE, which is
+# where the same six files are selected for packaging.
+ADDITIVE_PREFIX = os.path.join("data", "ui", "external", "ion_fut")
+
+
+def is_additive(rel):
+    """True for a loose override we ADD; False for an EA file we REPLACE."""
+    return rel.lower().startswith(ADDITIVE_PREFIX.lower() + os.sep)
+
+
 def game_files():
     """Every shipped game file, as paths relative to the Game folder."""
     out = []
@@ -211,22 +243,36 @@ def install_game(root, dry=False):
     if not rels:
         say(WARN, "game files", "none shipped in this build - skipped")
         return
-    missing = [r for r in rels if not os.path.exists(os.path.join(root, r))]
+    # THE LAYOUT GATE APPLIES TO REPLACEMENT FILES ONLY. An additive file being
+    # absent is the normal case on any genuine install - see the note above.
+    missing = [r for r in rels
+               if not is_additive(r)
+               and not os.path.exists(os.path.join(root, r))]
     if missing:
-        # A file we ship that the install does not have means this is not the
+        # A file we REPLACE that the install does not have means this is not the
         # FIFA 12 layout we patched. Copying in anyway would produce a game
         # that starts and then fails somewhere far from here.
         say(BAD, "game layout", "%d expected file(s) absent, e.g. %s"
             % (len(missing), missing[0]))
         return
-    n_back = n_copy = 0
+    n_back = n_copy = n_add = 0
     for rel in rels:
         live = os.path.join(root, rel)
         keep = os.path.join(BACKUP, rel)
         src = os.path.join(GAME_SRC, rel)
-        if md5(live) == md5(src):
+        fresh = not os.path.exists(live)
+        if fresh:
+            # An additive file with nowhere to land yet. md5() would raise on
+            # the missing path and copy2 would raise on the missing directory,
+            # so create the tree and skip both the compare and the backup -
+            # there is no original to preserve.
+            if not dry:
+                d = os.path.dirname(live)
+                if d and not os.path.isdir(d):
+                    os.makedirs(d)
+        elif md5(live) == md5(src):
             continue                       # already patched, nothing to do
-        if not os.path.exists(keep):
+        elif not os.path.exists(keep):
             # NEVER OVERWRITE AN EXISTING BACKUP. Running setup twice must not
             # promote the patched files to "original" and destroy the way back.
             if not dry:
@@ -240,14 +286,50 @@ def install_game(root, dry=False):
             if md5(live) != md5(src):
                 say(BAD, "game files", "copy of %s did not verify" % rel)
                 return
-        n_copy += 1
-    say(OK, "game files", "%d patched, %d original(s) backed up%s"
-        % (n_copy, n_back, " (dry run)" if dry else ""))
+        if fresh:
+            n_add += 1
+        else:
+            n_copy += 1
+    say(OK, "game files", "%d patched, %d added, %d original(s) backed up%s"
+        % (n_copy, n_add, n_back, " (dry run)" if dry else ""))
 
 
 def restore_game(root):
+    # ADDITIVE FILES ARE REMOVED, NOT RESTORED. They have no backup because
+    # there was no original - EA ships nothing in the ion_fut tree - so walking
+    # BACKUP alone would leave our six files behind and quietly break this
+    # file's promise that every one of the six things is reversible.
+    n_del = 0
+    for rel in game_files():
+        if not is_additive(rel):
+            continue
+        live = os.path.join(root, rel)
+        if os.path.exists(live):
+            try:
+                os.remove(live)
+                n_del += 1
+            except OSError as e:
+                say(WARN, "game files", "could not remove %s (%s)" % (rel, e))
+    # Prune the directories we created, deepest first, but ONLY while empty -
+    # never remove a folder that has something else in it. Emptiness is re-read
+    # from disk rather than taken from os.walk's cached listing, which is
+    # captured before the children are removed and so never reports a parent as
+    # empty. Stops at ion_fut; the tree above it is left alone.
+    top = os.path.join(root, ADDITIVE_PREFIX)
+    if os.path.isdir(top):
+        for root_a, _dirs, _files in os.walk(top, topdown=False):
+            try:
+                if not os.listdir(root_a):
+                    os.rmdir(root_a)
+            except OSError:
+                pass
+
     if not os.path.isdir(BACKUP):
-        say(WARN, "game files", "no backup to restore from")
+        if n_del:
+            say(OK, "game files", "%d added file(s) removed; no backup to "
+                                  "restore from" % n_del)
+        else:
+            say(WARN, "game files", "no backup to restore from")
         return
     n = 0
     for root_b, _d, files in os.walk(BACKUP):
@@ -256,7 +338,8 @@ def restore_game(root):
             rel = os.path.relpath(src, BACKUP)
             shutil.copy2(src, os.path.join(root, rel))
             n += 1
-    say(OK, "game files", "%d file(s) restored to their originals" % n)
+    say(OK, "game files", "%d file(s) restored to their originals, "
+                          "%d added file(s) removed" % (n, n_del))
 
 
 # --------------------------------------------------------------- the hosts
