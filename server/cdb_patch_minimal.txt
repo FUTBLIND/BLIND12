@@ -81,6 +81,45 @@ eb 12504f0 b0 01 c3
 eb 4483cc eb 1c
 eb 18b4312 39 39
 
+* --- THE STAT-GROUP TICKER POINTER. Do not drop this one. --------------------
+* Added 2026-08-23 after the far machine crashed on its first licensed launch:
+*
+*     fifazf!AptAnimationTarget::GetDragPos+0x6834
+*     013996a4 8b10   mov edx,dword ptr [eax]   eax=00000000
+*
+* That is not a new bug - it is round 2 of the three-round bisect recorded in
+* bake_static_patches.py:359-379, reproduced exactly. The conclusion there was
+* measured, not reasoned: "it was 0x18e5360 - not the pool - that carried the
+* login." Blaze command 0x0007/0x0003 is getStatGroupList and O_SG_TCKR is the
+* OSDK stat-group ticker, so the crash lands on the very command that feeds the
+* object this pointer repoints. Without it the client walks a stat-group ticker
+* config that is not there and dereferences null - which the player sees first
+* as a hang on "Retrieving data from server. Please wait...", because the async
+* Stats command is acked and then never answered.
+*
+* This build applied its .data sibling (the EASTL pool, above) but not this one.
+* Round 3 of that same bisect proved the pool ALONE changes nothing. Both are
+* load-bearing; neither is optional.
+eb 18e5360 ec 92 6c 01
+
+* --- ticker key + the empty-list crash fix, also dropped in the licensed cut --
+* O_TKfilter -> O_JS: the other half of the ticker config the line above feeds.
+eb 17f38f0 4f 5f 4a 53 00
+* Empty-list "Id" setter: an out-of-range index on an EMPTY list dereferenced
+* null and killed the process. Our feeds legitimately return no rows, so this
+* fires often. The jbe is repointed into an unused 0xcc cave that zeroes the
+* index instead. Two writes, and they MUST both land - the first is a rel32
+* jump to the second.
+eb 1370e5c 0f 86 21 a9 fa ff 51 8d 48 08 e8 95 33 83 ff
+eb 131b783 56 33 f6 e9 e4 56 05 00
+
+* --- FUT assets URL -> our local stub (dev-parity; measured as not in play) ---
+* The project measured that the built URL comes from the config object, not this
+* hardcoded default, so patching it "never produced any traffic on 8081". It is
+* restored purely so the far machine matches the known-good dev configuration
+* and this is not left as an untested difference.
+ea 16f7dac "http://127.0.0.1:8081/onlineAssets/2012/fut"
+
 * --- runtime hooks (software bps, valid now the .text is decrypted) ----------
 * FUT availability gate - without this UT says the servers are unavailable
 bp f728c0 "eb @ecx+0x13c 0; eb @ecx+0x14d 1; eb @ecx+0x14e 0; eb @ecx+0x14f 0; eb @ecx+0x150 0; ed @ecx+0x11c 1; ed @ecx+0x140 1; g"
