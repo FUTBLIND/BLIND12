@@ -51,11 +51,6 @@
    "bytes": 81768
   },
   {
-   "path": "game/Core/awc.dll",
-   "md5": "8c7db4d58ce1e9100932d2dc9f5d151b",
-   "bytes": 533792
-  },
-  {
    "path": "game/cards_patch.big",
    "md5": "406eb5894b16a4a30efdcc3a9fdfcab8",
    "bytes": 943634
@@ -99,11 +94,6 @@
    "path": "game/dlc/dlc_CardsDLL/dlc/cards0.big",
    "md5": "6acd7d3f42556f112ff40cb685b1f88f",
    "bytes": 22272298
-  },
-  {
-   "path": "game/fifa.exe",
-   "md5": "1f4d172ade0f051dff594a5de82d9389",
-   "bytes": 23449504
   },
   {
    "path": "server/aptread.py",

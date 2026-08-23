@@ -10,8 +10,10 @@ Run through SETUP.cmd, which checks for administrator first.
 SIX THINGS, and every one of them is reversible:
 
     1. find FIFA 12 and record the path in server\gamepath.txt
-    2. back up the eleven game files, then copy the patched ones in
-    3. append seven hosts entries
+    2. back up the shipped FUT content files, then copy the patched ones in
+       (LICENSED MODE ships NO fifa.exe / awc.dll - the machine's own
+       EA-App-activated binaries are left untouched)
+    3. append six hosts entries (NOT proxy.novafusion - see HOST_NAMES)
     4. install the local certificate into Trusted Root
     5. install THE GAME'S own runtime dependencies - the VC++ 2008 SP1 x86
        redistributable and two DirectX 9 DLLs, both carried in deps\
@@ -52,12 +54,17 @@ STATE = os.path.join(HERE, "setup_state.json")
 
 HOSTS = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"),
                      "System32", "drivers", "etc", "hosts")
+# LICENSED MODE: proxy.novafusion.ea.com is DELIBERATELY NOT redirected. That
+# host is EA's account/entitlement/activation path; pointing it at 127.0.0.1
+# would make our stub answer the genuine activation round-trip and could break
+# the real EA-App licence the far machine now holds. The Blaze/matchmaking and
+# EASW/POW hosts below still redirect to the local server - those are the dead
+# online-play path the private server replaces, not activation.
 HOST_NAMES = [
     "gosredirector.ea.com",
     "gosredirector.online.ea.com",
     "gosredirector.scert.ea.com",
     "gosredirector.stest.ea.com",
-    "proxy.novafusion.ea.com",
     "easw.easports.com",
     "eac-fifapow02.eac.ad.ea.com",
 ]

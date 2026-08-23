@@ -1,341 +1,108 @@
-* cdb_patch_minimal.txt - ONLY the patches that cannot live in a file.
-*
-* Everything static was baked into the binaries by bake_static_patches.py on
-* 2026-08-18 (19 sites in fifa.exe, 1 in CardsDLLzf.dll). Those `eb`/`ea`
-* writes are therefore GONE from this script - the game reaches the network
-* with no debugger at all, which is proven: Handshake SUCCEEDED at 13:10 with
-* nothing attached.
-*
-* What is left here writes to RUNTIME HEAP/STACK OBJECTS, which no file patch
-* can express:
-*
-*   ed 4007ffc0   awc.dll BSS global. It has exactly ONE initializer in the
-*                 binary and that initializer does not run on our launch path,
-*                 so the global stays zero and every vtable call through it
-*                 resolves to garbage. It is a BSS address - there are no file
-*                 bytes to patch. (Trying to bake it is what corrupted the
-*                 awc.dll .rsrc string.)
-*   bp 112fceb    D3D9 CreateDevice -> Windowed=1, RefreshRate=0
-*   bp f728c0     THE FUT AVAILABILITY GATE. Forces the fields on the FUT
-*                 config object, futNotAvailable among them. Without it the
-*                 client fetches cfgrouting.xml, retries once, never asks for
-*                 futBoot.xml or /ut/auth, and shows "EA servers are not
-*                 available" - measured 2026-08-18 13:10.
-*   bp c61611/38/59  QoS values sent to Blaze: DBPS, NAT_TYPE_OPEN, UBPS
-*   bp 125052b    entitlement object populate (quantity=1, data-valid=1)
-*   sxe av        log an access violation and CONTINUE instead of halting
-*
-* DELIBERATELY NOT HERE, and not to be re-added:
-*   bp 140c8e0    [SQFIX]. Scanned 192 MB (s -b 0x10000000 L?0xc000000) on every
-*                 LoadFUTDatabase - 49 hits last session, ~9.4 GB scanned, and
-*                 the biggest single source of the pack-reveal stutter. It also
-*                 skipped the security screen WITHOUT setting SECURITY_CHECKED,
-*                 which is what stranded the loading popup. The server-side
-*                 trusted-device gate replaces it.
-*   bu CardsDLLzf+0xa877f  [NEWUSER2]. Forced the new-user branch on dispatch
-*                 #1, i.e. the SECOND FUT entry of a session. That is the
-*                 re-entry hang.
-*   every tracing probe ([SEGLOAD], [ASSETOPEN], [SCREEN], [FORMCHK], [TEAMQ],
-*                 [PACKITEM], the APT opcode tracer). 147,415 [SEGLOAD] hits in
-*                 one log. These are why the game stuttered.
-*
-* No CardsDLLzf gate is needed any more: its only runtime hook was NEWUSER2 and
-* its static patch is baked, so nothing here waits on that module.
-*
+* cdb_patch_minimal.txt - LICENSED MODE (stock, EA-App-activated fifa.exe)
 * ===========================================================================
-* TAKE THE DEBUGGER OFF THE NETWORK. THIS MUST COME FIRST.
+* This build ships NO fifa.exe and NO awc.dll. The machine runs its OWN,
+* genuinely EA-App-activated FIFA 12: PACE + the real 71055.dlf licence decrypt
+* the .text and satisfy the DRM. NOTHING in this script touches the licence or
+* PACE's decryption.
 *
-* The 15:15 launch never opened a window - 59 modules loaded against 145 in a
-* working run, stopping in the WMI phase. Cause, from the log:
+* What this script DOES is the private-server NETWORK layer + FUT enablement -
+* exactly the functional patches that used to be BAKED into the cracked exe.
+* On a stock exe they cannot be baked (the .text is PACE-ciphertext on disk),
+* so they are re-applied at RUNTIME, after PACE has decrypted the code in
+* memory. This is the same class of change as any community-server client
+* patch (point the game at our server, accept our cert); it is NOT a DRM
+* bypass - the game is licensed.
 *
-*   *** Unable to resolve unqualified symbol in Bp expression
-*       'CardsDLLzf+0x6f8c0' from module 'C:\WINDOWS\SysWOW64\wbemcomn.dll'.
+* THE ONE NEW MECHANISM vs the baked build: a HARDWARE execute breakpoint at
+* the original entry point. fifa.exe is PACE-packed; its .text is ciphertext
+* until PACE unpacks it and jumps to the OEP at 0x00b8df79. A software (int3)
+* breakpoint there would be written into a ciphertext page and either be
+* overwritten when PACE decrypts it, or trip PACE's tamper check. A HARDWARE
+* breakpoint lives in the CPU debug registers, touches no memory, and fires the
+* instant execution reaches the (now-decrypted) OEP. Everything that patches
+* fifa.exe therefore happens AT that breakpoint, not before.
 *
-* A `bu` on an unmapped module makes cdb treat CardsDLLzf as an UNQUALIFIED
-* symbol and hunt for it in EVERY loaded module, on EVERY module load - and
-* each hunt forces a symbol load. cdb defaults to `srv*`, the Microsoft symbol
-* server with NO local cache (_NT_SYMBOL_PATH is unset everywhere and
-* C:\symbols does not exist), so every one of those went to the network and
-* cached nothing, with the debuggee suspended throughout.
-*
-*   .symopt+0x100  SYMOPT_NO_UNQUALIFIED_LOADS - the documented fix for exactly
-*                  that message: never search all modules for an unqualified
-*                  name.
-*   .sympath       a LOCAL directory, no srv*, so the network is unreachable.
-*                  We need no Microsoft PDBs: cdb resolves
-*                  KERNELBASE!CreateProcessW and SHELL32!ShellExecuteExW from
-*                  the export tables, and without PDBs kv prints module+offset,
-*                  which is the answer the EA App hunt actually needs.
-*
-*                  It is "." rather than a named folder, and that is the point.
-*                  Any local directory satisfies the requirement - what matters
-*                  is that it is NOT a symbol server - and "." is the Game
-*                  folder, because launch_fifa.ps1 starts cdb with
-*                  -WorkingDirectory $GAME. The absolute path that used to be
-*                  here named one machine's research archive, which is exactly
-*                  the kind of thing that makes a folder unportable while
-*                  looking completely fine on the machine that wrote it.
+* ADDRESSES ARE ABSOLUTE VAs (ImageBase 0x400000, no ASLR) and are keyed to the
+* game VERSION. This build targets the same version the patches were derived
+* from; a different EA-App build would need them re-derived.
 * ===========================================================================
+
 .symopt+0x100
 .sympath .
 !sym quiet
+.printf "--- FUT12 LICENSED MODE: runtime network+FUT patches on the stock exe ---\n"
 .printf "--- symbols: local only, no unqualified loads, no symbol server ---\n"
 
-.printf "--- MINIMAL patch set: runtime-only hooks, statics are baked into the files ---\n"
+* ---------------------------------------------------------------------------
+* An access violation anywhere gets a full dump + stack, then continues. This
+* is the primary diagnostic if the first launch does not reach FUT: the log
+* names where and the dump carries the thread stacks. /o + relative path so it
+* lands beside the game on any install (cdb runs -WorkingDirectory $GAME).
+sxe -c ".echo ===AV_BEGIN===; r; u @eip L3; kv 30; .echo ---RAWSTACK---; dps @esp L40; .dump /o /mFhut fut12_crash.dmp; .echo ===AV_END===; gN" av
 
-* ===========================================================================
-* DUMP PATHS ARE RELATIVE, ON PURPOSE.
-*
-* These two .dump commands used to name an absolute folder on the machine this
-* was developed on. On any other machine that folder does not exist, cdb fails
-* the dump and prints an error inside a breakpoint that is otherwise working -
-* which is a confusing way to learn that a path was hardcoded.
-*
-* Relative resolves against cdb's working directory, and launch_fifa.ps1 starts
-* it with -WorkingDirectory $GAME (the working directory is load-bearing: the
-* game loads no archive data without it). So a dump lands beside the game, on
-* any install, with no configuration.
-* ===========================================================================
-* wait for awc.dll to be mapped before touching anything in it
-sxe ld:awc
-
-* armed at the initial break, before awc loads (a fifa.exe address)
-bp 112fceb "bp30 poi(poi(@eax)+0x40) \"ed poi(@esp+0x18)+0x20 1; ed poi(@esp+0x18)+0x30 0; g\"; g"
+* ---------------------------------------------------------------------------
+* Break at the OEP once PACE has decrypted .text. Hardware exec bp - survives
+* the unpack, leaves no int3 in a packed page.
+ba e1 b8df79
+.printf "--- hardware bp armed at OEP 0x00b8df79; running until PACE unpacks ---\n"
 g
-sxd ld
 
-* awc.dll BSS global - the one static that cannot be a file patch
-ed 4007ffc0 40062a88
-.printf "--- DAT_4007ffc0 initialised ---\n"
+* === STOPPED AT OEP: fifa.exe .text is now decrypted in memory =============
+.printf "=== OEP reached: .text unpacked, applying network + FUT patches ===\n"
 
-* STOP fifa.exe LAUNCHING THE EA APP.
-* awc.dll FUN_4001a460 reads GetEnvironmentVariableW(L"EALaunchCode") and, when
-* it is absent, builds origin://LaunchGame/71055 and ShellExecuteExW's it. That
-* chain is fifa.exe -> EALauncher.exe -> EALaunchHelper.exe -> EADesktop.exe,
-* which steals focus ~10 s into the launch and tabs the game out. PROVEN on
-* 2026-08-18: EADesktop pid 21728 had parent pid 39052 = fifa.exe.
-*
-* We DO set EALaunchCode=1 in the launcher and it happened anyway, so force the
-* branch instead of relying on the env var.
-*   site: 0f 85 c7 03 00 00   JNZ rel32, displacement 0x3c7
-*   ours: e9 c8 03 00 00 90   JMP rel32 + NOP, displacement 0x3c8
-* The +1 is deliberate and required: JMP rel32 is 5 bytes where JNZ rel32 is 6,
-* so the displacement must grow by one for both to land on the same target.
-eb 4001a5d1 e9 c8 03 00 00 90
-.printf "--- origin:// launch gate forced open (EA App will not be spawned) ---\n"
-bu awc+0x15ed2 "r eax=1; g"
+* --- cert path: make the client accept our self-signed Blaze cert -----------
+* Without these the SSLv3 handshake to gosredirector aborts in ~15 ms and FUT
+* shows "EA servers are not available". These make the post-parse trust checks
+* pass; the public key is still extracted (needed for Client Key Exchange).
+eb c995ea 90 90 90 90
+eb c99639 90 90 90 90
+eb c912f6 90 90
+eb c9129c eb
+eb c912c5 eb
 
-* FUT availability gate - without this, UT says the servers are unavailable
+* --- online-available flag: the string FUT selects is driven off this --------
+eb be02eb 00
+eb be04dd 00
+eb bc69bf 00
+eb be03f6 90 90 90 90 90
+
+* --- DLC: load our real CardsDLLzf.dll (the one that talks to our server) ----
+eb 4080bd 90 90 90 90 90 90
+eb 40744d 90 90 90 90 90 90
+eb 4040a1 eb
+
+* --- FUT menu enablement + entitlement (EA's entitlement servers are dead) ---
+eb 106da83 90 90
+eb 121f595 33 c0 90
+eb 12504f0 b0 01 c3
+
+* --- stability: NULL AptString -> empty string (not an AV); larger EASTL pool
+eb 4483cc eb 1c
+eb 18b4312 39 39
+
+* --- runtime hooks (software bps, valid now the .text is decrypted) ----------
+* FUT availability gate - without this UT says the servers are unavailable
 bp f728c0 "eb @ecx+0x13c 0; eb @ecx+0x14d 1; eb @ecx+0x14e 0; eb @ecx+0x14f 0; eb @ecx+0x150 0; ed @ecx+0x11c 1; ed @ecx+0x140 1; g"
-
-* QoS values sent to Blaze
+* QoS values sent to Blaze: DBPS, NAT_TYPE_OPEN, UBPS
 bp c61611 "ed poi(esp) 0x186a0; g"
 bp c61638 "ed poi(esp) 0; g"
 bp c61659 "ed poi(esp) 0x186a0; g"
-
-* entitlement object populate
+* entitlement object populate (quantity=1, data-valid=1)
 bp 125052b "ed poi(ebp-4)+0x164 1; eb poi(ebp-4)+0x1a0 1; g"
+.printf "=== fifa.exe patches applied; arming awc handling ===\n"
 
 * ---------------------------------------------------------------------------
-* TEMPORARY DIAGNOSTICS - remove once the hub crash is understood.
-*
-* Deliberately NOT a breakpoint on the crash site 0x4483e4. That is a hot string
-* routine in the Apt VM; trapping every call is exactly the per-trap cost that
-* made the game stutter before. The AV handler below now writes a real dump
-* (it needed /o - it was failing with "The file exists"), and a minidump carries
-* thread stacks, so the call stack can be recovered offline with cdb -z instead.
-*
-* These two are `bu` (deferred) because CardsDLLzf.dll is not mapped until FUT
-* is entered, and both fire only a handful of times per session.
-*
-*   GetUserData    builds the object PlayerIdentity:updateValues() reads for the
-*                  hub - AVAILABLE_CREDITS, CREDITS, MATCH_RECORD,
-*                  MATCHES_PLAYED, PC_COINS, TOURNAMENT_WINS. A null member here
-*                  is exactly the null string the crash dereferences.
-*   0x472e0        the RS4 response delivery thunk. Timing it against hub
-*                  construction is what proves the coin first-render race.
-* (the CardsDLLzf probes are armed at the very END of this script - see there)
-
-* WHO SPAWNS THE EA APP. The awc.dll origin:// gate patch at 0x4001a5d1 APPLIED
-* (its printf is in the 14:57 log) and EA Desktop still took focus, so that gate
-* is NOT the spawn site on this path. Rather than guess a second time, name the
-* caller: the kv frames identify the module - awc.dll, EACore.dll or IGO32.dll.
-* Both fire rarely, so neither reintroduces the per-trap stutter.
-bp KERNELBASE!CreateProcessW ".printf \"[CP] %mu | %mu\\n\", poi(@esp+4), poi(@esp+8); kv 6; g"
-bp SHELL32!ShellExecuteExW ".printf \"[SEE] ShellExecuteExW\\n\"; kv 6; g"
-
-* THE OOM REPORTER. 0x00b5e7ca is an int 3 the game executes when an allocation
-* fails. With no handler cdb HALTS there, which is what presented as the game
-* freezing at the FUT hub. This does not fix anything - the allocation still
-* returns NULL - but it turns a frozen session into a logged line, so whatever
-* happens next is visible. The original script carried this; keep it.
-* NAME THE ALLOCATION SITE. 0x00b5e7ca is the int 3, i.e. AFTER the fact;
-* 0x00b5e770 is the reporter ENTRY, so this catches the caller before anything
-* unwinds. The hub crash asks for 0xFEEA0001 bytes of 'EASTL basic_string' - a
-* length read out of freed memory (0xFEEEFEEE is the freed-heap fill), which
-* matches the unresolved use-after-free in NEXT_SESSION.md. dps gives the
-* arguments and return chain even with no symbols; kv names the modules.
-* Fires only on an OOM, so it costs nothing in normal play.
-bp 00b5e770 ".echo ===OOM_BEGIN===; r; dps @esp L20; kv 30; .dump /o /mFhut fut12_oom.dmp; .echo ===OOM_END===; g"
-
-* and keep the int 3 handler, so the session survives the reporter and the
-* downstream access violation is captured too
-bp 00b5e7ca ".printf \"[OOM] continuing past the int3 - allocation returned NULL\\n\"; g"
-
-* ===========================================================================
-* WINDOW CREATION - MEASURE IT. Two wrong guesses is enough.
-*
-* fifasetup.ini is CONFIRMED intact and honoured: 11 CRs, FULLSCREEN = 3, mtime
-* is our write, and the game did NOT rewrite it. Yet the window still behaves
-* like borderless fullscreen. So the tri-state model in NEXT_SESSION.md:65-74 is
-* incomplete somewhere, and the next move is a measurement, not another theory.
-*
-* (Earlier the ini really WAS broken - `sed -i` had stripped every CRLF, 0 CRs
-* against the original's 10, so the game fell back to fifasetup_default.ini
-* whose FULLSCREEN default is 2 = borderless topmost. That is fixed; the file is
-* now written in binary mode with explicit CRLF. This probe proves what the game
-* does with it.)
-*
-*   0x00b9e99c  cmp ebx,1     <- ebx IS the FULLSCREEN value. Settles whether 3
-*                                was read, before any branch is taken.
-*   0x00b9ea37  call [0x1650648] = CreateWindowExA. Args are already pushed:
-*        [esp]=dwExStyle  [esp+4]=lpClassName  [esp+8]=lpWindowName
-*        [esp+0xc]=dwStyle  [esp+0x10]=X  [esp+0x14]=Y
-*        [esp+0x18]=nWidth  [esp+0x1c]=nHeight
-*
-* EXPECTED if mode 3 is applied: style=0xcf0000 (WS_OVERLAPPEDWINDOW), ex=0.
-* If we see style=0x86000000 / ex=8 instead, it took the mode-1/2 arm and the
-* whole tri-state understanding is wrong.
-* Both fire exactly ONCE per launch, so they cost nothing.
-* WHERE DOES THE 1 COME FROM? Run 6 measured [FSMODE] FULLSCREEN=1 while the
-* ini said 3 - and the ini is provably being read, because the SAME reader on
-* the SAME settings object [0x1a18560] returned our RESOLUTIONWIDTH/HEIGHT
-* (w=1904 h=1041) twelve instructions later. Every write to ebx between the
-* read and the branch was traced: the only coercion is 0 -> 1 at 0x00b9e8d5
-* (non-Transgaming), so a 3 would survive untouched.
-*
-* So either the ini LOOKUP returned the default, or the command-line override
-* path overwrote it. These two have completely different fixes, and these two
-* probes separate them:
-*   0x00b9e89f  eax = result of GetIniInt("FULLSCREEN", default=1)   <- the ini
-*   0x00b9e8b3  eax = result after the 0xb32c30 override lookup       <- final
-* If READ=3 and FINAL=1 the override path is the culprit. If READ=1 the key is
-* not being found at all, despite the file containing it.
-bp 00b9e89f ".printf \"[FSREAD] ini returned %d\\n\", @eax; g"
-bp 00b9e8b3 ".printf \"[FSFINAL] after override %d\\n\", @eax; g"
-
-bp 00b9e99c ".printf \"[FSMODE] FULLSCREEN=%d\\n\", @ebx; g"
-bp 00b9ea37 ".printf \"[WND] ex=%p style=%p x=%p y=%p w=%d h=%d\\n\", poi(@esp), poi(@esp+0xc), poi(@esp+0x10), poi(@esp+0x14), poi(@esp+0x18), poi(@esp+0x1c); g"
-
-* ---------------------------------------------------------------------------
-* TAB-OUT: PROVE THE MINIMISE PATH, do not just assume the patch worked.
-*
-* 0x00b9d739 is WM_ACTIVATE (WndProc 0x00b9d6e0, jump table 0x00b9d894 index 6).
-* 0x00b9d748 is the WA_INACTIVE arm, reached the moment focus is lost, with esi
-* already holding g_fullscreen - the value the minimise used to be gated on.
-* 0x00b9d77c is the WA_ACTIVE / WA_CLICKACTIVE arm.
-*
-* [DEACT] firing on Alt-Tab WHILE THE WINDOW IS STILL UP is the proof that the
-* handler runs and the CloseWindow patch is what stopped the minimise. Both are
-* one-per-focus-change, so they cost nothing.
-*
-* A bp on 0x00b9d761 (the CloseWindow call) would be useless now - the patched
-* jmp at 0x00b9d756 makes it unreachable, so it can never fire either way.
-* ---------------------------------------------------------------------------
-bp 00b9d748 ".printf \"[DEACT] focus LOST, g_fullscreen=%d\\n\", @esi; g"
-bp 00b9d77c ".printf \"[REACT] focus REGAINED\\n\"; g"
-* ===========================================================================
-
-* CATCH THE CORRUPT STRING BEFORE THE ALLOCATOR EVER SEES IT.
-*
-* 0x010b5c8c is the thousands-separator insert inside the number formatter:
-*   cmp ebp,3 / mov ecx,[esi] / push 0x16599bd / push 0x16599bc (a STATIC
-*   1-char ',') / push ecx / call 0x00b979e0 = basic_string::replace()
-* replace() then computes  required = (end - begin) + 1  and the measured value
-* was 0xFE7C0000 - negative, and an exact multiple of 64 KB, i.e. begin and end
-* are in DIFFERENT heap blocks. Since the separator length is a hard-coded 1,
-* the only bad term is the string's own (end - begin). The object is already
-* corrupt when the formatter receives it.
-*
-* CONDITIONAL, and on the formatter rather than on replace() itself. A bare
-* trap on replace() would fire for every string replace in the game - exactly
-* the per-trap cost that caused the old stutter. This site only runs while
-* grouping digits, and prints ONLY when the size is impossible, so a healthy
-* frame costs one comparison.
-bp 010b5c8c ".if (poi(@esi+4)-poi(@esi) > 0x10000) { .echo ===BADSTR===; .printf \"[BADSTR] begin=%p end=%p size=%p pos=%p\\n\", poi(@esi), poi(@esi+4), poi(@esi+4)-poi(@esi), @ecx; r; dps @esp L18; kv 30 }; g"
-* ---------------------------------------------------------------------------
-
-* an access violation should be logged and continued, not halt the game
-* /mFhut, NOT /ma. A full-memory dump of this process is ~800 MB and this
-* handler fires on the FIRST chance of EVERY access violation, including any
-* the game handles itself - writing 800 MB each time would stall the game. This
-* form carries module headers, handles, unloaded modules and thread state,
-* which is what was missing last time ("Stack unwind information not
-* available"), at a fraction of the size.
-*
-* FORWARD SLASHES IN THE PATH, DELIBERATELY. Inside a quoted cdb command string
-* a backslash is an escape character, so the first attempt at this line wrote
-*     Creating C:logscrash.dmp        (from C:\logs\crash.dmp)
-* - every separator was swallowed. Win32 accepts forward slashes, and cdb never
-* touches them, so this form cannot be mangled.
-sxe -c ".echo ===AV_BEGIN===; r; u @eip L3; kv 30; .echo ---RAWSTACK---; dps @esp L40; .dump /o /mFhut fut12_crash.dmp; .echo ===AV_END===; gN" av
-* ===========================================================================
-* CardsDLLzf PROBES - LAST, BEHIND A LOAD GATE, AND THE ORDER MATTERS.
-*
-* `module+offset` only parses once the module is mapped. Before that cdb reads
-* CardsDLLzf as an unqualified symbol and hunts for it in every loaded module
-* on every module load, which is what stalled the 15:15 launch. The original
-* cdb_patch_clean.txt always gated these; the gate was dropped along with
-* [NEWUSER2] and that was the mistake.
-*
-* THIS BLOCK IS LAST ON PURPOSE. The `g` below runs the game until CardsDLLzf
-* loads, which does not happen until FUT is entered. Anything placed after it
-* would not be armed until then - so the spawn probes, the OOM handler and the
-* AV handler all have to come BEFORE it, and they do.
-* ===========================================================================
-.printf "--- patch set armed; running until CardsDLLzf loads (FUT entry) ---\n"
-sxe ld:CardsDLLzf
+* awc.dll loads AFTER the OEP (it is pulled in by the game's own code, not a
+* static import). It is NOT PACE-packed, so its addresses are stable. Wait for
+* it, then: init the one BSS global whose initializer never runs on a
+* standalone launch, and suppress the origin:// EA-App relaunch (focus-steal).
+* Neither is a DRM change - both just let fifa.exe run standalone cleanly.
+sxe ld:awc
 g
 sxd ld
-.printf "--- CardsDLLzf mapped, arming its probes ---\n"
-* ADDRESS CORRECTED 2026-08-18. This was CardsDLLzf+0x6f8c0, which fired ZERO
-* times across all three runs (145750, 151540, 161825) while [RS4RESP] on
-* CardsDLLzf+0x472e0 fired 16-17 times in the SAME runs - so breakpoints and the
-* module base were fine and the address was simply wrong. FINDINGS.md:13281
-* records the ION_CardInventory vtable as GetUserCardIDs 0xb0420 / GetUserData
-* 0xb04a0. Every conclusion that rested on "GetUserData never fired" was
-* therefore resting on nothing.
-bp CardsDLLzf+0xb04a0 ".printf \"[GETUSERDATA] hub user-data object, ret=%p\\n\", poi(@esp); g"
-bp CardsDLLzf+0x472e0 ".printf \"[RS4RESP] delivering response obj=%p\\n\", poi(@esp+8); g"
-
-* ===========================================================================
-* PROBES REMOVED 2026-08-20. Both had served their purpose, and one of them
-* was actively breaking the game.
-*
-*   [IFQ]  answered its question: players.playerid is 19 bits and the variant
-*          never reaches that query, so the In-Form stat route is closed.
-*   [FCE]  answered its question too - OnTeamsReady DOES fire and the
-*          `TEAM NOT VALID` line is noise, printed for ids that are in the
-*          teams table as well as for 130000.
-*
-* WHY [FCE] HAD TO GO, and the rule it establishes:
-*
-* Four of its breakpoints were on FootballCompEngzf - a DLC PLUGIN that FIFA
-* LOADS AND UNLOADS ON DEMAND. Backing out of a tournament unloads it. cdb
-* lifts its int3 to step past a breakpoint and re-arms it afterwards; if the
-* page has been unmapped in between, WriteProcessMemory fails and cdb ABORTS
-* THE RESUME and sits at its own prompt with the debuggee suspended. The
-* script issues no further `g`, so the process never runs again.
-*
-* Measured 2026-08-20: `Unable to insert breakpoint 27 at 598ddcd2, Win32
-* error 0n299` / `bp27 at 598ddcd2 failed`, halted in NtUnmapViewOfSection.
-* ModLoad 598b0000 + 0x2dcd2 = 598ddcd2 - exactly the [FCE] `added team`
-* probe. The user reported it as a crash on backing out of the tournament;
-* fifa.exe was alive, not responding, CPU and working set flat, and silent on
-* every port. There was NO access violation anywhere in the session.
-*
-* RULE: only ever breakpoint modules that stay mapped for the whole run -
-* fifa.exe and CardsDLLzf. Never `bu` a dlc\dlc_* plugin.
-* ===========================================================================
+ed 4007ffc0 40062a88
+eb 4001a5d1 e9 c8 03 00 00 90
+bu awc+0x15ed2 "r eax=1; g"
+.printf "--- awc mapped and patched; running the game ---\n"
 
 g
