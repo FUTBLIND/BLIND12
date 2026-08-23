@@ -60,13 +60,48 @@ HOSTS = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"),
 # the real EA-App licence the far machine now holds. The Blaze/matchmaking and
 # EASW/POW hosts below still redirect to the local server - those are the dead
 # online-play path the private server replaces, not activation.
+#
+# DELIBERATELY NOT REDIRECTED, and it must stay that way:
+#   proxy.novafusion.ea.com   EA account/entitlement/activation
+#   paceap.com / www.paceap.com   PACE licensing
+# Those three are the licence path. Redirecting them points a real activation
+# round-trip at our stub and could break the EA-App licence this build depends
+# on. Everything else below is the dead ONLINE-PLAY path the private server
+# replaces.
+#
+# The rest of this list was measured 2026-08-23 by diffing the dev machine's
+# hosts file (23 redirected names) against what setup actually wrote (6). The
+# 14 additions are why the far machine was not equivalent to the dev machine.
+# content.lt.easfc.ea.com is the load-bearing one: it is a hostname baked into
+# the CardsDLLzf.dll THIS BUILD SHIPS, serving the FUT asset base and
+# leaderboard images on :8080 (novafusion_stub). Unredirected it NXDOMAINs.
 HOST_NAMES = [
+    # Blaze redirector - the entry point for the whole online session.
     "gosredirector.ea.com",
     "gosredirector.online.ea.com",
     "gosredirector.scert.ea.com",
     "gosredirector.stest.ea.com",
+    # EA Sports World / Football Club, and the FUT asset host baked into
+    # CardsDLLzf.dll. Both are served locally.
     "easw.easports.com",
+    "xmlns.easw.easports.com",
     "eac-fifapow02.eac.ad.ea.com",
+    "content.lt.easfc.ea.com",
+    # Profile / presence / telemetry. Dead externally; answered or refused
+    # locally so the client fails fast instead of waiting on a timeout.
+    "profile.ea.com",
+    "elephant.online.ea.com",
+    "peach.online.ea.com",
+    "reports.tools.gos.ea.com",
+    "demangler.ea.com",
+    "pg.fifa12.test.easportsworld.ea.com",
+    # Web/store endpoints the client pokes at. Nothing needs to reach them.
+    "client.akamai.com",
+    "fifa.easports.com",
+    "eastore.ea.com",
+    "www.ea.com",
+    "support.ea.com",
+    "www.worldwide.ea.com",
 ]
 MARK = "# FUT12 local server"
 
@@ -210,14 +245,38 @@ def save_state(d):
 # masked while the far machine received a byte-copy of this machine's already-
 # patched install; a genuine install correctly has no ion_fut tree.
 #
-# Keep this prefix in step with build_dist.py's _LOOSE / GAME_LOOSE, which is
-# where the same six files are selected for packaging.
+# Keep these in step with build_dist.py's _LOOSE / GAME_LOOSE, which is where
+# the same files are selected for packaging.
 ADDITIVE_PREFIX = os.path.join("data", "ui", "external", "ion_fut")
+ADDITIVE_PREFIXES = (ADDITIVE_PREFIX,)
+
+# Two config files that live in the Game root and are also purely additive.
+# Added 2026-08-23 after measuring the dev install against a stock one:
+#   user.ini  157 keys - FUT_ENABLE_MENU, FUT/OVERRIDE_VERSION, ~130
+#             FUT/MODULE_BASEURL_* / FUT_RS4_* entries pointing at 127.0.0.1,
+#             and the ONLINE/FUTDYNAMICMESSAGES_CUSTOM* trio. Most are ALSO
+#             served over Blaze (server_sslv3.py:108-145), which is why a
+#             machine without it gets some of the way; not all of them are.
+#             Audited before shipping: no personal data, no machine-specific
+#             paths, no off-box URLs.
+#   rna.ini   OVERRIDES fifasetup.ini. Carries FULLSCREEN=3 - a real bordered
+#             window. Without it the game falls back to fifasetup_default.ini,
+#             which is 800x600 fullscreen. Resolution is NOT shipped: it is
+#             per-display and lives in the user's own Documents\FIFA 12\
+#             fifasetup.ini.
+ADDITIVE_ROOT_FILES = ("user.ini", "rna.ini")
 
 
 def is_additive(rel):
-    """True for a loose override we ADD; False for an EA file we REPLACE."""
-    return rel.lower().startswith(ADDITIVE_PREFIX.lower() + os.sep)
+    """True for a file we ADD; False for an EA file we REPLACE.
+
+    An additive file is EXPECTED to be absent from a genuine install - that is
+    the whole reason it ships. Only replacement files gate the layout check.
+    """
+    r = rel.lower()
+    if r in tuple(f.lower() for f in ADDITIVE_ROOT_FILES):
+        return True
+    return any(r.startswith(p.lower() + os.sep) for p in ADDITIVE_PREFIXES)
 
 
 def game_files():
@@ -702,6 +761,124 @@ def check_python():
         say(OK, "python", "%s (32-bit)" % sys.version.split()[0])
 
 
+# ------------------------------------------------------------------ parity
+# EVERY fifa.exe SITE THE RUNTIME cdb SCRIPT MUST RE-APPLY.
+#
+# WHY THIS EXISTS. The far machine hung on "Retrieving data from server" and
+# then died at AptAnimationTarget::GetDragPos+0x6834 (mov edx,[eax], eax=0)
+# because the licensed-mode cut of cdb_patch_minimal.txt re-applied 17 of the
+# 19 baked sites and silently dropped 0x18e5360 - the O_SG_TCKR stat-group
+# ticker pointer that a measured three-round bisect had already proved
+# load-bearing. Nothing compared the two lists, so a dropped patch became a null
+# dereference on someone else's machine instead of a build error here.
+#
+# Cosmetic sites (window position, SetFocus, minimise-on-focus-loss) are
+# deliberately absent from this list - they change nothing functional.
+REQUIRED_CDB_SITES = [
+    ("c995ea",  "stat-fail suppress"),
+    ("c99639",  "stat-fail suppress"),
+    ("c912f6",  "cert bypass"),
+    ("c9129c",  "cert bypass"),
+    ("c912c5",  "cert bypass"),
+    ("be02eb",  "online-available flag"),
+    ("be04dd",  "online-available flag"),
+    ("bc69bf",  "online-available flag"),
+    ("be03f6",  "online-available flag"),
+    ("4080bd",  "DLC real-DLL gate"),
+    ("40744d",  "DLC real-DLL gate"),
+    ("4040a1",  "DLC real-DLL gate"),
+    ("106da83", "FUT_ENABLE_MENU"),
+    ("121f595", "Ebisu error force"),
+    ("12504f0", "entitlement data-ready"),
+    ("4483cc",  "NULL AptString -> empty"),
+    ("18b4312", "EASTL pool 320K->990K"),
+    ("18e5360", "O_SG_TCKR ticker ptr (carries the Blaze login)"),
+    ("17f38f0", "ticker key O_TKfilter -> O_JS"),
+    ("1370e5c", "empty-list Id setter -> cave stub"),
+    ("131b783", "cave stub body"),
+    ("16f7dac", "FUT assets URL -> local stub"),
+    ("f728c0",  "FUT availability gate (runtime bp)"),
+    ("c61611",  "QoS DBPS (runtime bp)"),
+    ("c61638",  "QoS NAT type (runtime bp)"),
+    ("c61659",  "QoS UBPS (runtime bp)"),
+    ("125052b", "entitlement populate (runtime bp)"),
+]
+
+
+def check_parity(root):
+    """Assert this machine actually has what the rig needs - before it crashes.
+
+    Three things nothing else checks: that every shipped game file really landed
+    and matches, that every host we depend on is redirected, and that the cdb
+    script still carries every patch site. The last one is the whole point: a
+    dropped patch must be an error here, not a null deref on the far machine.
+    """
+    bad = []
+
+    rels = game_files()
+    wrong = []
+    for rel in rels:
+        live = os.path.join(root, rel)
+        if not os.path.exists(live):
+            wrong.append(rel + " (absent)")
+        elif md5(live) != md5(os.path.join(GAME_SRC, rel)):
+            wrong.append(rel + " (differs)")
+    if wrong:
+        bad.append("game files")
+        say(BAD, "parity: game files", "%d not as shipped: %s"
+            % (len(wrong), ", ".join(wrong[:3])))
+    else:
+        say(OK, "parity: game files", "%d present and matching" % len(rels))
+
+    try:
+        txt = io.open(HOSTS, encoding="utf-8", errors="replace").read().lower()
+    except (IOError, OSError) as e:
+        say(WARN, "parity: hosts", "could not read hosts (%s)" % e)
+        txt = None
+    if txt is not None:
+        redirected = set()
+        for line in txt.splitlines():
+            line = line.split("#")[0].strip()
+            parts = line.split()
+            if len(parts) >= 2 and parts[0].startswith("127."):
+                redirected.update(p.strip() for p in parts[1:])
+        absent = [h for h in HOST_NAMES if h.lower() not in redirected]
+        if absent:
+            bad.append("hosts")
+            say(BAD, "parity: hosts", "%d not redirected: %s"
+                % (len(absent), ", ".join(absent[:3])))
+        else:
+            say(OK, "parity: hosts", "all %d redirected" % len(HOST_NAMES))
+
+    cdb_script = os.path.join(SERVER, "cdb_patch_minimal.txt")
+    try:
+        script = io.open(cdb_script, encoding="utf-8",
+                         errors="replace").read().lower()
+    except (IOError, OSError) as e:
+        bad.append("cdb patches")
+        say(BAD, "parity: cdb patches", "cannot read %s (%s)" % (cdb_script, e))
+        script = None
+    if script is not None:
+        # ONLY the executable lines. cdb comments start with '*', and the
+        # comments here quote the very addresses they explain - so scanning the
+        # whole file reports a patch as present when all that survives is the
+        # paragraph describing it. That is not hypothetical: the first cut of
+        # this check passed while 0x18e5360 was deleted, because the note above
+        # it still said "0x18e5360".
+        script = "\n".join(ln for ln in script.splitlines()
+                           if not ln.lstrip().startswith("*"))
+        gone = [(a, w) for a, w in REQUIRED_CDB_SITES if a.lower() not in script]
+        if gone:
+            bad.append("cdb patches")
+            say(BAD, "parity: cdb patches",
+                "%d MISSING - the game will crash or hang: %s"
+                % (len(gone), ", ".join("%s (%s)" % (a, w) for a, w in gone[:3])))
+        else:
+            say(OK, "parity: cdb patches",
+                "all %d sites present" % len(REQUIRED_CDB_SITES))
+    return not bad
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--uninstall", action="store_true")
@@ -763,6 +940,12 @@ def main():
     install_cdb(dry)
     check_runtimes(root, dry)
     check_python()
+    # LAST, and after everything else has run: does this machine now actually
+    # match what the rig needs? A dry run has installed nothing, so the file and
+    # hosts halves would report absences that are not faults - only the cdb
+    # patch-site check is meaningful there, and it runs inside check_parity.
+    if not dry:
+        check_parity(root)
 
     print("")
     if _faults:

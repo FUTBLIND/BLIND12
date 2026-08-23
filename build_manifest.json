@@ -2,8 +2,8 @@
   "files": [
     {
       "path": "README.md",
-      "md5": "c9a2e553e34567cffa419300fd7cadb9",
-      "bytes": 11049
+      "md5": "520af052398e6841696ff6c9186df8a0",
+      "bytes": 11514
     },
     {
       "path": "SETUP.cmd",
@@ -94,6 +94,16 @@
       "path": "game/dlc/dlc_CardsDLL/dlc/cards0.big",
       "md5": "6acd7d3f42556f112ff40cb685b1f88f",
       "bytes": 22272298
+    },
+    {
+      "path": "game/rna.ini",
+      "md5": "995f34c2aafc59dec5b3bea7c748723b",
+      "bytes": 150
+    },
+    {
+      "path": "game/user.ini",
+      "md5": "a50b86753661c7c43e91327d340cccc0",
+      "bytes": 12045
     },
     {
       "path": "server/aptread.py",
@@ -617,12 +627,12 @@
     },
     {
       "path": "setup.py",
-      "md5": "5be2a0450ba06eae90b8347d277b73dc",
-      "bytes": 31744
+      "md5": "b9ae8de51d444648bb6d09a569826872",
+      "bytes": 40474
     }
   ],
-  "count": 124,
-  "bytes": 46901784,
+  "count": 126,
+  "bytes": 46923174,
   "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
   "excluded_personal": [
     "club.json",

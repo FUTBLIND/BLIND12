@@ -59,12 +59,13 @@ component other software may now rely on.
 
 ### You need your own FIFA 12 — this is not it
 
-This folder is **about 58 MB against a 6.2 GB game**, and it carries nine game
+This folder is **about 58 MB against a 6.2 GB game**, and it carries eleven game
 files in two kinds. Three are *replaced* — `CardsDLLzf.dll` and the two `.big`
-archives EA ships. Six are *added* — the loose files under
-`data\ui\external\ion_fut\`, which EA ships nothing of and which no FIFA 12
-install has ever had. `SETUP.cmd` expects exactly that: the three must already
-be present, the six must not. It does not carry `data6.big` (1.7 GB),
+archives EA ships. Eight are *added* — the six loose files under
+`data\ui\external\ion_fut\`, plus `user.ini` (FUT enablement and the local base
+URLs) and `rna.ini` (window mode). EA ships none of the eight and no FIFA 12
+install has ever had them. `SETUP.cmd` expects exactly that: the three must
+already be present, the eight must not. It does not carry `data6.big` (1.7 GB),
 `data3.big` (1.2 GB), the audio, the video, or the other 1,735 files. With no
 FIFA 12 on the machine there is nothing to patch, and `SETUP.cmd` says so and
 stops rather than half-finishing.
@@ -134,14 +135,20 @@ Get-ChildItem -Recurse | Unblock-File
 
 1. **`SETUP.cmd`** — right-click, *Run as administrator*. Once, ever.
    It finds FIFA 12, backs up the three files it is about to replace, copies
-   those in and adds the six loose `ion_fut` files, appends six `hosts` entries,
-   installs a local certificate, and checks the ports and the debugger. If
+   those in and adds the eight others, appends twenty `hosts` entries, installs
+   a local certificate, checks the ports and the debugger, and finishes with a
+   parity check that confirms the machine really has what the rig needs. If
    anything is wrong it stops and says which thing — it never half-finishes.
+
+   The `hosts` entries redirect the dead ONLINE-PLAY hosts to the local server.
+   `proxy.novafusion.ea.com` and `paceap.com` are **deliberately left alone** —
+   those are EA activation and PACE licensing, and they must keep reaching the
+   real servers so your licence keeps working.
 2. **`START.cmd`** — run as administrator. Brings the seven services up, arms a
    watchdog, and launches the game.
 3. **`STOP.cmd`** — stops the services. Leaves the game alone.
 4. **`UNINSTALL.cmd`** — puts the game and the machine back exactly as they
-   were: the three replaced files restored from backup, the six added ones
+   were: the three replaced files restored from backup, the eight added ones
    deleted, the `hosts` lines removed, the certificate dropped.
 
 ### First launch
@@ -194,7 +201,7 @@ python\                    a bundled Python 3.7.9 32-bit — nothing to install
 deps\                      the game's Microsoft runtimes, installed by SETUP.cmd
 server\                    the seven services, their libraries and their data
   launcher\                pre-flight, boot, stop, watchdog
-game\                      nine game files: 3 replaced, 6 added (ion_fut)
+game\                      eleven game files: 3 replaced, 8 added
   _backup_original\        your originals, created by SETUP.cmd
 build_manifest.json        every shipped file with its md5
 ```
