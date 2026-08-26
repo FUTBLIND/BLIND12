@@ -13,7 +13,8 @@ SIX THINGS, and every one of them is reversible:
     2. back up the shipped FUT content files, then copy the patched ones in
        (LICENSED MODE ships NO fifa.exe / awc.dll - the machine's own
        EA-App-activated binaries are left untouched)
-    3. append six hosts entries (NOT proxy.novafusion - see HOST_NAMES)
+    3. append the hosts entries in HOST_NAMES (paceap.com is deliberately
+       NOT among them - see the note there)
     4. install the local certificate into Trusted Root
     5. install THE GAME'S own runtime dependencies - the VC++ 2008 SP1 x86
        redistributable and two DirectX 9 DLLs, both carried in deps\
@@ -54,20 +55,22 @@ STATE = os.path.join(HERE, "setup_state.json")
 
 HOSTS = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"),
                      "System32", "drivers", "etc", "hosts")
-# LICENSED MODE: proxy.novafusion.ea.com is DELIBERATELY NOT redirected. That
-# host is EA's account/entitlement/activation path; pointing it at 127.0.0.1
-# would make our stub answer the genuine activation round-trip and could break
-# the real EA-App licence the far machine now holds. The Blaze/matchmaking and
-# EASW/POW hosts below still redirect to the local server - those are the dead
-# online-play path the private server replaces, not activation.
+# proxy.novafusion.ea.com IS REDIRECTED (changed 2026-08-26). It was excluded
+# here on the theory that it carried the EA-App activation round-trip and that
+# redirecting it "could break" the licence. That was precautionary and never
+# measured, and it cost a manual hosts edit on every far machine: without it the
+# client never reaches the local novafusion stub.
 #
-# DELIBERATELY NOT REDIRECTED, and it must stay that way:
-#   proxy.novafusion.ea.com   EA account/entitlement/activation
+# Three things settle it. The dev rig has redirected this name for months and
+# its licence works. Licensed mode requires the game to already launch normally
+# BEFORE setup runs, so the activation round-trip has happened by then. And the
+# Trusted Root certificate this setup installs is issued FOR
+# proxy.novafusion.ea.com - see the -delstore call in the cert section - so
+# redirecting it is what finally makes that certificate mean anything.
+#
+# STILL DELIBERATELY NOT REDIRECTED, and this half stands:
 #   paceap.com / www.paceap.com   PACE licensing
-# Those three are the licence path. Redirecting them points a real activation
-# round-trip at our stub and could break the EA-App licence this build depends
-# on. Everything else below is the dead ONLINE-PLAY path the private server
-# replaces.
+# A separate licence path with no stub behind it. Leave it alone.
 #
 # The rest of this list was measured 2026-08-23 by diffing the dev machine's
 # hosts file (23 redirected names) against what setup actually wrote (6). The
@@ -95,6 +98,9 @@ HOST_NAMES = [
     "reports.tools.gos.ea.com",
     "demangler.ea.com",
     "pg.fifa12.test.easportsworld.ea.com",
+    # EA account/entitlement host. Served locally by novafusion_stub.py,
+    # which owns 80/443/8080.
+    "proxy.novafusion.ea.com",
     # Web/store endpoints the client pokes at. Nothing needs to reach them.
     "client.akamai.com",
     "fifa.easports.com",
