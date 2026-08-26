@@ -1,11 +1,7 @@
 # FUT12 — a local FIFA 12 Ultimate Team server
 
-EA's FUT servers for FIFA 12 were switched off years ago, and with them the
-entire Ultimate Team mode. This folder puts it back: seven local services that
-answer the game the way EA's did, so the mode boots, a club is created, packs
-open, squads save and the transfer market runs.
+REPORT BUGS TO @FUTBLIND ON TWITTER, @BLIND80 ON DISCORD
 
-Everything runs on your own machine. Nothing is sent anywhere for gameplay.
 
 > **LICENSED MODE.** This build runs on top of a **genuine, EA-App-activated
 > FIFA 12** — the game must already launch normally for you first (it needs its
