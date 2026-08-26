@@ -1,3 +1,8 @@
+# Report bugs and problems to **@FUTBLIND** on X, or on Discord:
+
+- Discord server: **https://discord.gg/3aFHn9HhQH**
+- Direct: **@BLIND80**
+
 # FUT12 — a local FIFA 12 Ultimate Team server
 
 Seven local services that answer the game the way EA's did, so Ultimate Team
