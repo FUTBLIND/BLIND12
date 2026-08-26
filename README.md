@@ -33,8 +33,7 @@ Everything runs on your own machine. Nothing is sent anywhere for gameplay.
 
 ### The runtimes are the game's dependencies, not this folder's
 
-Worth stating plainly, because it cost an evening. FIFA 12 links against
-Microsoft runtimes that Windows does not ship: the **Visual C++ 2008 x86**
+FIFA 12 links against Microsoft runtimes that Windows does not ship: the **Visual C++ 2008 x86**
 assembly (`fifa.exe` and `powdllzf.dll` name it), the **Visual C++ 2005 x86**
 assembly (`awc.dll`, `activation.exe` and the Qt DLLs name it), and
 `d3dx9_41.dll` from the **DirectX June 2010** redistributable plus its
@@ -59,31 +58,15 @@ component other software may now rely on.
 
 ### You need your own FIFA 12 — this is not it
 
-This folder is **about 58 MB against a 6.2 GB game**, and it carries eleven game
-files in two kinds. Three are *replaced* — `CardsDLLzf.dll` and the two `.big`
-archives EA ships. Eight are *added* — the six loose files under
-`data\ui\external\ion_fut\`, plus `user.ini` (FUT enablement and the local base
-URLs) and `rna.ini` (window mode). EA ships none of the eight and no FIFA 12
-install has ever had them. `SETUP.cmd` expects exactly that: the three must
-already be present, the eight must not. It does not carry `data6.big` (1.7 GB),
-`data3.big` (1.2 GB), the audio, the video, or the other 1,735 files. With no
-FIFA 12 on the machine there is nothing to patch, and `SETUP.cmd` says so and
-stops rather than half-finishing.
-
-**Copying an existing install works.** You do not have to reinstall, and you do
-not need the EA App or Origin:
-
 - the game folder is found at any standard location **with no registry entry**,
   and `server\gamepath.txt` covers anywhere else
 - the launcher starts `fifa.exe` directly, so no store client is ever involved
 
-Copy the whole `FIFA 12` folder to the same path on the other machine, then run
-`SETUP.cmd`. That machine may still need the **Visual C++ runtimes and
+Copy the whole `FIFA 12` folder to the same path on the your machine, then run
+`SETUP.cmd`. Your machine may still need the **Visual C++ runtimes and
 DirectX 9** the game itself depends on — those are FIFA's requirements, not this
 folder's.
 
-If you copied it across, check it arrived intact **before** setting up. A 6.2 GB
-transfer that drops or truncates a file does not announce itself:
 
 ```
 python\python.exe server\gamehash.py --check
@@ -151,11 +134,6 @@ Get-ChildItem -Recurse | Unblock-File
    were: the three replaced files restored from backup, the eight added ones
    deleted, the `hosts` lines removed, the certificate dropped.
 
-### First launch
-
-The game will ask you to **create a club**. That is correct and it is not
-skippable — the club must not exist beforehand or the entry sequence stops dead.
-You start with **800,000,000 coins** and a starter pack of 18 players.
 
 ---
 
@@ -172,13 +150,6 @@ Nothing hidden, and all of it reversible with `UNINSTALL.cmd`.
 - **One certificate** added to Trusted Root, so the game accepts the local
   HTTPS stub.
 
-**Be aware of what that certificate means.** It is self-signed for
-`proxy.novafusion.ea.com`, and its private key ships in this folder in plain
-sight — it has to, because a local server has to present it. So anyone holding
-this folder could impersonate *that one hostname* to a machine that has trusted
-it. That is fine for a hostname whose real servers no longer exist, and it is
-the only way the handshake can work offline, but it is a real property of the
-design rather than a detail, and `UNINSTALL.cmd` removes it.
 
 ---
 
