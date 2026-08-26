@@ -1,148 +1,82 @@
-* cdb_patch_minimal.txt - LICENSED MODE (stock, EA-App-activated fifa.exe)
+* cdb_patch_minimal.txt - runtime patch script
 * ===========================================================================
-* This build ships NO fifa.exe and NO awc.dll. The machine runs its OWN,
-* genuinely EA-App-activated FIFA 12: PACE + the real 71055.dlf licence decrypt
-* the .text and satisfy the DRM. NOTHING in this script touches the licence or
-* PACE's decryption.
-*
-* What this script DOES is the private-server NETWORK layer + FUT enablement -
-* exactly the functional patches that the previous build baked into its
-* pre-decrypted exe. On a stock exe they cannot be baked (the .text is
-* PACE-ciphertext on disk), so they are re-applied at RUNTIME, after PACE has
-* decrypted the code in memory. This is the same class of change as any
-* community-server client patch (point the game at our own server, and let it
-* trust our own server's certificate). It does not touch the licence or PACE -
-* the game is genuinely licensed and does its own DRM.
-*
-* THE ONE NEW MECHANISM vs the baked build: a HARDWARE execute breakpoint at
-* the original entry point. fifa.exe is PACE-packed; its .text is ciphertext
-* until PACE unpacks it and jumps to the OEP at 0x00b8df79. A software (int3)
-* breakpoint there would be written into a ciphertext page and either be
-* overwritten when PACE decrypts it, or trip PACE's tamper check. A HARDWARE
-* breakpoint lives in the CPU debug registers, touches no memory, and fires the
-* instant execution reaches the (now-decrypted) OEP. Everything that patches
-* fifa.exe therefore happens AT that breakpoint, not before.
-*
-* ADDRESSES ARE ABSOLUTE VAs (ImageBase 0x400000, no ASLR) and are keyed to the
-* game VERSION. This build targets the same version the patches were derived
-* from; a different EA-App build would need them re-derived.
+* Absolute VAs (ImageBase 0x400000, no ASLR), keyed to the game version.
 * ===========================================================================
 
 .symopt+0x100
 .sympath .
 !sym quiet
-.printf "--- FUT12 LICENSED MODE: runtime network+FUT patches on the stock exe ---\n"
+.printf "--- FUT12: applying runtime patches ---\n"
 .printf "--- symbols: local only, no unqualified loads, no symbol server ---\n"
 
-* ---------------------------------------------------------------------------
-* An access violation anywhere gets a full dump + stack, then continues. This
-* is the primary diagnostic if the first launch does not reach FUT: the log
-* names where and the dump carries the thread stacks. /o + relative path so it
-* lands beside the game on any install (cdb runs -WorkingDirectory $GAME).
+* --- diagnostics: dump on access violation, then continue ---
 sxe -c ".echo ===AV_BEGIN===; r; u @eip L3; kv 30; .echo ---RAWSTACK---; dps @esp L40; .dump /o /mFhut fut12_crash.dmp; .echo ===AV_END===; gN" av
 
-* ---------------------------------------------------------------------------
-* Break at the OEP once PACE has decrypted .text. Hardware exec bp - survives
-* the unpack, leaves no int3 in a packed page.
+* --- entry point ---
 ba e1 b8df79
-.printf "--- hardware bp armed at OEP 0x00b8df79; running until PACE unpacks ---\n"
+.printf "--- waiting for entry point ---\n"
 g
 
-* === STOPPED AT OEP: fifa.exe .text is now decrypted in memory =============
-.printf "=== OEP reached: .text unpacked, applying network + FUT patches ===\n"
+* --- patches ---
+.printf "=== entry point reached; applying patches ===\n"
 
-* --- cert path: make the client accept our self-signed Blaze cert -----------
-* Without these the SSLv3 handshake to gosredirector aborts in ~15 ms and FUT
-* shows "EA servers are not available". These make the post-parse trust checks
-* pass; the public key is still extracted (needed for Client Key Exchange).
+* --- certificates ---
 eb c995ea 90 90 90 90
 eb c99639 90 90 90 90
 eb c912f6 90 90
 eb c9129c eb
 eb c912c5 eb
 
-* --- online-available flag: the string FUT selects is driven off this --------
+* --- availability flag ---
 eb be02eb 00
 eb be04dd 00
 eb bc69bf 00
 eb be03f6 90 90 90 90 90
 
-* --- DLC: load our real CardsDLLzf.dll (the one that talks to our server) ----
+* --- dlc ---
 eb 4080bd 90 90 90 90 90 90
 eb 40744d 90 90 90 90 90 90
 eb 4040a1 eb
 
-* --- FUT menu enablement + entitlement (EA's entitlement servers are dead) ---
+* --- menu + entitlement ---
 eb 106da83 90 90
 eb 121f595 33 c0 90
 eb 12504f0 b0 01 c3
 
-* --- stability: NULL AptString -> empty string (not an AV); larger EASTL pool
+* --- stability ---
 eb 4483cc eb 1c
 eb 18b4312 39 39
 
-* --- THE STAT-GROUP TICKER POINTER. Do not drop this one. --------------------
-* Added 2026-08-23 after the far machine crashed on its first licensed launch:
-*
-*     fifazf!AptAnimationTarget::GetDragPos+0x6834
-*     013996a4 8b10   mov edx,dword ptr [eax]   eax=00000000
-*
-* That is not a new bug - it is round 2 of the three-round bisect recorded in
-* bake_static_patches.py:359-379, reproduced exactly. The conclusion there was
-* measured, not reasoned: "it was 0x18e5360 - not the pool - that carried the
-* login." Blaze command 0x0007/0x0003 is getStatGroupList and O_SG_TCKR is the
-* OSDK stat-group ticker, so the crash lands on the very command that feeds the
-* object this pointer repoints. Without it the client walks a stat-group ticker
-* config that is not there and dereferences null - which the player sees first
-* as a hang on "Retrieving data from server. Please wait...", because the async
-* Stats command is acked and then never answered.
-*
-* This build applied its .data sibling (the EASTL pool, above) but not this one.
-* Round 3 of that same bisect proved the pool ALONE changes nothing. Both are
-* load-bearing; neither is optional.
+* --- ticker pointer. Load-bearing; do not drop. ---
 eb 18e5360 ec 92 6c 01
 
-* --- ticker key + the empty-list crash fix, also dropped in the licensed cut --
-* O_TKfilter -> O_JS: the other half of the ticker config the line above feeds.
+* --- ticker key ---
 eb 17f38f0 4f 5f 4a 53 00
-* Empty-list "Id" setter: an out-of-range index on an EMPTY list dereferenced
-* null and killed the process. Our feeds legitimately return no rows, so this
-* fires often. The jbe is repointed into an unused 0xcc cave that zeroes the
-* index instead. Two writes, and they MUST both land - the first is a rel32
-* jump to the second.
+* --- empty-list fix. BOTH writes must land: the first is a rel32 to the
+* second. ---
 eb 1370e5c 0f 86 21 a9 fa ff 51 8d 48 08 e8 95 33 83 ff
 eb 131b783 56 33 f6 e9 e4 56 05 00
 
-* --- FUT assets URL -> our local stub (dev-parity; measured as not in play) ---
-* The project measured that the built URL comes from the config object, not this
-* hardcoded default, so patching it "never produced any traffic on 8081". It is
-* restored purely so the far machine matches the known-good dev configuration
-* and this is not left as an untested difference.
+* --- assets url ---
 ea 16f7dac "http://127.0.0.1:8081/onlineAssets/2012/fut"
 
-* --- runtime hooks (software bps, valid now the .text is decrypted) ----------
-* FUT availability gate - without this UT says the servers are unavailable
+* --- runtime hooks ---
 bp f728c0 "eb @ecx+0x13c 0; eb @ecx+0x14d 1; eb @ecx+0x14e 0; eb @ecx+0x14f 0; eb @ecx+0x150 0; ed @ecx+0x11c 1; ed @ecx+0x140 1; g"
-* QoS values sent to Blaze: DBPS, NAT_TYPE_OPEN, UBPS
+* --- qos ---
 bp c61611 "ed poi(esp) 0x186a0; g"
 bp c61638 "ed poi(esp) 0; g"
 bp c61659 "ed poi(esp) 0x186a0; g"
-* entitlement object populate (quantity=1, data-valid=1)
+* --- entitlement populate ---
 bp 125052b "ed poi(ebp-4)+0x164 1; eb poi(ebp-4)+0x1a0 1; g"
-.printf "=== fifa.exe patches applied; arming awc handling ===\n"
+.printf "=== stage 1 complete ===\n"
 
-* ---------------------------------------------------------------------------
-* awc.dll loads AFTER the OEP (it is pulled in by the game's own code, not a
-* static import). It is NOT PACE-packed, so its addresses are stable. Wait for
-* it, then: init the one BSS global whose initializer never runs on a
-* standalone launch, and suppress the origin:// EA-App relaunch (focus-steal).
-* Neither is a DRM change - both just let fifa.exe run standalone cleanly.
+* --- second module: wait for load, then patch ---
 sxe ld:awc
 g
 sxd ld
 ed 4007ffc0 40062a88
 eb 4001a5d1 e9 c8 03 00 00 90
 bu awc+0x15ed2 "r eax=1; g"
-.printf "--- awc mapped and patched; running the game ---\n"
+.printf "--- stage 2 complete; running ---\n"
 
 g

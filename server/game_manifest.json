@@ -1,6 +1,6 @@
 {
- "bytes": 6292903456,
- "count": 173,
+ "bytes": 6245459543,
+ "count": 169,
  "files": {
   "Core/EACore.dll": [
    "f29405c1230e41a4716cc864b733d78f",
@@ -56,10 +56,6 @@
   ],
   "Core/awc.dll": [
    "8c7db4d58ce1e9100932d2dc9f5d151b",
-   533792
-  ],
-  "Core/awc.dll.backup": [
-   "7b11c8a33bf3b124a99e893720a17090",
    533792
   ],
   "Core/codecs/qcncodecs4.dll": [
@@ -562,17 +558,9 @@
    "1f4d172ade0f051dff594a5de82d9389",
    23449504
   ],
-  "fifa.exe.bak": [
-   "7a42135a456e5c8154ff3dd5be4b3db4",
-   23449504
-  ],
   "fifa.par": [
    "ed515064c2ce84984723a4c21d7b9207",
    664
-  ],
-  "fifa_standalone_test.exe": [
-   "0866bb81e184776579ab729da46893e6",
-   23449504
   ],
   "fifapc.ico": [
    "7c9e0796ecf44a6e4fe0aa93c0c7c4ea",
@@ -689,10 +677,6 @@
   "user.ini": [
    "a50b86753661c7c43e91327d340cccc0",
    12045
-  ],
-  "user.ini.bak_uselocal": [
-   "c2fe91fa291970a26c2ad6cc8ef54e77",
-   11113
   ]
  },
  "root_hint": "C:\\Program Files\\EA Games\\FIFA 12\\Game"

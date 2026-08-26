@@ -86,6 +86,23 @@ IGNORE_SUFFIX = (".dmp",)
 # setup, not to EA, and UNINSTALL.cmd takes them away again.
 IGNORE_NAMES = {"d3dx9_41.dll", "xinput1_3.dll"}
 
+# Build-side backups and test copies. Not game files.
+IGNORE_BACKUP_SUFFIX = (".bak", ".backup")
+IGNORE_BACKUP_MARKER = ".bak_"
+IGNORE_OURS = {"fifa_standalone_test.exe"}
+
+# Not shipped with this build - the machine uses its own copies, so these
+# are expected to differ. Content check only; size and presence still apply.
+LICENSED_OWN = {"fifa.exe", "core/awc.dll"}
+
+
+def ours_not_eas(rel):
+    """Build-side backups and test copies, not game files."""
+    n = rel.rsplit("/", 1)[-1].lower()
+    return (n.endswith(IGNORE_BACKUP_SUFFIX) or IGNORE_BACKUP_MARKER in n
+            or n in IGNORE_OURS)
+
+
 _skipped = []
 
 
@@ -98,7 +115,8 @@ def walk(root):
         for f in sorted(files):
             q = os.path.join(base, f)
             rel = os.path.relpath(q, root).replace("\\", "/")
-            if f.lower().endswith(IGNORE_SUFFIX) or f.lower() in IGNORE_NAMES:
+            if (f.lower().endswith(IGNORE_SUFFIX)
+                    or f.lower() in IGNORE_NAMES or ours_not_eas(f)):
                 _skipped.append(rel)
                 continue
             try:
@@ -162,6 +180,8 @@ def cmd_check(root, path):
         print("  Run --write on the machine you are copying FROM first.")
         return 1
     want = json.loads(io.open(path, encoding="utf-8").read()).get("files") or {}
+    # Also drop them from an older manifest, so existing clones self-correct.
+    want = dict((k, v) for k, v in want.items() if not ours_not_eas(k))
     print("  manifest : %d file(s)" % len(want))
     print("  checking : %s" % root)
     if not os.path.isdir(root):
@@ -176,15 +196,18 @@ def cmd_check(root, path):
 
     missing = sorted(set(want) - set(have))
     extra = sorted(set(have) - set(want))
-    changed, short = [], []
+    changed, short, exempt = [], [], []
     for rel in sorted(set(want) & set(have)):
         if want[rel][0] == have[rel][0]:
             continue
         # A size difference means truncation, which is what an interrupted
         # transfer produces; a same-size difference means corruption. Saying
         # which one saves guessing at the cause.
+        # Size first, so the exemption below cannot hide a truncated file.
         if have[rel][1] != want[rel][1]:
             short.append((rel, want[rel][1], have[rel][1]))
+        elif rel.lower() in LICENSED_OWN:
+            exempt.append(rel)
         else:
             changed.append(rel)
 
@@ -204,6 +227,12 @@ def cmd_check(root, path):
     show("DIFFERENT - same size, different content", changed)
     show("extra - present here but not in the manifest (usually harmless)",
          extra, limit=10)
+
+    if exempt:
+        print("  not shipped with this build - yours, and expected to "
+              "differ: %d" % len(exempt))
+        for r in exempt:
+            print("      %s" % r)
 
     bad = len(missing) + len(short) + len(changed)
     print("")
