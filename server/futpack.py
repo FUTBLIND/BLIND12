@@ -1705,8 +1705,8 @@ def inform_resource_id(playerid, variant):
 # ordinary cards and are handled in _carded_rows/_alt_rows instead - only the
 # coloured-art categories are drawn by the swap pass below.
 #
-# TOTS IS NOT IN THE FILE AT ALL (user, 2026-08-18): end-game content, too
-# imbalanced to add yet. Nothing here needs to filter it out.
+# TOTS IS IN THIS FILE (user, 2026-08-27), reversing the 2026-08-18 decision to
+# hold it back: 137 rows, art class TOTS, rareflag 5, dealt by the swap pass.
 SPECIALS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                              "specials_fifa12.json")
 
@@ -1768,12 +1768,28 @@ SPECIAL_TARGET = {99: 0.0010}
 # Same units and same algorithm as the tables above: percentage OF ALL PLAYER
 # CARDS at that rating. Authored from a stated rule rather than typed numbers -
 # a per-card share that steps down as the rating rises, times the number of TOTS
-# cards at that rating - then scaled so the GOLD WINDOW sums to 1.5x MOTM's
-# effective gold rate (MOTM 0.03343 x calibration 1.19 = 0.03978; 1.5x = 0.05967).
+# cards at that rating.
+#
+# >>> THE FIRST DERIVATION OF THIS TABLE WAS WRONG, AND IT IS WORTH SAYING SO.
+# It aimed at 1.5x "MOTM's effective rate", computed as 0.03343 x 1.19 = 0.03978.
+# SPECIAL_CALIBRATION is a LOSS COMPENSATOR - it exists so the ACHIEVED rate
+# comes out equal to the RAW table sum - so that 1.19 was already spent, and
+# 0.03978 is a number nothing ever achieves.
+#
+# MEASURED over 720,000 all-rare gold cards, which is what settled it:
+#     MOTM  raw 0.03343  ->  achieved 0.03472 %/card
+#     TOTS  raw 0.05964  ->  achieved 0.05264 %/card  (at calibration 1.0)
+#     achieved ratio 1.52x +/- 0.12, against the 1.50x asked for
+# so this table's 0.05964 with NO correction IS the 1.5x, and
+# SPECIAL_CALIBRATION["TOTS"] is 1.0 because none is needed. An earlier cut set
+# it to 1.14 off a noisy per-PACK sample and pushed the achieved ratio to 1.70x;
+# per-CARD over a large sample is the honest measure, because the tables are
+# authored per card. Do not re-add a correction without re-measuring. <<<
 #
 # 101 of the 137 cards are gold, so while *a* TOTS is 1.5x commoner than *a*
 # MOTM, any NAMED TOTS is far rarer - that is the pool size, and it is the
-# intended shape for end-game cards.
+# intended shape for end-game cards. And in a MIXED coin pack TOTS is rarer than
+# MOTM, not commoner, because it is rare_only and MOTM is not - see below.
 #
 # The 36 bronze/silver cards are dealt by their own band's packs, matched to
 # MOTM_SILVER_TARGET on the same 1.5x rule. FIFA 12 shipped bronze and silver
@@ -1795,7 +1811,7 @@ TOTS_TARGET = {64: 0.00650, 71: 0.00120, 73: 0.00120, 74: 0.02891, 78: 0.00198,
 # no correction (it draws into a band with almost no competition); the gold
 # tables lose ~15-20% of their rolls to slots already holding an In Form.
 SPECIAL_CALIBRATION = {"TOTY": 1.03, "MOTM": 1.19, "MOTM_SILVER": 1.0,
-                       "iMOTM": 1.17, "SPECIAL": 1.0, "TOTS": 1.14}
+                       "iMOTM": 1.17, "SPECIAL": 1.0, "TOTS": 1.0}
 
 _SPECIALS = None
 _SPECIAL_SWAP = None
@@ -1881,8 +1897,9 @@ def _targeted_swap(rows, rnd, target, byovr, key, lo, hi, scale=1.0,
     Rows that already carry `_inform` or `_special` are left alone, so the
     categories compose without overwriting one another.
 
-    `rare_only` RESTRICTS THE SWAP TO SLOTS THE PACK PROMISED AS RARE, and only
-    the TOTY pass sets it. TOTY is written with the `_inform` key, so it emits
+    `rare_only` RESTRICTS THE SWAP TO SLOTS THE PACK PROMISED AS RARE. The TOTY
+    pass sets it, and so does the TOTS pass (rareflag 5 is odd, so TOTS is foiled
+    for the same reason). TOTY is written with the `_inform` key, so it emits
     rareflag 3 - and `rareflag & 1` is the foil. Without this, a TOTY could be
     swapped onto a COMMON slot of a mixed coin pack and the player would see a
     foiled card the pack never advertised. Measured 2026-08-19 over 4,000 builds
