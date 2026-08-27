@@ -74,6 +74,7 @@ import json
 import os
 import time
 
+import cardcats
 import cardsdb
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -183,6 +184,12 @@ def _repair_club_cards(rec):
             if not isinstance(rid, int) or not isinstance(rating, int):
                 continue
             is_inform = (c.get("rareflag") == futpack.INFORM_TOTW_RAREFLAG)
+            # SEPARATE FROM is_inform ON PURPOSE. is_inform drives the In Form
+            # IDENTITY repair below and must stay In Form only; this one is the
+            # PRICING question, and it has to cover every coloured class or the
+            # repair rewrites them all onto the common curve. Measured: a
+            # 98-rated special is worth 11,096 and was being repaired to 369.
+            is_special = cardcats.is_special_rareflag(c.get("rareflag"))
 
             # the fault: an In Form wearing a normal card's identity
             if is_inform and rid <= 0xFFFFFF:
@@ -289,7 +296,7 @@ def _repair_club_cards(rec):
 
             # stale price, on any player card
             want_price = futpack.discard_value(
-                rating, rare=(c.get("rareflag") == 1), inform=is_inform)
+                rating, rare=(c.get("rareflag") == 1), inform=is_special)
             if c.get("discardValue") != want_price:
                 c["discardValue"] = want_price
                 changed += 1

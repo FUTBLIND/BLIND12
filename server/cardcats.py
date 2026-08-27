@@ -155,6 +155,27 @@ def is_rare(art_class):
     return bool(rareflag(art_class) & 1)
 
 
+# THE SPECIAL RAREFLAGS - DERIVED FROM THE ART TABLE, NEVER TYPED.
+#
+# The cards that price on the special quick-sell curve (9,000+ coins) rather
+# than the ordinary one: In Form and every coloured class, i.e. everything that
+# is not a plain COMMON or RARE. Derived so it cannot drift out of step with
+# ART_RAREFLAG the way a second hand-written list would.
+SPECIAL_RAREFLAGS = frozenset(
+    v for k, v in ART_RAREFLAG.items() if k not in (ART_COMMON, ART_RARE))
+
+
+def is_special_rareflag(rf):
+    """Whether a wire rareflag belongs to a special card.
+
+    The MINT path already gets this right, because it asks the art class. The
+    club and market paths hold only the rareflag byte, and testing that against
+    In Form's 3 alone silently reprices every coloured card - MOTM, iMOTM,
+    SPECIAL, TOTS - onto the common curve.
+    """
+    return rf in SPECIAL_RAREFLAGS
+
+
 def art_for(provenance, rare=False):
     """Art class for a provenance.
 
