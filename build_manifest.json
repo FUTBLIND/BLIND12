@@ -142,8 +142,8 @@
     },
     {
       "path": "server/cardcats.py",
-      "md5": "aa809697ee8283555504d2764881b85c",
-      "bytes": 9593
+      "md5": "5cb764bb2cda0ed63cb9a2dfc299ac2f",
+      "bytes": 10470
     },
     {
       "path": "server/carddb.py",
@@ -177,8 +177,8 @@
     },
     {
       "path": "server/cdb_patch_minimal.txt",
-      "md5": "72a8fc155d6598b893f6bd1cee231513",
-      "bytes": 7502
+      "md5": "c52f94781b0d543a00952311dad04d08",
+      "bytes": 2240
     },
     {
       "path": "server/cdbpath.py",
@@ -197,8 +197,8 @@
     },
     {
       "path": "server/clubstore.py",
-      "md5": "6ae6b62aaccd198054a42a221d12a3ad",
-      "bytes": 192837
+      "md5": "31d28a1922208635151e0bd002c80e5b",
+      "bytes": 193318
     },
     {
       "path": "server/diagnose.py",
@@ -457,8 +457,8 @@
     },
     {
       "path": "server/futpack.py",
-      "md5": "c4a1b4c775b745833927b9671903ca6b",
-      "bytes": 290488
+      "md5": "f0fabb639230e24f7363acaf6587b5ea",
+      "bytes": 292487
     },
     {
       "path": "server/futprices.py",
@@ -587,8 +587,8 @@
     },
     {
       "path": "server/specials_fifa12.json",
-      "md5": "899deba54512102f5e0fdfc1761237db",
-      "bytes": 217672
+      "md5": "945e71d3806ee1663a89dcccdde77646",
+      "bytes": 262323
     },
     {
       "path": "server/start_all.ps1",
@@ -627,12 +627,12 @@
     },
     {
       "path": "setup.py",
-      "md5": "b9ae8de51d444648bb6d09a569826872",
-      "bytes": 40474
+      "md5": "097879048bfcc1c0c51fc9dd24e1a0ae",
+      "bytes": 40818
     }
   ],
   "count": 126,
-  "bytes": 46923174,
+  "bytes": 46966264,
   "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
   "excluded_personal": [
     "club.json",
