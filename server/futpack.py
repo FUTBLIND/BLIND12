@@ -1795,7 +1795,7 @@ TOTS_TARGET = {64: 0.00650, 71: 0.00120, 73: 0.00120, 74: 0.02891, 78: 0.00198,
 # no correction (it draws into a band with almost no competition); the gold
 # tables lose ~15-20% of their rolls to slots already holding an In Form.
 SPECIAL_CALIBRATION = {"TOTY": 1.03, "MOTM": 1.19, "MOTM_SILVER": 1.0,
-                       "iMOTM": 1.17, "SPECIAL": 1.0, "TOTS": 1.0}
+                       "iMOTM": 1.17, "SPECIAL": 1.0, "TOTS": 1.14}
 
 _SPECIALS = None
 _SPECIAL_SWAP = None
