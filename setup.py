@@ -796,6 +796,7 @@ REQUIRED_CDB_SITES = [
     ("106da83", "FUT_ENABLE_MENU"),
     ("121f595", "Ebisu error force"),
     ("12504f0", "entitlement data-ready"),
+    ("1220282", "settings identity pin"),
     ("4483cc",  "NULL AptString -> empty"),
     ("18b4312", "EASTL pool 320K->990K"),
     ("18e5360", "O_SG_TCKR ticker ptr (carries the Blaze login)"),
