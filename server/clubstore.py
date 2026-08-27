@@ -3351,17 +3351,35 @@ def create(name, abbr=""):
     # vanished the moment the club was created, with no error anywhere. Start
     # from the existing record and overwrite only what we own.
     rec = dict(rec)
-    rec.update({
-        "club": {"clubName": name, "clubAbbr": abbr,
-                 "created": time.strftime("%Y-%m-%dT%H:%M:%S")},
+    # >>> AN EXISTING CLUB IS NEVER RE-CREATED OVER. <<<
+    # The guard above is `club is not None AND roster`, so a club whose roster
+    # came back EMPTY reaches this tail - and the comment that used to sit here
+    # claimed "repeat calls return above without reaching it", which is exactly
+    # the assumption that does not hold on that path. Measured in a sandbox:
+    # coins survived, the roster was regranted, and the SAVED SQUAD WAS WIPED.
+    #
+    # So decide it once. An existing club keeps its identity, its squad and its
+    # one-shot squad flag, and still gets a roster back - which is the self-heal
+    # this path is for. Only a genuinely new club gets the new-club fields.
+    had_club = rec.get("club") is not None
+    fields = {
         "roster": items,
-        "squad": None,
         "nextId": max([c["id"] for c in items] or [999]) + 1,
+    }
+    if had_club:
+        fields["club"] = rec["club"]        # keep the name the player chose
+        print("    *** club already exists (%r) - roster restored, squad and "
+              "identity KEPT ***"
+              % (rec["club"].get("clubName"),), flush=True)
+    else:
+        fields["club"] = {"clubName": name, "clubAbbr": abbr,
+                          "created": time.strftime("%Y-%m-%dT%H:%M:%S")}
         # A genuinely new club has never had a squad served, so the one-shot
         # fill is armed here. This is the "at creation" in "fill an empty squad
-        # once, at creation" - repeat calls return above without reaching it.
-        "squadSeeded": False,
-    })
+        # once, at creation".
+        fields["squad"] = None
+        fields["squadSeeded"] = False
+    rec.update(fields)
     save(rec)
     print("    *** club store CREATED: %r, %d items, ids %d..%d ***"
           % (name, len(items),

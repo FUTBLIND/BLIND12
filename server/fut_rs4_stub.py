@@ -1318,7 +1318,12 @@ def _body_for(path: str, method="GET", body=b""):
         # Name/abbr obey createclubview.lua's own validation - NAME_MIN 5,
         # NAME_MAX 15, ABBR exactly 3 - so the value is legal everywhere the
         # client renders it, even though its entry screen is bypassed.
-        if AUTO_CREATE_CLUB:
+        # NEVER OVER AN EXISTING CLUB. This arm is dormant (AUTO_CREATE_CLUB
+        # is False) and is paired with RESET_CLUB_ON_START, which deletes the
+        # file immediately above - so the debug "fresh club every launch" flow
+        # still works. The existence test only stops it renaming a club a real
+        # player already has, if the flag is ever flipped on its own.
+        if AUTO_CREATE_CLUB and not os.path.exists(CLUB_FILE):
             save_club(AUTO_CLUB_NAME, AUTO_CLUB_ABBR)
             print("    *** club auto-created -> /clientdata will answer 200, "
                   "create-club screen SKIPPED ***", flush=True)
