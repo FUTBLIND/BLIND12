@@ -1727,7 +1727,7 @@ FIFAUTEAM_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
 # art, which is also what makes them expensive: they price on the In Form
 # curve (9,000-11,148 coins), so the rate below is an economic lever, not a
 # cosmetic one.
-SPECIAL_SWAP_CATEGORIES = ("MOTM", "iMOTM", "SPECIAL")
+SPECIAL_SWAP_CATEGORIES = ("MOTM", "iMOTM", "SPECIAL", "TOTS")
 
 # PER-RATING TARGETS FOR THE COLOURED CATEGORIES (user, 2026-08-19).
 #
@@ -1763,6 +1763,28 @@ IMOTM_TARGET = {
 # One card, Messi 99. Deliberately the rarest thing in the store.
 SPECIAL_TARGET = {99: 0.0010}
 
+# TEAM OF THE SEASON (user, 2026-08-27).
+#
+# Same units and same algorithm as the tables above: percentage OF ALL PLAYER
+# CARDS at that rating. Authored from a stated rule rather than typed numbers -
+# a per-card share that steps down as the rating rises, times the number of TOTS
+# cards at that rating - then scaled so the GOLD WINDOW sums to 1.5x MOTM's
+# effective gold rate (MOTM 0.03343 x calibration 1.19 = 0.03978; 1.5x = 0.05967).
+#
+# 101 of the 137 cards are gold, so while *a* TOTS is 1.5x commoner than *a*
+# MOTM, any NAMED TOTS is far rarer - that is the pool size, and it is the
+# intended shape for end-game cards.
+#
+# The 36 bronze/silver cards are dealt by their own band's packs, matched to
+# MOTM_SILVER_TARGET on the same 1.5x rule. FIFA 12 shipped bronze and silver
+# TOTS, so they are dealt.
+TOTS_TARGET = {64: 0.00650, 71: 0.00120, 73: 0.00120, 74: 0.02891, 78: 0.00198,
+               79: 0.00099, 80: 0.00198, 81: 0.00692, 82: 0.00494,
+               83: 0.00494, 84: 0.00523, 85: 0.00981, 86: 0.00654,
+               87: 0.00088, 88: 0.00485, 89: 0.00265, 90: 0.00301,
+               91: 0.00201, 92: 0.00100, 93: 0.00085, 94: 0.00064,
+               97: 0.00021, 98: 0.00021}
+
 # MEASURED CORRECTION FACTORS, not design values.
 #
 # The category passes run in sequence and each skips slots already holding an
@@ -1773,7 +1795,7 @@ SPECIAL_TARGET = {99: 0.0010}
 # no correction (it draws into a band with almost no competition); the gold
 # tables lose ~15-20% of their rolls to slots already holding an In Form.
 SPECIAL_CALIBRATION = {"TOTY": 1.03, "MOTM": 1.19, "MOTM_SILVER": 1.0,
-                       "iMOTM": 1.17, "SPECIAL": 1.0}
+                       "iMOTM": 1.17, "SPECIAL": 1.0, "TOTS": 1.0}
 
 _SPECIALS = None
 _SPECIAL_SWAP = None
@@ -1974,6 +1996,18 @@ def _apply_specials(rows, rnd, lo=None, hi=None):
     rows = _targeted_swap(rows, rnd, SPECIAL_TARGET, cat.get("SPECIAL", {}),
                           "_special", lo, hi,
                           SPECIAL_CALIBRATION.get("SPECIAL", 1.0))
+    # TOTS RUNS LAST, AND THAT IS LOAD-BEARING. Every pass above has finished
+    # before this one draws, and _targeted_swap skips rows already claimed, so
+    # TOTS can only take slots nothing else wanted - which is what keeps the
+    # five categories above at exactly the rates they had before it existed.
+    #
+    # rare_only=True is NOT optional: rareflag 5 is ODD, so TOTS is foiled, and
+    # on a common slot it would show a foiled card the pack never advertised.
+    # Measured once already at 10 such cards over 4,000 builds per pack.
+    rows = _targeted_swap(rows, rnd, TOTS_TARGET, cat.get("TOTS", {}),
+                          "_special", lo, hi,
+                          SPECIAL_CALIBRATION.get("TOTS", 1.0),
+                          rare_only=True)
     return rows
 
 
