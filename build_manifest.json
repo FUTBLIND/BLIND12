@@ -197,8 +197,8 @@
     },
     {
       "path": "server/clubstore.py",
-      "md5": "31d28a1922208635151e0bd002c80e5b",
-      "bytes": 193318
+      "md5": "0e79c5a27d52b470278249cb79cca61d",
+      "bytes": 194338
     },
     {
       "path": "server/diagnose.py",
@@ -442,8 +442,8 @@
     },
     {
       "path": "server/fut_rs4_stub.py",
-      "md5": "0e4da54f8d59567c75f3e0f50f983b57",
-      "bytes": 297662
+      "md5": "5cce7b2226d84de92a94d1393d8047f5",
+      "bytes": 298079
     },
     {
       "path": "server/futflow.py",
@@ -457,8 +457,8 @@
     },
     {
       "path": "server/futpack.py",
-      "md5": "f0fabb639230e24f7363acaf6587b5ea",
-      "bytes": 292487
+      "md5": "c471ce2b09f278120c2dd66306e153d1",
+      "bytes": 293574
     },
     {
       "path": "server/futprices.py",
@@ -527,8 +527,8 @@
     },
     {
       "path": "server/packcheck.py",
-      "md5": "7507156a5db5d63c4e242c85bed2904e",
-      "bytes": 33528
+      "md5": "f8c7b2973f9d04dca5fd0642d651a37c",
+      "bytes": 34009
     },
     {
       "path": "server/pow_stub.py",
@@ -632,7 +632,7 @@
     }
   ],
   "count": 126,
-  "bytes": 46966264,
+  "bytes": 46969269,
   "game_source": "C:\\Program Files\\EA Games\\FIFA 12\\Game",
   "excluded_personal": [
     "club.json",
