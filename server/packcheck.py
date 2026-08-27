@@ -667,6 +667,13 @@ def main():
             ("MOTM", futpack.MOTM_SILVER_TARGET if silver else futpack.MOTM_TARGET),
             ("iMOTM", futpack.IMOTM_TARGET),
             ("SPECIAL", futpack.SPECIAL_TARGET),
+            # TOTS WAS MISSING FROM THIS LIST while 137 TOTS cards were added,
+            # so the one check built to catch an unreachable special was not
+            # looking at the newest one. Its denominator is rare_player_rows,
+            # not player_rows: TOTS is rare_only for the same reason TOTY is -
+            # rareflag 5 is odd, so it is foiled and may only take a slot the
+            # pack promised as rare.
+            ("TOTS", futpack.TOTS_TARGET),
         ]
         cells = []
         for name, tbl in targets:
@@ -680,7 +687,7 @@ def main():
             # Gold Pack's TOTY expectation as 5.7 when the measured rate is about
             # 1 in 15,000 packs - the check would have failed every run and been
             # switched off, which is how a test stops being worth having.
-            denom = (r["rare_player_rows"] if name == "TOTY"
+            denom = (r["rare_player_rows"] if name in ("TOTY", "TOTS")
                      else r["player_rows"])
             exp = denom * rate
             seen = r["seen_art"].get(name, 0)
