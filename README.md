@@ -57,7 +57,6 @@ The folder is found at any standard location with no registry entry, and
 `server\gamepath.txt` covers anywhere else. The launcher starts `fifa.exe`
 directly.
 
-If you copied it across, verify it arrived intact **before** running setup:
 
 ```
 python\python.exe server\gamehash.py --check
@@ -111,9 +110,6 @@ certificate setup installs is issued for that name.
 | **`STOP.cmd`** | stops the services, leaves the game running |
 | **`UNINSTALL.cmd`** | restores the four replaced files, deletes the eight added, removes the `hosts` lines and the certificate |
 
-On first launch the game asks you to **create a club**. That is correct and not
-skippable — the club must not exist beforehand or the entry sequence stops. You
-start with 800,000,000 coins and an 18-player starter pack.
 
 ---
 
@@ -184,6 +180,6 @@ Anything not covered here — see **Support** below.
 Report bugs and problems to **@FUTBLIND** on X, or on Discord:
 
 - Discord server: **https://discord.gg/3aFHn9HhQH**
-- Direct: **@BLIND80**
+- Direct: **@BLIND308**
 
 Please include your `server\logs\` output and say which step failed.
